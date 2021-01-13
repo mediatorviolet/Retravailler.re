@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.main > div:nth-child(1) {
+    background-image:url("../img/conseilEvoMain.jpg");
+    background-color: #9CDBC4;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
