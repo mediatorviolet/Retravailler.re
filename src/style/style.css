@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+#logo_nav {
+    width: 7rem;
+}
+
+.nav-item {
+    text-transform: uppercase;
+}
+
+.main > div:nth-child(1) {
+    background-image: linear-gradient( rgba(92, 33, 94, 0.5), rgba(92, 33, 94, 0.5)), url("../resources/img/People\ -\ 6387.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+#logo-main {
+    width: 10rem;
+    
+}
