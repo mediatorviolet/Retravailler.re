@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -27,7 +29,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto me-3 mb-2 mb-lg-0 flex-end">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Acceuil</a>
+                        <a class="nav-link active" aria-current="page" href="#">Accueil</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -49,8 +51,32 @@
     </nav>
 
     <section class="main">
-        <div class="container-fluid">
+        <div class="container-fluid d-flex flex-column align-items-center">
             <img id="logo-main" src="src/resources/img/logo-RW-reunion.png" alt="logo-RW-reunion">
+            <h2 class="slogan mt-5">orientation | formation | emploi | conseil</h2>
+            <button type="button" class="btn-lg btn-primary rounded-pill mt-5 py-3 px-5">Nos prestations<i class="fas fa-angle-down ms-2"></i></button>
+        </div>
+    </section>
+
+    <section class="infos">
+        <div class="container-fluid d-flex justify-content-center">
+            <div class="col-2 d-flex justify-content-end me-5">
+                <i class="fas fa-book-open"></i>
+            </div>
+            <div class="col-4 me-5">
+                <h2 class="mb-5 infos-title">Qui sommes-nous ?</h2>
+                <p class="text-infos">
+                    Le Réseau National Retravailler est né en 1974 sur l’impulsion d’Evelyne SULLEROT, sociologue, afin d’accompagner les femmes qui souhaitaient reprendre une activité professionnelle.
+                </p>
+                <p class="text-infos">
+                    A cette occasion, Retravailler développe les premiers outils d’aide à l’orientation des adultes, en France, en s’appuyant sur une approche psychosociale et le développement d’une méthode innovante. Ces travaux seront à l’origine de la méthodologie du Bilan de Compétences.
+                </p>
+                <p class="text-infos">
+                    Depuis Retravailler a élargi son action pour le public à l’ensemble des actifs : jeunes, adultes, hommes, femmes… Son cœur de métiers reste centré sur l’accompagnement et la sécurisation des trajectoires professionnelles.
+                </p>
+            </div>
+            <div class="col-4 side-infos">
+            </div>
         </div>
     </section>
 </body>

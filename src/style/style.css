@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -22,6 +23,36 @@
 }
 
 #logo-main {
-    width: 10rem;
-    
+    width: 18rem;
+}
+
+.slogan {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+.infos {
+    padding: 150px 0px 150px 0px;
+}
+
+.text-infos {
+    text-align: justify;
+}
+
+.fa-book-open {
+    height: 4rem;
+    padding: 1rem;
+    background-color: #61CE70;
+    color: white;
+    font-size: 2rem;
+}
+
+.infos-title {
+    color: #61CE70;
+}
+
+.side-infos {
+    background-image: url("../resources/img/scott-graham-5fNmWej4tAA-unsplash.jpg");
+    background-size: cover;
 }
