@@ -54,7 +54,7 @@
         <div class="container-fluid d-flex flex-column align-items-center">
             <img id="logo-main" src="src/ressources/img/logo-RW-reunion.png" alt="logo-RW-reunion">
             <h2 class="slogan mt-5">orientation | formation | emploi | conseil</h2>
-            <button type="button" class="btn-lg btn-primary rounded-pill mt-5 py-3 px-5">Nos prestations<i class="fas fa-angle-down ms-2"></i></button>
+            <button type="button" class="btn-lg btn-primary rounded-pill mt-5 py-3 px-5 btn-green">Nos prestations<i class="fas fa-angle-down ms-2"></i></button>
         </div>
     </section>
 
@@ -85,7 +85,7 @@
         <div class="container-fluid row">
             <div class="col-3 mx-auto d-flex flex-row">
                 <i class="fas fa-cannabis me-5"></i>
-                <h2>Nos prestations</h2>
+                <h2 class="title-presta">Nos prestations</h2>
             </div>
             <div class="col-6">
                 <!-- <h2>Conseil en évolution professionnelle</h2> -->
@@ -102,7 +102,7 @@
                         Vous apporter des réponses à la diversité de vos besoins. <br>
                         Construire votre projet avec le conseiller qui vous accompagne tout au long de sa mise en œuvre.
                     </p>
-                    <button type="button" class="btn btn-primary">Découvrir</button>
+                    <button type="button" class="btn btn-primary btn-decouvrir">Découvrir</button>
                 </div>
             </div>
             <div class="container d-flex mt-5 mb-5 justify-content-center">
@@ -116,13 +116,13 @@
                         <li>à la mise sous tension des démarches favorisée par la dynamique de groupe</li>
                         <li>à un accompagnement et un soutien intensif</li>
                     </ul>
-                    <button type="button" class="btn btn-primary">Découvrir</button>
+                    <button type="button" class="btn btn-primary btn-decouvrir">Découvrir</button>
                 </div>
-                <div class="col-3 img-cep ms-5">
+                <div class="col-3 img-ae ms-5">
                 </div>
             </div>
             <div class="container d-flex mt-5 justify-content-center">
-                <div class="col-3 img-cep ms-5">
+                <div class="col-3 img-atc ms-5">
                 </div>
                 <div class="col-6 ms-5">
                     <h2>Atelier conseil</h2>
@@ -131,7 +131,7 @@
                         Elle s’adresse à tous les actifs, qu’ils soient demandeurs d’emploi inscrits ou non, quel que soit leur niveau
                         d’expression écrite et / ou orale et leur aisance à utiliser les outils numériques.
                     </p>
-                    <button type="button" class="btn btn-primary">Découvrir</button>
+                    <button type="button" class="btn btn-primary btn-decouvrir">Découvrir</button>
                 </div>
             </div>
         </div>
@@ -139,9 +139,9 @@
 
     <section class="contact">
         <div class="container-fluid">
-            <h2 class="text-center">Contactez-nous</h2>
+            <h2 class="text-center text-white">Contactez-nous</h2>
             <div class="d-flex justify-content-center">
-                <button type="button" class="btn btn-primary rounded-pill mt-3 py-3 px-5"><i class="fas fa-phone-alt me-2"></i>Contact</button>
+                <button type="button" class="btn btn-primary rounded-pill mt-3 py-3 px-5 btn-green"><i class="fas fa-phone-alt me-2"></i>Contact</button>
             </div>
             <div class="d-flex justify-content-center mt-5">
                 <iframe class="col-8" src="https://www.google.com/maps/d/embed?mid=1StIVoLvuiMLhf3bpTaFzscL6xdWNtN4a&hl=fr" width="640" height="520"></iframe>

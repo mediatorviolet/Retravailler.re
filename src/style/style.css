@@ -68,9 +68,25 @@
     background-color: #5C215E26;
 }
 
+.title-presta {
+    color: #5C215E;
+}
+
 .img-cep {
     height: 200px;
     background-image: url("../ressources/img/homme femme working.jpg");
+    background-size: cover;
+}
+
+.img-ae {
+    height: 200px;
+    background-image: url("../ressources/img/accelere-emploi\ main.jpg");
+    background-size: cover;
+}
+
+.img-atc {
+    height: 200px;
+    background-image: url("../ressources/img/atelier\ conseil\ main.jpg");
     background-size: cover;
 }
 
@@ -103,3 +119,26 @@ footer {
 	margin-right: 2em;
 }
 
+.btn-green {
+    background-color: #61CE70;
+    border-color: #61CE70;
+    border-width: .2rem;
+}
+
+.btn-green:hover {
+    background-color: transparent;
+    border-color: #fff;
+}
+
+.btn-decouvrir {
+    background-color: #5C215E;
+    border-color: #5C215E;
+    border-width: 2px;
+    padding: .5rem 1.5rem;;
+}
+
+.btn-decouvrir:hover {
+    background-color: transparent;
+    border-color: #5C215E;
+    color: #5C215E;
+}
