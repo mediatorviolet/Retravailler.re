@@ -5,12 +5,49 @@
     font-family: 'Roboto', sans-serif;
 }
 
-.main > div:nth-child(1) {
-    background-image:url("../img/conseilEvoMain.jpg");
-    background-color: #9CDBC4;
+.imgMain  {
+    background-image:url("../ressources/img/conseilEvoProMain.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    padding-top: 200px;
-    padding-bottom: 200px;
+    height: 500px;
+    color: rgb(255, 255, 255);
+}
+
+.textMain
+{
+    padding: 140px 0px 140px 0px;
+    font-style: oblique;
+    font-size: large;
+}
+
+#imageMiddle
+{
+    height: 300px;
+    background-size: cover;
+    background-image: url("../ressources/img/reunionVuDeHautWomen.jpg");
+}
+
+#imageMiddle2
+{
+    height: 300px;
+    background-size: cover;
+    background-image: url("../ressources/img/rendezVousBlack.jpg");
+}
+
+.middleSection
+{
+    margin: 0px 100px 0px 100px ;
+    padding-bottom: 140px;
+
+}
+
+.middleSectionTextRight
+{
+    padding: 50px 0px 0px 50px;
+}
+
+.middleSectionTextLeft
+{
+    padding: 50px 50px 0px 0px;
 }
