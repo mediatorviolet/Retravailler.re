@@ -32,7 +32,7 @@
     font-size: 1.5rem;
 }
 
-.infos, .prestation {
+.infos, .prestation, .contact {
     padding: 150px 0px 150px 0px;
 }
 
@@ -72,4 +72,11 @@
     height: 200px;
     background-image: url("../ressources/img/homme femme working.jpg");
     background-size: cover;
+}
+
+.contact {
+    background-image: linear-gradient(rgba(97, 206, 112, 0.3), rgba(151, 192, 37, 0.3)), url("../ressources/img/reunion\ vu\ de\ haut\ women\ working.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }

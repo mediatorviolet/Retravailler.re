@@ -136,6 +136,18 @@
             </div>
         </div>
     </section>
+
+    <section class="contact">
+        <div class="container-fluid">
+            <h2 class="text-center">Contactez-nous</h2>
+            <div class="d-flex justify-content-center">
+                <button type="button" class="btn btn-primary rounded-pill mt-3 py-3 px-5"><i class="fas fa-phone-alt me-2"></i>Contact</button>
+            </div>
+            <div class="d-flex justify-content-center mt-5">
+                <iframe class="col-8" src="https://www.google.com/maps/d/embed?mid=1StIVoLvuiMLhf3bpTaFzscL6xdWNtN4a&hl=fr" width="640" height="520"></iframe>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>
