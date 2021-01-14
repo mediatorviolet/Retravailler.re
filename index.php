@@ -20,7 +20,7 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow fixed-top">
         <div class="container-fluid col-md-8 mx-auto">
             <a class="navbar-brand" href="#"><img id="logo_nav" src="src/resources/img/logo-RW-reunion.png" alt="logo-RW-reunion"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,7 +60,7 @@
 
     <section class="infos">
         <div class="container-fluid d-flex justify-content-center">
-            <div class="col-2 d-flex justify-content-end me-5">
+            <div class="col d-flex justify-content-end me-5">
                 <i class="fas fa-book-open"></i>
             </div>
             <div class="col-4 me-5">
@@ -76,6 +76,19 @@
                 </p>
             </div>
             <div class="col-4 side-infos">
+            </div>
+            <div class="col"></div>
+        </div>
+    </section>
+
+    <section class="prestation">
+        <div class="container-fluid row">
+            <div class="col-2">
+                <i class="fas fa-cannabis"></i>
+                <h2>Nos prestations</h2>
+            </div>
+            <div class="col-6">
+                <h2>Conseil en évolution professionnelle</h2>
             </div>
         </div>
     </section>
