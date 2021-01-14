@@ -28,16 +28,16 @@
             </ul>
 
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary btn-green-nav" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-backdrop="false">
+            <button type="button" class="btn btn-primary btn-green-nav" data-bs-toggle="modal" data-bs-target="#connexion" data-bs-backdrop="false">
                 Connexion
             </button>
 
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <!-- Modal connexion -->
+            <div class="modal fade" id="connexion" tabindex="-1" aria-labelledby="connexionLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Connexion</h5>
+                            <h5 class="modal-title" id="connexionLabel">Connexion</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -54,9 +54,50 @@
                             </form>
                         </div>
                         <div class="modal-footer">
-                            <a class="text-muted" href="">
-                                Pas encore inscrit ? Inscrivez-vous
+                            <a class="text-muted" href="" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#inscription" data-bs-backdrop="false">
+                                Pas encore de compte ? Inscrivez-vous
                             </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal inscription -->
+            <div class="modal fade" id="inscription" tabindex="-1" aria-labelledby="inscriptionLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="inscriptionLabel">Inscription</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="nom" class="form-label">Nom</label>
+                                    <input type="text" class="form-control" name="nom" id="nom">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="prenom" class="form-label">Prenom</label>
+                                    <input type="text" class="form-control" name="prenom" id="prenom">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" name="email" id="email">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="tel" class="form-label">Téléphone</label>
+                                    <input type="tel" class="form-control" name="tel" id="tel">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="pass" class="form-label">Mot de passe</label>
+                                    <input type="password" class="form-control" name="pass" id="pass">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="passConfirmation" class="form-label">Confirmez le mot de passe</label>
+                                    <input type="password" class="form-control" name="passConfirmation" id="passConfirmation">
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-green-nav">Inscription</button>
+                            </form>
                         </div>
                     </div>
                 </div>
