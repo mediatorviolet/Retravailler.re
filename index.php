@@ -127,8 +127,8 @@
                 <div class="col-6 ms-5">
                     <h2>Atelier conseil</h2>
                     <p>
-                        La prestation <strong>Atelier Conseil</strong> s’inscrit dans l’offre de services prestations de Pôle Emploi. 
-                        Elle s’adresse à tous les actifs, qu’ils soient demandeurs d’emploi inscrits ou non, quel que soit leur niveau 
+                        La prestation <strong>Atelier Conseil</strong> s’inscrit dans l’offre de services prestations de Pôle Emploi.
+                        Elle s’adresse à tous les actifs, qu’ils soient demandeurs d’emploi inscrits ou non, quel que soit leur niveau
                         d’expression écrite et / ou orale et leur aisance à utiliser les outils numériques.
                     </p>
                     <button type="button" class="btn btn-primary">Découvrir</button>
@@ -148,6 +148,35 @@
             </div>
         </div>
     </section>
+
+    <footer>
+        <div class="logo-footer d-flex align-items-center justify-content-center">
+            <a href="">
+                <i class="fab fa-facebook icon-footer"></i>
+            </a>
+            <a href="">
+                <i class="fab fa-linkedin icon-footer"></i>
+            </a>
+            <a href="">
+                <img class="img-footer" src="src/ressources/img/france-competences.png" alt="france_competence_logo">
+            </a>
+            <a href="">
+                <img class="img-footer" src="src/ressources/img/pole_emploi.jpg" alt="pole_emploi_logo">
+            </a>
+        </div>
+        <hr class="w-75 mx-auto bg-light">
+        <div class="menu-footer d-flex w-75 mx-auto">
+            <p class="text-uppercase me-5">
+                <a class="nav-link text-white" href="">acccueil</a>
+            </p>
+            <p class="text-uppercase me-5">
+                <a class="nav-link text-white" href="">nos prestations</a>
+            </p>
+            <p class="text-uppercase">
+                <a class="nav-link text-white" href="">contact</a>
+            </p>
+        </div>
+    </footer>
 </body>
 
 </html>
