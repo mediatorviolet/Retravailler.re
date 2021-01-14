@@ -18,3 +18,13 @@
     border-color: #61CE70;
     color: #61CE70;
 }
+
+.btn-green-nav:active, .btn-green-nav:focus {
+    background-color: #61CE70 !important;
+    border-color: #61CE70 !important;
+    border-width: 2px !important;
+}
+
+.btn-green-nav:focus {
+    box-shadow: 0 0 0 .25rem rgba(97, 206, 112, .5);
+}
