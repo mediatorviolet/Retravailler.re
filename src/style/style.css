@@ -13,8 +13,13 @@
     text-transform: uppercase;
 }
 
+.nav-link {
+    font-size: .8rem;
+    line-height: 1.5;
+}
+
 .main > div:nth-child(1) {
-    background-image: linear-gradient( rgba(92, 33, 94, 0.5), rgba(92, 33, 94, 0.5)), url("../ressources/img/People\ -\ 6387.gif");
+    background-image: linear-gradient( rgba(92, 33, 94, 0.5), rgba(92, 33, 94, 0.5)), url("../ressources/img/accueil\ second.gif");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -128,6 +133,18 @@ footer {
 .btn-green:hover {
     background-color: transparent;
     border-color: #fff;
+}
+
+.btn-green-nav {
+    background-color: #61CE70;
+    border-color: #61CE70;
+    border-width: 2px;
+}
+
+.btn-green-nav:hover {
+    background-color: transparent;
+    border-color: #61CE70;
+    color: #61CE70;
 }
 
 .btn-decouvrir {

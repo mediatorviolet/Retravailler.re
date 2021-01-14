@@ -45,7 +45,7 @@
                         <a class="nav-link" href="#">Contactez-Nous</a>
                     </li>
                 </ul>
-                <button type="button" class="btn btn-primary">Connexion</button>
+                <button type="button" class="btn btn-primary btn-green-nav">Connexion</button>
             </div>
         </div>
     </nav>
