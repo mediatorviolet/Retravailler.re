@@ -22,7 +22,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow fixed-top">
         <div class="container-fluid col-md-8 mx-auto">
-            <a class="navbar-brand" href="#"><img id="logo_nav" src="src/resources/img/logo-RW-reunion.png" alt="logo-RW-reunion"></a>
+            <a class="navbar-brand" href="#"><img id="logo_nav" src="src/ressources/img/logo-RW-reunion.png" alt="logo-RW-reunion"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -52,7 +52,7 @@
 
     <section class="main">
         <div class="container-fluid d-flex flex-column align-items-center">
-            <img id="logo-main" src="src/resources/img/logo-RW-reunion.png" alt="logo-RW-reunion">
+            <img id="logo-main" src="src/ressources/img/logo-RW-reunion.png" alt="logo-RW-reunion">
             <h2 class="slogan mt-5">orientation | formation | emploi | conseil</h2>
             <button type="button" class="btn-lg btn-primary rounded-pill mt-5 py-3 px-5">Nos prestations<i class="fas fa-angle-down ms-2"></i></button>
         </div>
@@ -83,12 +83,56 @@
 
     <section class="prestation">
         <div class="container-fluid row">
-            <div class="col-2">
-                <i class="fas fa-cannabis"></i>
+            <div class="col-3 mx-auto d-flex flex-row">
+                <i class="fas fa-cannabis me-5"></i>
                 <h2>Nos prestations</h2>
             </div>
             <div class="col-6">
-                <h2>Conseil en évolution professionnelle</h2>
+                <!-- <h2>Conseil en évolution professionnelle</h2> -->
+            </div>
+            <div class="container d-flex mt-5 mb-5 justify-content-center">
+                <div class="col-3 img-cep ms-5">
+                </div>
+                <div class="col-6 ms-5">
+                    <h2>Conseil en évolution professionnelle</h2>
+                    <p>
+                        Un temps pour vous, pour parler de vos envies et clarifier vos besoins. <br>
+                        Un espace pour parler formation, compétences et certifications professionnelles. <br>
+                        L’occasion d’évoquer la mobilité ou la reconversion professionnelle, la création / reprise d’entreprise. <br>
+                        Vous apporter des réponses à la diversité de vos besoins. <br>
+                        Construire votre projet avec le conseiller qui vous accompagne tout au long de sa mise en œuvre.
+                    </p>
+                    <button type="button" class="btn btn-primary">Découvrir</button>
+                </div>
+            </div>
+            <div class="container d-flex mt-5 mb-5 justify-content-center">
+                <div class="col-6 ms-5">
+                    <h2>Accélèr'Emploi</h2>
+                    <p>
+                        La prestation <strong>Accélèr’Emploi</strong> a pour objectif le retour rapide à l’emploi grâce :
+                    </p>
+                    <ul>
+                        <li>au renforcement de la maîtrise des outils et techniques de recherche d’emploi</li>
+                        <li>à la mise sous tension des démarches favorisée par la dynamique de groupe</li>
+                        <li>à un accompagnement et un soutien intensif</li>
+                    </ul>
+                    <button type="button" class="btn btn-primary">Découvrir</button>
+                </div>
+                <div class="col-3 img-cep ms-5">
+                </div>
+            </div>
+            <div class="container d-flex mt-5 justify-content-center">
+                <div class="col-3 img-cep ms-5">
+                </div>
+                <div class="col-6 ms-5">
+                    <h2>Atelier conseil</h2>
+                    <p>
+                        La prestation <strong>Atelier Conseil</strong> s’inscrit dans l’offre de services prestations de Pôle Emploi. 
+                        Elle s’adresse à tous les actifs, qu’ils soient demandeurs d’emploi inscrits ou non, quel que soit leur niveau 
+                        d’expression écrite et / ou orale et leur aisance à utiliser les outils numériques.
+                    </p>
+                    <button type="button" class="btn btn-primary">Découvrir</button>
+                </div>
             </div>
         </div>
     </section>

@@ -14,7 +14,7 @@
 }
 
 .main > div:nth-child(1) {
-    background-image: linear-gradient( rgba(92, 33, 94, 0.5), rgba(92, 33, 94, 0.5)), url("../resources/img/People\ -\ 6387.gif");
+    background-image: linear-gradient( rgba(92, 33, 94, 0.5), rgba(92, 33, 94, 0.5)), url("../ressources/img/People\ -\ 6387.gif");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -43,9 +43,16 @@
 .fa-book-open, .fa-cannabis {
     height: 4rem;
     padding: 1rem;
-    background-color: #61CE70;
     color: white;
     font-size: 2rem;
+}
+
+.fa-book-open {
+    background-color: #61CE70;
+}
+
+.fa-cannabis {
+    background-color: #5C215E;
 }
 
 .infos-title {
@@ -53,10 +60,16 @@
 }
 
 .side-infos {
-    background-image: url("../resources/img/scott-graham-5fNmWej4tAA-unsplash.jpg");
+    background-image: url("../ressources/img/accelere-emploi\ main.jpg");
     background-size: cover;
 }
 
 .prestation {
     background-color: #5C215E26;
+}
+
+.img-cep {
+    height: 200px;
+    background-image: url("../ressources/img/homme femme working.jpg");
+    background-size: cover;
 }
