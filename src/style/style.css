@@ -6,7 +6,7 @@
 }
 
 .main > div:nth-child(1) {
-    background-image: linear-gradient( rgba(92, 33, 94, 0.5), rgba(92, 33, 94, 0.5)), url("../ressources/img/accueilSecond.gif");
+    background-image: linear-gradient( rgba(92, 33, 94, 0.5), rgba(92, 33, 94, 0.5)) url("../ressources/img/accueilSecond.gif");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;

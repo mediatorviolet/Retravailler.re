@@ -1,9 +1,9 @@
-<link rel="stylesheet" href="../ressources/style/header.css">
+<link rel="stylesheet" href="src/style/header.css">
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow fixed-top">
     <div class="container-fluid col-md-8 mx-auto">
-        <a class="navbar-brand" href="#"><img class="img-fluid" style="width: 7rem;" src="src/ressources/img/logo-RW-reunion.png" alt="logo-RW-reunion"></a>
+        <a class="navbar-brand" href="#"><img class="nav-logo img-fluid" style="width: 7rem;" src="src/ressources/img/logo-RW-reunion.png" alt="logo-RW-reunion"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -26,7 +26,42 @@
                     <a class="nav-link" href="#">Contactez-Nous</a>
                 </li>
             </ul>
-            <button type="button" class="btn btn-primary btn-green-nav">Connexion</button>
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary btn-green-nav" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-backdrop="false">
+                Connexion
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Connexion</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1">
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-green-nav">Connexion</button>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <a class="text-muted" href="">
+                                Pas encore inscrit ? Inscrivez-vous
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </nav>
