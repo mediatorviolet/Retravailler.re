@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="../ressources/style/footer.css">
+
 <footer>
         <div class="logo-footer d-flex align-items-center justify-content-center">
             <a href="">

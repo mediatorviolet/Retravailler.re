@@ -1,0 +1,21 @@
+footer {
+    padding: 50px 0px 50px 0px;
+    background: #333334;
+    color: #fff
+}
+
+.logo-footer {
+    height: 110px;
+    background: #333334;
+}
+
+.icon-footer {
+    font-size: 3em;
+    margin-right: 1em;
+    color: #fff
+}
+
+.img-footer {
+    height: 110px;
+	margin-right: 2em;
+}

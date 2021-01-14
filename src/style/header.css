@@ -1,0 +1,20 @@
+.nav-item {
+    text-transform: uppercase;
+}
+
+.nav-link {
+    font-size: .8rem;
+    line-height: 1.5;
+}
+
+.btn-green-nav {
+    background-color: #61CE70;
+    border-color: #61CE70;
+    border-width: 2px;
+}
+
+.btn-green-nav:hover {
+    background-color: transparent;
+    border-color: #61CE70;
+    color: #61CE70;
+}
