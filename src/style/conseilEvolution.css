@@ -1,6 +1,18 @@
 @media screen and (max-width: 400px)
 
 {
+    .title
+{
+    font-size: 50px!important;
+    font-style: oblique!important;
+    font-weight: 200!important;
+    font-family: 'roboto'!important;
+}
+
+.slogan
+{
+    font-size: 25px!important;
+}
     .textMain
     {
         padding: 35px 0px 35px 0px!important;
@@ -9,6 +21,7 @@
     {
     padding-bottom: 70px!important;
     }
+
     .imgMain
     {
         background: center;
@@ -70,7 +83,7 @@ p
 }
 
 .imgMain  {
-    background-image:url("../ressources/img/conseilEvoProMain.jpg");
+    background-image: linear-gradient(rgba(0, 128, 49, 0.486), rgba(0, 128, 49, 0.486)), url("../ressources/img/conseilEvoProMain.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -83,7 +96,7 @@ p
 {   
     font-style: oblique;
     font-size: large;
-    padding: 140px 0px 140px 0px;
+    padding: 0px 0px 140px 0px;
 }
 
 #imageMiddle
@@ -100,5 +113,32 @@ p
     background-image: url("../ressources/img/rendezVousBlack.jpg");
 }
 
+.middleSection div
+{
+    background-color:#F5F5F5!important;
+}
 
+.imageMiddle
+
+{
+    padding:0px 0px 0px 0px;
+
+}
+
+@media screen and ( min-width:401px)
+{.custom-shape-divider-top-1610624090 {
+
+    width: 100%;
+    overflow: hidden;
+
+}
+
+.custom-shape-divider-top-1610624090 svg {
+
+    width: calc(122% + 1.3px);
+}
+
+.custom-shape-divider-top-1610624090 .shape-fill {
+    fill: #5AE99C;
+}}
 
