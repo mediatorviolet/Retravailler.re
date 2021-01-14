@@ -5,16 +5,8 @@
     font-family: 'Roboto', sans-serif;
 }
 
-#logo_nav {
-    width: 7rem;
-}
-
-.nav-item {
-    text-transform: uppercase;
-}
-
 .main > div:nth-child(1) {
-    background-image: linear-gradient( rgba(92, 33, 94, 0.5), rgba(92, 33, 94, 0.5)), url("../ressources/img/People\ -\ 6387.gif");
+    background-image: linear-gradient( rgba(92, 33, 94, 0.5), rgba(92, 33, 94, 0.5)), url("../ressources/img/accueilSecond.gif");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -60,7 +52,7 @@
 }
 
 .side-infos {
-    background-image: url("../ressources/img/accelere-emploi\ main.jpg");
+    background-image: url("../ressources/img/accelereEmploiMain.jpg");
     background-size: cover;
 }
 
@@ -68,17 +60,57 @@
     background-color: #5C215E26;
 }
 
+.title-presta {
+    color: #5C215E;
+}
+
 .img-cep {
     height: 200px;
-    background-image: url("../ressources/img/homme femme working.jpg");
+    background-image: url("../ressources/img/conseilEvoProMain.jpg");
+    background-size: cover;
+}
+
+.img-ae {
+    height: 200px;
+    background-image: url("../ressources/img/accelereEmploiMain.jpg");
+    background-size: cover;
+}
+
+.img-atc {
+    height: 200px;
+    background-image: url("../ressources/img/atelierConseilMain.jpg");
     background-size: cover;
 }
 
 .contact {
-    background-image: linear-gradient(rgba(97, 206, 112, 0.3), rgba(151, 192, 37, 0.3)), url("../ressources/img/reunion\ vu\ de\ haut\ women\ working.jpg");
+    background-image: linear-gradient(rgba(97, 206, 112, 0.3), rgba(151, 192, 37, 0.3)), url("../ressources/img/reunionVuDeHautWomen.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
+}
+
+.btn-green {
+    background-color: #61CE70;
+    border-color: #61CE70;
+    border-width: .2rem;
+}
+
+.btn-green:hover {
+    background-color: transparent;
+    border-color: #fff;
+}
+
+.btn-decouvrir {
+    background-color: #5C215E;
+    border-color: #5C215E;
+    border-width: 2px;
+    padding: .5rem 1.5rem;;
+}
+
+.btn-decouvrir:hover {
+    background-color: transparent;
+    border-color: #5C215E;
+    color: #5C215E;
 }
 
 footer {
@@ -102,4 +134,3 @@ footer {
     height: 110px;
 	margin-right: 2em;
 }
-
