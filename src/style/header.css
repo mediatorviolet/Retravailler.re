@@ -2,9 +2,13 @@
     text-transform: uppercase;
 }
 
-.nav-link {
+.nav-link, .dropdown-item {
     font-size: .8rem;
     line-height: 1.5;
+}
+
+.dropdown-item {
+    text-transform: capitalize;
 }
 
 .btn-green-nav {

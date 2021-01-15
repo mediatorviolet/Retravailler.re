@@ -54,7 +54,7 @@
                             </form>
                         </div>
                         <div class="modal-footer">
-                            <a class="text-muted" href="" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#inscription" data-bs-backdrop="false">
+                            <a class="text-muted" href="#" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#inscription" data-bs-backdrop="false">
                                 Pas encore de compte ? Inscrivez-vous
                             </a>
                         </div>
