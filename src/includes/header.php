@@ -1,3 +1,8 @@
+<?php
+include 'src/functions/connexion.php';
+connexion(); // Fonction qui gère la connexion
+?>
+
 <link rel="stylesheet" href="src/style/header.css">
 
 <!-- Navbar -->
@@ -10,23 +15,38 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto me-3 mb-2 mb-lg-0 flex-end">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+                    <a class="nav-link 
+                    <?php // Lien actif si url = 'index.php', 'index.php#' ou 'index.php?page=accueil'.
+                    if ($_GET['page'] == 'accueil' or $_GET['page'] == '#' or $_GET['page'] == '') {
+                        echo 'active';
+                    } else {
+                        echo '';
+                    }
+                    ?>" aria-current="page" href="index.php?page=accueil">Accueil</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle 
+                    <?php // Lien actif si url = 'index.php?page=evolution_personnelle', 'index.php?page=atelier_conseil'.
+                    if ($_GET['page'] == 'evolution_professionnelle' or $_GET['page'] == 'atelier_conseil' or $_GET['page'] == 'acceler_emploi') {
+                        echo 'active';
+                    } else {
+                        echo '';
+                    }
+                    ?>" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Nos prestations
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Conseil en Evolution Professionnelle</a></li>
-                        <li><a class="dropdown-item" href="#">Accélèr'Emploi</a></li>
-                        <li><a class="dropdown-item" href="#">Atelier Conseil</a></li>
+                        <li><a class="dropdown-item <?= $_GET['page'] == 'evolution_professionnelle' ? 'active' : '' ?>" href="index.php?page=evolution_professionnelle">Conseil en Evolution Professionnelle</a></li>
+                        <li><a class="dropdown-item <?= $_GET['page'] == 'acceler_emploi' ? 'active' : '' ?>" href="index.php?page=acceler_emploi">Accélèr'Emploi</a></li>
+                        <li><a class="dropdown-item <?= $_GET['page'] == 'atelier_conseil' ? 'active' : '' ?>" href="index.php?page=atelier_conseil">Atelier Conseil</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Contactez-Nous</a>
                 </li>
+                <!-- Si aucun utilisateur n'est connecté, on affiche ce qui suit -->
+                <?php if ($_SESSION["user"] == false and $_SESSION["admin"] == false) { ?>
             </ul>
-
             <!-- Button trigger modal -->
             <button type="button" class="btn btn-primary btn-green-nav" data-bs-toggle="modal" data-bs-target="#connexion" data-bs-backdrop="false">
                 Connexion
@@ -41,21 +61,21 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <form>
+                            <form action="<?= $_SERVER["PHP_SELF"] ?>" method="POST">
                                 <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Email</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1">
+                                    <label for="email_connect" class="form-label">Email</label>
+                                    <input type="email" class="form-control" name="email_connect" id="email_connect">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
-                                    <input type="password" class="form-control" id="exampleInputPassword1">
+                                    <label for="password_connect" class="form-label">Mot de passe</label>
+                                    <input type="password" class="form-control" name="password_connect" id="password_connect">
                                 </div>
-                                <button type="submit" class="btn btn-primary btn-green-nav">Connexion</button>
+                                <button type="submit" name="connexion" class="btn btn-primary btn-green-nav">Connexion</button>
                             </form>
                         </div>
                         <div class="modal-footer">
-                            <a class="text-muted" href="#" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#inscription" data-bs-backdrop="false">
-                                Pas encore de compte ? Inscrivez-vous
+                            <a class="text-muted text-decoration-none" href="#" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#inscription" data-bs-backdrop="false">
+                                Pas encore de compte ? Inscrivez-vous <i class="fas fa-sign-in-alt"></i>
                             </a>
                         </div>
                     </div>
@@ -102,7 +122,16 @@
                     </div>
                 </div>
             </div>
-
+            <!-- Si 'user' est connecté, on affiche ce qui suit -->
+        <?php } else if ($_SESSION["user"] == true) { ?>
+            <li class="nav-item">
+                <a class="nav-link <?= $_GET['page'] == 'espace_perso' ? 'active' : '' ?>" href="index.php?page=espace_perso">Espace personnel</a>
+            </li>
+            </ul>
+            <form action="<?= connexion() ?>" method="POST">
+                <button class="btn btn-primary btn-green-nav" type="submit" name="deconnexion">Déconnexion</button>
+            </form>
+        <?php } ?>
         </div>
     </div>
 </nav>
