@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+if (!isset($_SESSION["user"])) {
+    $_SESSION["user"] = false;
+}
+if (!isset($_SESSION["admin"])) {
+    $_SESSION["admin"] = false;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

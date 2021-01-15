@@ -1,3 +1,8 @@
+<?php
+include 'src/functions/connexion.php';
+connexion();
+?>
+
 <link rel="stylesheet" href="src/style/header.css">
 
 <!-- Navbar -->
@@ -32,8 +37,8 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Contactez-Nous</a>
                 </li>
+                <?php if ($_SESSION["user"] == false and $_SESSION["admin"] == false) { ?>
             </ul>
-
             <!-- Button trigger modal -->
             <button type="button" class="btn btn-primary btn-green-nav" data-bs-toggle="modal" data-bs-target="#connexion" data-bs-backdrop="false">
                 Connexion
@@ -48,21 +53,21 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <form>
+                            <form action="<?= $_SERVER["PHP_SELF"] ?>" method="POST">
                                 <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Email</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1">
+                                    <label for="email_connect" class="form-label">Email</label>
+                                    <input type="email" class="form-control" name="email_connect" id="email_connect">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
-                                    <input type="password" class="form-control" id="exampleInputPassword1">
+                                    <label for="password_connect" class="form-label">Mot de passe</label>
+                                    <input type="password" class="form-control" name="password_connect" id="password_connect">
                                 </div>
-                                <button type="submit" class="btn btn-primary btn-green-nav">Connexion</button>
+                                <button type="submit" name="connexion" class="btn btn-primary btn-green-nav">Connexion</button>
                             </form>
                         </div>
                         <div class="modal-footer">
-                            <a class="text-muted" href="#" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#inscription" data-bs-backdrop="false">
-                                Pas encore de compte ? Inscrivez-vous
+                            <a class="text-muted text-decoration-none" href="#" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#inscription" data-bs-backdrop="false">
+                                Pas encore de compte ? Inscrivez-vous <i class="fas fa-sign-in-alt"></i>
                             </a>
                         </div>
                     </div>
@@ -109,6 +114,15 @@
                     </div>
                 </div>
             </div>
+        <?php } else if ($_SESSION["user"] == true) { ?>
+            <li class="nav-item">
+                <a class="nav-link" href="index.php?page=espace_perso">Espace personnel</a>
+            </li>
+            </ul>
+            <form action="<?= connexion() ?>" method="POST">
+                <button class="btn btn-primary btn-green-nav" type="submit" name="deconnexion">Déconnexion</button>
+            </form>
+        <?php } ?>
 
         </div>
     </div>
