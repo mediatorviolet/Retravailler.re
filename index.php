@@ -26,6 +26,8 @@ if (!isset($_SESSION["admin"])) {
             echo 'Atelier Conseil';
         } if ($_GET['page'] == 'evolution_professionnelle') {
             echo 'Conseil en Evolution Professionnelle';
+        } if ($_GET['page'] == 'acceler_emploi') {
+            echo 'Accélèr\'Emploi';
         }
         ?>
     </title>
@@ -49,6 +51,7 @@ if (!isset($_SESSION["admin"])) {
         'espace_perso' => 'espace-perso.php',
         'atelier_conseil' => 'atelier-conseil.php',
         'evolution_professionnelle' => 'evolution-pro.php',
+        'acceler_emploi' => 'acceler-emploi.php'
     );
 
     if (isset($_GET["page"]) and isset($page_ok[$_GET['page']])) {

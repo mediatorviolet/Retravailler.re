@@ -27,7 +27,7 @@ connexion(); // Fonction qui gère la connexion
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle 
                     <?php // Lien actif si url = 'index.php?page=evolution_personnelle', 'index.php?page=atelier_conseil'.
-                    if ($_GET['page'] == 'evolution_professionnelle' or $_GET['page'] == 'atelier_conseil') {
+                    if ($_GET['page'] == 'evolution_professionnelle' or $_GET['page'] == 'atelier_conseil' or $_GET['page'] == 'acceler_emploi') {
                         echo 'active';
                     } else {
                         echo '';
@@ -37,7 +37,7 @@ connexion(); // Fonction qui gère la connexion
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item <?= $_GET['page'] == 'evolution_professionnelle' ? 'active' : '' ?>" href="index.php?page=evolution_professionnelle">Conseil en Evolution Professionnelle</a></li>
-                        <li><a class="dropdown-item" href="#">Accélèr'Emploi</a></li>
+                        <li><a class="dropdown-item <?= $_GET['page'] == 'acceler_emploi' ? 'active' : '' ?>" href="index.php?page=acceler_emploi">Accélèr'Emploi</a></li>
                         <li><a class="dropdown-item <?= $_GET['page'] == 'atelier_conseil' ? 'active' : '' ?>" href="index.php?page=atelier_conseil">Atelier Conseil</a></li>
                     </ul>
                 </li>
