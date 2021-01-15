@@ -15,7 +15,20 @@ if (!isset($_SESSION["admin"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Retravailler.re | Accueil</title>
+    <title>
+        Retravailler.re | 
+        <?php
+        if ($_GET['page'] == 'accueil') {
+            echo 'Accueil';
+        } if ($_GET['page'] == 'espace_perso') {
+            echo 'Espace Personnel';
+        } if ($_GET['page'] == 'atelier_conseil') {
+            echo 'Atelier Conseil';
+        } if ($_GET['page'] == 'evolution_professionnelle') {
+            echo 'Conseil en Evolution Professionnelle';
+        }
+        ?>
+    </title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <!-- Google Font -->
