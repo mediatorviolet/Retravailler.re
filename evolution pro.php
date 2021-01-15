@@ -23,6 +23,7 @@
 </head>
 
 <body>
+    <?php include 'src/includes/header.php'; ?>
 
     <section class="imgMain d-flex flex-column align-items-center justify-content-center">
         <h1 class="title text-center pb-5">Le conseil en evolution<br> professionnelle</h1>
@@ -32,10 +33,14 @@
 
     <section class="textMain d-flex flex-column align-items-center justify-content-center">
         <div class="col-md-3 col-1"></div>
-        <div class="col-md-6 col-10 px-md-0 px-3 py-md-0 py-5">
+        <div class="col-md-6 col-10 px-md-0 px-3 py-md-0 py-5  custom-shape-divider-top-1610624090">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+    </svg>
             <p class="text-center">Mon conseil en évolution professionnelle a été créé en 2014 et rénové par la loi du 5 septembre 2018 pour
                 la « liberté de choisir son avenir professionnel » ; il est organisé et financé par France Compétence
                 pour les salariés du secteur privé et travailleurs indépendants.</p>
+                
         </div>
         <div class="col-md-3 col-1"></div>
     </section>
@@ -43,7 +48,7 @@
 
     <section class="row d-flex justify-content-center middleSection mx-md-5 mx-0">
 
-        <div class="col-md-6">
+        <div class="col-md-6 imageMiddle">
             <img src="src\ressources\img\reunionWorkingPeopleBlanc.jpg" class="img-fluid"alt="">
         </div>
 
@@ -64,7 +69,7 @@
                 Vous apporter des réponses à la diversité de vos besoins.
                 Co-construire votre projet avec le conseiller qui vous accompagne tout au long de sa mise en œuvre.</p>
         </div>
-        <div class="col-md-6 order-1 order-md-2">
+        <div class="col-md-6 order-1 order-md-2 imageMiddle">
             <img src="src\ressources\img\rendezVousBlack.jpg" class="img-fluid"alt="">
         </div>
 
@@ -83,7 +88,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>
-
+        <?php include 'src/includes/footer.php'; ?>
 </body>
 
 </html>
