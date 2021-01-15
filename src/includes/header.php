@@ -1,6 +1,6 @@
 <?php
 include 'src/functions/connexion.php';
-connexion();
+connexion(); // Fonction qui gère la connexion
 ?>
 
 <link rel="stylesheet" href="src/style/header.css">
@@ -15,11 +15,18 @@ connexion();
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto me-3 mb-2 mb-lg-0 flex-end">
                 <li class="nav-item">
-                    <a class="nav-link <?= $_GET['page'] == 'accueil' ? 'active' : '' ?>" aria-current="page" href="index.php?page=accueil">Accueil</a>
+                    <a class="nav-link 
+                    <?php // Lien actif si url = 'index.php', 'index.php#' ou 'index.php?page=accueil'.
+                    if ($_GET['page'] == 'accueil' or $_GET['page'] == '#' or $_GET['page'] == '') {
+                        echo 'active';
+                    } else {
+                        echo '';
+                    }
+                    ?>" aria-current="page" href="index.php?page=accueil">Accueil</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle 
-                    <?php
+                    <?php // Lien actif si url = 'index.php?page=evolution_personnelle', 'index.php?page=atelier_conseil'.
                     if ($_GET['page'] == 'evolution_professionnelle' or $_GET['page'] == 'atelier_conseil') {
                         echo 'active';
                     } else {
@@ -37,6 +44,7 @@ connexion();
                 <li class="nav-item">
                     <a class="nav-link" href="#">Contactez-Nous</a>
                 </li>
+                <!-- Si aucun utilisateur n'est connecté, on affiche ce qui suit -->
                 <?php if ($_SESSION["user"] == false and $_SESSION["admin"] == false) { ?>
             </ul>
             <!-- Button trigger modal -->
@@ -114,16 +122,16 @@ connexion();
                     </div>
                 </div>
             </div>
+            <!-- Si 'user' est connecté, on affiche ce qui suit -->
         <?php } else if ($_SESSION["user"] == true) { ?>
             <li class="nav-item">
-                <a class="nav-link" href="index.php?page=espace_perso">Espace personnel</a>
+                <a class="nav-link <?= $_GET['page'] == 'espace_perso' ? 'active' : '' ?>" href="index.php?page=espace_perso">Espace personnel</a>
             </li>
             </ul>
             <form action="<?= connexion() ?>" method="POST">
                 <button class="btn btn-primary btn-green-nav" type="submit" name="deconnexion">Déconnexion</button>
             </form>
         <?php } ?>
-
         </div>
     </div>
 </nav>

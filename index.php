@@ -1,5 +1,5 @@
 <?php
-session_start();
+session_start(); // Initialisation de la session
 
 if (!isset($_SESSION["user"])) {
     $_SESSION["user"] = false;
@@ -31,7 +31,7 @@ if (!isset($_SESSION["admin"])) {
     <?php include 'src/includes/header.php'; ?>
 
     <?php
-    $page_ok = array(
+    $page_ok = array( // Array contenant toutes les pages valides
         'accueil' => 'homepage.php',
         'espace_perso' => 'espace-perso.php',
         'atelier_conseil' => 'atelier-conseil.php',
@@ -39,6 +39,7 @@ if (!isset($_SESSION["admin"])) {
     );
 
     if (isset($_GET["page"]) and isset($page_ok[$_GET['page']])) {
+        // On inclut la page correspondante
         $page = $_GET['page'];
         include('src/pages/' . $page_ok[$page]);
     } else {
