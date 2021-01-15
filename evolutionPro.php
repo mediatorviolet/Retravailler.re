@@ -40,7 +40,6 @@
             <p class="text-center">Mon conseil en évolution professionnelle a été créé en 2014 et rénové par la loi du 5 septembre 2018 pour
                 la « liberté de choisir son avenir professionnel » ; il est organisé et financé par France Compétence
                 pour les salariés du secteur privé et travailleurs indépendants.</p>
-                
         </div>
         <div class="col-md-3 col-1"></div>
     </section>
@@ -74,21 +73,12 @@
         </div>
 
     </section>
-
-
-
-
-
-
-
-
-
-
+    <?php include 'src/includes/footer.php'; ?>
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>
-        <?php include 'src/includes/footer.php'; ?>
+        
 </body>
 
 </html>

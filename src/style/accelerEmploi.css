@@ -54,6 +54,7 @@
     font-style: oblique;
     font-weight: 400;
     font-family: 'roboto';
+    text-transform: uppercase;
 }
 
 .slogan
@@ -62,6 +63,13 @@
     font-style: normal;
     font-weight: 200;
     font-family: 'roboto'
+}
+
+h2
+{
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
 }
 
 .middleSection
@@ -84,13 +92,12 @@ p
 
 .imgMain  {
     margin-top: 4.5rem;
-    background-image: linear-gradient(rgba(0, 128, 49, 0.486), rgba(0, 128, 49, 0.486)), url("../ressources/img/conseilEvoProMain.jpg");
+    background-image: linear-gradient(rgba(96, 76, 128, 0.486), rgba(96, 76, 128, 0.486)), url("../ressources/img/accelereEmploiMain.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 500px;
     color: rgb(255, 255, 255);
-    
 }
 
 .textMain
@@ -126,20 +133,46 @@ p
 
 }
 
+.redBar
+{
+    background-color:rgba(255, 0, 0, 0.63);
+    height: 5px;
+    width: 200px;
+    border-radius: 10px;
+}
+
+.ateliers
+{
+    padding-bottom: 35px;
+} 
+
+.textBottom {
+    background-image: linear-gradient(rgba(192, 192, 192, 0.486), rgba(192, 192, 192, 0.486)), url("../ressources/img/imageWorkingWomenOffice.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 300px;
+    color: rgb(255, 255, 255);
+    font-family: 'roboto', sans-serif;
+
+}
+
 @media screen and ( min-width:401px)
-{.custom-shape-divider-top-1610624090 {
+{.custom-shape-divider-top-1610706305 {
 
     width: 100%;
     overflow: hidden;
 
 }
 
-.custom-shape-divider-top-1610624090 svg {
+.custom-shape-divider-top-1610706305 svg {
 
-    width: calc(122% + 1.3px);
+    width: calc(151% + 1.3px);
+
 }
 
-.custom-shape-divider-top-1610624090 .shape-fill {
-    fill: #5AE99C;
-}}
+.custom-shape-divider-top-1610706305 .shape-fill {
+    fill: #604C80CC;
+}
+}
 
