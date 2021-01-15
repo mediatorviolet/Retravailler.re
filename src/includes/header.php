@@ -10,16 +10,23 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto me-3 mb-2 mb-lg-0 flex-end">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+                    <a class="nav-link <?= $_GET['page'] == 'accueil' ? 'active' : '' ?>" aria-current="page" href="index.php?page=accueil">Accueil</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle 
+                    <?php
+                    if ($_GET['page'] == 'evolution_professionnelle' or $_GET['page'] == 'atelier_conseil') {
+                        echo 'active';
+                    } else {
+                        echo '';
+                    }
+                    ?>" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Nos prestations
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Conseil en Evolution Professionnelle</a></li>
+                        <li><a class="dropdown-item <?= $_GET['page'] == 'evolution_professionnelle' ? 'active' : '' ?>" href="index.php?page=evolution_professionnelle">Conseil en Evolution Professionnelle</a></li>
                         <li><a class="dropdown-item" href="#">Accélèr'Emploi</a></li>
-                        <li><a class="dropdown-item" href="#">Atelier Conseil</a></li>
+                        <li><a class="dropdown-item <?= $_GET['page'] == 'atelier_conseil' ? 'active' : '' ?>" href="index.php?page=atelier_conseil">Atelier Conseil</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">

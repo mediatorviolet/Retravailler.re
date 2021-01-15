@@ -91,13 +91,12 @@
 
 .btn-green {
     background-color: #61CE70;
-    border-color: #61CE70;
-    border-width: .2rem;
+    border: .2rem solid #61CE70 !important;
 }
 
 .btn-green:hover {
     background-color: transparent;
-    border-color: #fff;
+    border-color: #fff !important;
 }
 
 .btn-decouvrir {
