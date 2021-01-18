@@ -1,0 +1,19 @@
+.main-background {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)), url('../ressources/img/workingPeopleReunionAgile.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.modal-header {
+    background-color: #61CE70;
+}
+
+.modal-footer a {
+    color: #61ce70;
+    transition: ease-in-out 0.3s;
+}
+
+.modal-footer a:hover {
+    color: #4ea55a;
+}

@@ -50,13 +50,17 @@ ajout_user(); // Fonction qui gère l'ajout d'utilisateur dans la base de donné
                 <!-- Si aucun utilisateur n'est connecté, on affiche ce qui suit -->
                 <?php if ($_SESSION["user"] == false and $_SESSION["admin"] == false) { ?>
             </ul>
+
+            <a class="btn btn-primary btn-green-nav" href="login-page.php">
+                Connexion<i class="fas fa-sign-in-alt ms-2"></i>
+            </a>
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary btn-green-nav" data-bs-toggle="modal" data-bs-target="#connexion" data-bs-backdrop="false">
-                Connexion
-            </button>
+            <!-- <button type="button" class="btn btn-primary btn-green-nav" data-bs-toggle="modal" data-bs-target="#connexion" data-bs-backdrop="false">
+                Connexion<i class="fas fa-sign-in-alt ms-2"></i>
+            </button> -->
 
             <!-- Modal connexion -->
-            <div class="modal fade" id="connexion" tabindex="-1" aria-labelledby="connexionLabel" aria-hidden="true">
+            <!-- <div class="modal fade" id="connexion" tabindex="-1" aria-labelledby="connexionLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -64,7 +68,7 @@ ajout_user(); // Fonction qui gère l'ajout d'utilisateur dans la base de donné
                             <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <form action="<?= connexion() ?>" method="POST">
+                            <form action="" method="POST">
                                 <div class="mb-3">
                                     <label for="email_connect" class="form-label">Email</label>
                                     <input type="email" class="form-control" name="email_connect" id="email_connect" required>
@@ -78,15 +82,15 @@ ajout_user(); // Fonction qui gère l'ajout d'utilisateur dans la base de donné
                         </div>
                         <div class="modal-footer">
                             <a class="text-muted text-decoration-none" href="#" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#inscription" data-bs-backdrop="false">
-                                Pas encore de compte ? Inscrivez-vous <i class="fas fa-sign-in-alt"></i>
+                                Pas encore de compte ? Inscrivez-vous <i class="fas fa-user-plus"></i>
                             </a>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- Modal inscription -->
-            <div class="modal fade" id="inscription" tabindex="-1" aria-labelledby="inscriptionLabel" aria-hidden="true">
+            <!-- <div class="modal fade" id="inscription" tabindex="-1" aria-labelledby="inscriptionLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -94,7 +98,7 @@ ajout_user(); // Fonction qui gère l'ajout d'utilisateur dans la base de donné
                             <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <form action="<?php 'src/functions/ajout_utilisateur.php' ?>" method="POST">
+                            <form action="" method="POST">
                                 <div class="mb-3">
                                     <label for="nom" class="form-label">Nom</label>
                                     <input type="text" class="form-control" name="nom" id="nom" required>
@@ -124,7 +128,7 @@ ajout_user(); // Fonction qui gère l'ajout d'utilisateur dans la base de donné
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- Si 'user' est connecté, on affiche ce qui suit -->
         <?php } else if ($_SESSION["user"] == true) { ?>
             <li class="nav-item">
