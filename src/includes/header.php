@@ -60,18 +60,18 @@ ajout_user(); // Fonction qui gère l'ajout d'utilisateur dans la base de donné
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="connexionLabel">Connexion</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <h5 class="modal-title text-white" id="connexionLabel">Connexion</h5>
+                            <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <form action="<?= connexion() ?>" method="POST">
                                 <div class="mb-3">
                                     <label for="email_connect" class="form-label">Email</label>
-                                    <input type="email" class="form-control" name="email_connect" id="email_connect">
+                                    <input type="email" class="form-control" name="email_connect" id="email_connect" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="password_connect" class="form-label">Mot de passe</label>
-                                    <input type="password" class="form-control" name="password_connect" id="password_connect">
+                                    <input type="password" class="form-control" name="password_connect" id="password_connect" required>
                                 </div>
                                 <button type="submit" name="connexion" class="btn btn-primary btn-green-nav">Connexion</button>
                             </form>
@@ -90,34 +90,34 @@ ajout_user(); // Fonction qui gère l'ajout d'utilisateur dans la base de donné
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="inscriptionLabel">Inscription</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <h5 class="modal-title text-white" id="inscriptionLabel">Inscription</h5>
+                            <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <form action="<?php 'src/functions/ajout_utilisateur.php' ?>" method="POST">
                                 <div class="mb-3">
                                     <label for="nom" class="form-label">Nom</label>
-                                    <input type="text" class="form-control" name="nom" id="nom">
+                                    <input type="text" class="form-control" name="nom" id="nom" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="prenom" class="form-label">Prenom</label>
-                                    <input type="text" class="form-control" name="prenom" id="prenom">
+                                    <input type="text" class="form-control" name="prenom" id="prenom" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="email" class="form-label">Email</label>
-                                    <input type="email" class="form-control" name="email" id="email">
+                                    <input type="email" class="form-control" name="email" id="email" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="tel" class="form-label">Téléphone</label>
-                                    <input type="tel" class="form-control" name="tel" id="tel">
+                                    <input type="tel" class="form-control" name="tel" id="tel" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="pass" class="form-label">Mot de passe</label>
-                                    <input type="password" class="form-control" name="pass" id="pass">
+                                    <input type="password" class="form-control" name="pass" id="pass" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="passConfirmation" class="form-label">Confirmez le mot de passe</label>
-                                    <input type="password" class="form-control" name="passConfirmation" id="passConfirmation">
+                                    <input type="password" class="form-control" name="passConfirmation" id="passConfirmation" required>
                                 </div>
                                 <button type="submit" class="btn btn-primary btn-green-nav" name="inscription">Inscription</button>
                             </form>
