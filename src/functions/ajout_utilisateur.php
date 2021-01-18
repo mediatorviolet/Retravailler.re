@@ -23,19 +23,11 @@ function ajout_user()
           $prenom = $_POST['prenom'];
           $telephone = $_POST['tel'];
           $email = $_POST['email'];
-          $pass = $_POST['pass'];
+          $pass = password_hash($_POST['pass'], PASSWORD_DEFAULT);
           $etat = 1;    
   
   
-          // $role1 = 1;
-          // $nom = 'pipi';
-          // $prenom = 'biere';
-          // $telephone = '0669696969';
-          // $email = 'test@biere.com';
-          // $pass = 'test';
-          // $etat = 1;    
-  
-          // creation d'une variable qui appelle la methode prepare() de l'objet bdd
+          // creation d'une variable qui appelle la methode prepare() sur la variable objet bdd
           // la demande SQL est entrée en parametre, et les placeholder ecrit avec :nom_du_placeholder
           $my_Insert_Statement = $bdd->prepare("INSERT INTO utilisateur (role, nom, prenom, telephone, email, motDePasse, etat) VALUES (:role1, :nom, :prenom, :tel, :email, :pass, :etat)");
           
