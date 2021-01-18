@@ -1,6 +1,6 @@
 <?php
 
-function ajout_utilisateur()
+function ajout_user()
 {
   if (isset($_POST['inscription']))
 
@@ -23,12 +23,9 @@ function ajout_utilisateur()
           $prenom = $_POST['prenom'];
           $telephone = $_POST['tel'];
           $email = $_POST['email'];
-          $pass = $POST['pass'];
+          $pass = $_POST['pass'];
           $etat = 1;    
   
-          var_dump($nom);
-          print_r($nom);
-          echo 'abc';
   
           // $role1 = 1;
           // $nom = 'pipi';
@@ -60,13 +57,15 @@ function ajout_utilisateur()
             echo "Impossible de créer l'enregistrement";
           }
           
-         
+          header("Location: index.php");
           }
-  
-          else
-          {
-            echo 'error';
-          }}
+        }
+        ajout_user();
+          
+   
+
+     
+          
 
     
 

@@ -1,9 +1,9 @@
 <?php
 include 'src/functions/connexion.php';
 include 'src/functions/ajout_utilisateur.php';
-ajout_user(); // ajout utilisateur dans la base de données
 
 connexion(); // Fonction qui gère la connexion
+ajout_user(); // Fonction qui gère l'ajout d'utilisateur dans la base de données
 ?>
 
 <link rel="stylesheet" href="src/style/header.css">
@@ -94,7 +94,7 @@ connexion(); // Fonction qui gère la connexion
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <form>
+                            <form action="<?php 'src/functions/ajout_utilisateur.php' ?>" method="POST">
                                 <div class="mb-3">
                                     <label for="nom" class="form-label">Nom</label>
                                     <input type="text" class="form-control" name="nom" id="nom">
