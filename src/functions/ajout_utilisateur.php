@@ -1,71 +1,73 @@
 <?php
 
-
-if (isset($_POST['inscription']))
-
+function ajout_utilisateur()
 {
-        try
-        {
-            $bdd = new PDO('mysql:host=localhost;dbname=retravailler;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-        
-        }
-        catch(Exception $e)
-        {
-                die('Erreur : '.$e->getMessage());
-        }
+  if (isset($_POST['inscription']))
 
+  {
+          try
+          {
+              $bdd = new PDO('mysql:host=localhost;dbname=retravailler;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+          
+          }
+          catch(Exception $e)
+          {
+                  die('Erreur : '.$e->getMessage());
+          }
+  
+  
+          
+          // creation des variables pour l'ajout d'utilisateur
+          $role1 = 1;
+          $nom = $_POST['nom'];
+          $prenom = $_POST['prenom'];
+          $telephone = $_POST['tel'];
+          $email = $_POST['email'];
+          $pass = $POST['pass'];
+          $etat = 1;    
+  
+          var_dump($nom);
+          print_r($nom);
+          echo 'abc';
+  
+          // $role1 = 1;
+          // $nom = 'pipi';
+          // $prenom = 'biere';
+          // $telephone = '0669696969';
+          // $email = 'test@biere.com';
+          // $pass = 'test';
+          // $etat = 1;    
+  
+          // creation d'une variable qui appelle la methode prepare() de l'objet bdd
+          // la demande SQL est entrée en parametre, et les placeholder ecrit avec :nom_du_placeholder
+          $my_Insert_Statement = $bdd->prepare("INSERT INTO utilisateur (role, nom, prenom, telephone, email, motDePasse, etat) VALUES (:role1, :nom, :prenom, :tel, :email, :pass, :etat)");
+          
+          // on utilise la methode bindparam pour lier les placeholder au variable
+          // premier parametre le placeholder, deuxieme la variable qui doit s'y referer
+          $my_Insert_Statement->bindParam(':role1', $role1);
+          $my_Insert_Statement->bindParam(':nom', $nom);
+          $my_Insert_Statement->bindParam(':prenom', $prenom);
+          $my_Insert_Statement->bindParam(':email', $email);
+          $my_Insert_Statement->bindParam(':tel', $telephone);
+          $my_Insert_Statement->bindParam(':pass', $pass);
+          $my_Insert_Statement->bindParam(':etat', $etat);
+  
+          
+  
+          if ($my_Insert_Statement->execute()) {
+            echo "Nouveau enregistrement créé avec succès";
+          } else {
+            echo "Impossible de créer l'enregistrement";
+          }
+          
+         
+          }
+  
+          else
+          {
+            echo 'error';
+          }}
 
-        
-        // creation des variables pour l'ajout d'utilisateur
-        $role1 = 1;
-        $nom = $_POST['nom'];
-        $prenom = $_POST['prenom'];
-        $telephone = $_POST['tel'];
-        $email = $_POST['email'];
-        $pass = $POST['pass'];
-        $etat = 1;    
-
-        var_dump($nom);
-        print_r($nom);
-        echo 'abc';
-
-        // $role1 = 1;
-        // $nom = 'pipi';
-        // $prenom = 'biere';
-        // $telephone = '0669696969';
-        // $email = 'test@biere.com';
-        // $pass = 'test';
-        // $etat = 1;    
-
-        // creation d'une variable qui appelle la methode prepare() de l'objet bdd
-        // la demande SQL est entrée en parametre, et les placeholder ecrit avec :nom_du_placeholder
-        $my_Insert_Statement = $bdd->prepare("INSERT INTO utilisateur (role, nom, prenom, telephone, email, motDePasse, etat) VALUES (:role1, :nom, :prenom, :tel, :email, :pass, :etat)");
-        
-        // on utilise la methode bindparam pour lier les placeholder au variable
-        // premier parametre le placeholder, deuxieme la variable qui doit s'y referer
-        $my_Insert_Statement->bindParam(':role1', $role1);
-        $my_Insert_Statement->bindParam(':nom', $nom);
-        $my_Insert_Statement->bindParam(':prenom', $prenom);
-        $my_Insert_Statement->bindParam(':email', $email);
-        $my_Insert_Statement->bindParam(':tel', $telephone);
-        $my_Insert_Statement->bindParam(':pass', $pass);
-        $my_Insert_Statement->bindParam(':etat', $etat);
-
-        
-
-        if ($my_Insert_Statement->execute()) {
-          echo "Nouveau enregistrement créé avec succès";
-        } else {
-          echo "Impossible de créer l'enregistrement";
-        }
-        
-       
-        }
-
-        else
-        {
-          echo 'error';
-        }
     
 
 

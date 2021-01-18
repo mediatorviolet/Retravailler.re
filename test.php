@@ -1,9 +1,10 @@
 <?php
 include 'src/functions/ajout_utilisateur.php';
+ajout_utilisateur();
 // ajout utilisateur dans la base de données
 ?>
 
-<form>
+<form action="" method="post">
     <div class="mb-3">
         <label for="nom" class="form-label">Nom</label>
         <input type="text" class="form-control" name="nom" id="nom">
