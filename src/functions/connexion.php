@@ -24,7 +24,7 @@ function connexion()
         if (!$resultat) { // Si un des deux input ne correspond pas, on renvoi un message
             echo 'Mauvais identifiant ou mot de passe';
         } else {
-            if ($isPasswordCorrect) { // Si le pssword correspond on lance la session user
+            if ($isPasswordCorrect) { // Si le password correspond on lance la session user
                 // session_start();
                 $_SESSION['user'] = $resultat;
             }

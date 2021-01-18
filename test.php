@@ -1,6 +1,6 @@
 <?php
 include 'src/functions/ajout_utilisateur.php';
-ajout_utilisateur();
+//ajout_utilisateur();
 // ajout utilisateur dans la base de données
 ?>
 
