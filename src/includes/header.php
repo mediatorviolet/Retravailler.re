@@ -1,7 +1,6 @@
 <?php
 include 'src/functions/connexion.php';
 include 'src/functions/ajout_utilisateur.php';
-// ajout_user(); // ajout utilisateur dans la base de données
 
 connexion(); // Fonction qui gère la connexion
 ajout_user(); // Fonction qui gère l'ajout d'utilisateur dans la base de données
