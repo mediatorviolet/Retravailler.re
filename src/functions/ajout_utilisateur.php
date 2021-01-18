@@ -43,7 +43,7 @@ function ajout_user()
       echo "Impossible de créer l'enregistrement";
     }
 
-    header("Location: index.php?page=accueil");
+    header("Location: login-page.php");
     die;
   }
 }
