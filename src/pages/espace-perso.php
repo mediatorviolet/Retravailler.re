@@ -2,7 +2,7 @@
  <link rel="stylesheet" href="src/style/espace-perso.css">
 
  <div class="container-fluid main-perso">
-     <h2 class="text-uppercase text-white text-center">Espace personnel</h2>
+     <h2 class="text-uppercase text-white text-center">votre espace personnel</h2>
      <h4 class="text-white text-center mt-5">Bienvenue <?php echo $_SESSION['user']['prenom'] ?></h4>
  </div>
 

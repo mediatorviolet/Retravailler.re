@@ -23,11 +23,7 @@ function ajout_user()
           $prenom = $_POST['prenom'];
           $telephone = $_POST['tel'];
           $email = $_POST['email'];
-<<<<<<< HEAD
           $pass = password_hash($_POST['pass'], PASSWORD_DEFAULT);
-=======
-          $pass = $_POST['pass'];
->>>>>>> bf6b4b5bc6c4a142551fe9bf7605d05ba5353f76
           $etat = 1;    
   
   
