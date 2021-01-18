@@ -2,6 +2,7 @@
 
 <section class="imgMain d-flex flex-column align-items-center justify-content-center">
         <h1 class="title text-center pb-5">acceler'emploi</h1>
+        <div><button class="btn btn-lg btn-outline-light" type="button">S'inscrire à la prestation</button></div>
     </section>
 
 
@@ -13,6 +14,7 @@
                 </svg>
             
             <h2>l'objectif</h2>
+            <div class="redBar mx-auto mb-3 mt-4"></div>
             <p class="text-center">La prestation AccélèR'Emploi a pour objectif le retour rapide à l’emploi grâce :
                 au renforcement de la maîtrise des outils et techniques de recherche d’emploi
                 à la mise sous tension des démarches favorisée par la dynamique de groupe

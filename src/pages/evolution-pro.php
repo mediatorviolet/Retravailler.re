@@ -4,6 +4,11 @@
 <section class="imgMain d-flex flex-column align-items-center justify-content-center">
         <h1 class="title text-center pb-5">Le conseil en evolution<br> professionnelle</h1>
         <h3 class="slogan mt-5 text-center">Salariés et indépendants, votre avenir professionnel se construit avec vous</h3>
+
+<div class="pt-4"><button class="btn btn-lg btn-primary btn-green-nav" type="button">S'inscrire à la prestation</button></div>
+  
+
+
     </section>
 
 
