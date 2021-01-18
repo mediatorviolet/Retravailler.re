@@ -1,5 +1,8 @@
 <?php
 include 'src/functions/connexion.php';
+include 'src/functions/ajout_utilisateur.php';
+ajout_user(); // ajout utilisateur dans la base de données
+
 connexion(); // Fonction qui gère la connexion
 ?>
 
@@ -116,7 +119,7 @@ connexion(); // Fonction qui gère la connexion
                                     <label for="passConfirmation" class="form-label">Confirmez le mot de passe</label>
                                     <input type="password" class="form-control" name="passConfirmation" id="passConfirmation">
                                 </div>
-                                <button type="submit" class="btn btn-primary btn-green-nav">Inscription</button>
+                                <button type="submit" class="btn btn-primary btn-green-nav" name="inscription">Inscription</button>
                             </form>
                         </div>
                     </div>
