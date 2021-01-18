@@ -23,7 +23,7 @@ function ajout_utilisateur()
           $prenom = $_POST['prenom'];
           $telephone = $_POST['tel'];
           $email = $_POST['email'];
-          $pass = $POST['pass'];
+          $pass = $_POST['pass'];
           $etat = 1;    
   
           var_dump($nom);
