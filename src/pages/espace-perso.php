@@ -3,7 +3,7 @@
 
  <div class="container-fluid main-perso">
      <h2 class="text-uppercase text-white text-center">Espace personnel</h2>
-     <h4 class="text-white text-center mt-5">Bienvenue ..</h4>
+     <h4 class="text-white text-center mt-5">Bienvenue <?php echo $_SESSION['user']['prenom'] ?></h4>
  </div>
 
  <div class="container-fluid atelier-perso">

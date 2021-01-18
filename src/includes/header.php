@@ -1,6 +1,10 @@
 <?php
 include 'src/functions/connexion.php';
 include 'src/functions/ajout_utilisateur.php';
+<<<<<<< HEAD
+=======
+// ajout_user(); // ajout utilisateur dans la base de données
+>>>>>>> bf6b4b5bc6c4a142551fe9bf7605d05ba5353f76
 
 connexion(); // Fonction qui gère la connexion
 ajout_user(); // Fonction qui gère l'ajout d'utilisateur dans la base de données
@@ -64,7 +68,7 @@ ajout_user(); // Fonction qui gère l'ajout d'utilisateur dans la base de donné
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <form action="<?= $_SERVER["PHP_SELF"] ?>" method="POST">
+                            <form action="<?= connexion() ?>" method="POST">
                                 <div class="mb-3">
                                     <label for="email_connect" class="form-label">Email</label>
                                     <input type="email" class="form-control" name="email_connect" id="email_connect">

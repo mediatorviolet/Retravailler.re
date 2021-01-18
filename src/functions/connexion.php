@@ -1,17 +1,38 @@
 <?php
-function connexion()
-{
-    if ($_SERVER["REQUEST_METHOD"] == "POST" and isset($_POST["connexion"])) { // On vérifie si le serveur envoie une requête 'POST' et qu'on à cliqué sur le bouton connexion
-        if ($_POST["email_connect"] == "test@test.fr" and $_POST["password_connect"] == "test") { // On vérifie les infos saisies par l'utilisateur
-            // 'user' est connecté, ses infos sont stockées dans $_SESSION
-            $_SESSION["user"] = true;
+
+function connexion() {
+    if ($_SERVER['REQUEST_METHOD'] == 'POST' and isset($_POST['connexion'])) {
+        try {
+            $bdd = new PDO('mysql:host=localhost;dbname=retravailler;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
         }
+        catch(Exception $e) {
+            die('Erreur : '.$e->getMessage());
+        }
+        $req = $bdd->prepare('SELECT * FROM utilisateur WHERE email = :email and motDePasse = :motDePasse');
+        $req->execute(array(
+            'email' => $_POST["email_connect"],
+            'motDePasse' => $_POST['password_connect']
+        ));
+        $resultat = $req->fetch();
+        
+        // $isPasswordCorrect = password_verify($_POST["password_connect"], $resultat["motDePasse"]);
+        
+        if (!$resultat) {
+            echo 'Mauvais identifiant ou mot de passe';
+        } else {
+            if ($resultat) {
+                // session_start();
+                // $_SESSION['user'] = true;
+                $_SESSION['user'] = $resultat;
+            }
+        }
+        header('Location: index.php?page=accueil');
+        die;
     }
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST" and isset($_POST["deconnexion"])) {
-        // Lorsque l'utilisateur clique sur le btn de déconnexion, on détruit sa session et on le ramène sur la page d'accueil
-        $_SESSION["user"] = false;
+    if ($_SERVER['REQUEST_METHOD'] == 'POST' and isset($_POST['deconnexion'])) {
+        $_SESSION['user'] = false;
         session_destroy();
-        header("Location: index.php");
+        header("Location: index.php?page=accueil");
     }
 }
