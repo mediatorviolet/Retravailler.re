@@ -16,18 +16,24 @@ if (!isset($_SESSION["admin"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        Retravailler.re | 
+        Retravailler.re |
         <?php
-        if ($_GET['page'] == 'accueil') {
+        $title = array( // Array contenant tous les titres des pages
+            'accueil' => 'Accueil',
+            'espace_perso' => 'Espace Personel',
+            'atelier_conseil' => 'Atelier Conseil',
+            'evolution_professionnelle' => 'Conseil en Evolution Professionnelle',
+            'acceler_emploi' => 'Accélèr\'Emploi',
+            'atelier_conseil_atelier' => 'Atelier Conseil - Atelier',
+            'evolution_professionnelle_atelier' => 'Conseil en Evolution Professionnelle - Atelier',
+            'acceler_emploi_atelier' => 'Accélèr\'Emploi - Atelier'
+        );
+
+        if (isset($_GET['page']) and isset($title[$_GET['page']])) { // Si la page possède un titre dans l'array on echo le titre
+            $page = $_GET['page'];
+            echo $title[$page];
+        } else { // Sinon on echo 'Accueil' (cas de index.php qui renvoie sur la page d'accueil)
             echo 'Accueil';
-        } if ($_GET['page'] == 'espace_perso') {
-            echo 'Espace Personnel';
-        } if ($_GET['page'] == 'atelier_conseil') {
-            echo 'Atelier Conseil';
-        } if ($_GET['page'] == 'evolution_professionnelle') {
-            echo 'Conseil en Evolution Professionnelle';
-        } if ($_GET['page'] == 'acceler_emploi') {
-            echo 'Accélèr\'Emploi';
         }
         ?>
     </title>
@@ -51,7 +57,10 @@ if (!isset($_SESSION["admin"])) {
         'espace_perso' => 'espace-perso.php',
         'atelier_conseil' => 'atelier-conseil.php',
         'evolution_professionnelle' => 'evolution-pro.php',
-        'acceler_emploi' => 'acceler-emploi.php'
+        'acceler_emploi' => 'acceler-emploi.php',
+        'evolution_professionnelle_atelier' => 'evolution-pro-atelier.php',
+        'acceler_emploi_atelier' => 'acceler-emploi-atelier.php',
+        'atelier_conseil_atelier' => 'atelier-conseil-atelier.php'
     );
 
     if (isset($_GET["page"]) and isset($page_ok[$_GET['page']])) {
