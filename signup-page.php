@@ -1,10 +1,13 @@
 <?php session_start() ?>
 <?php
 include 'src/functions/connexion.php';
-include 'src/functions/ajout_utilisateur.php';
+include 'src/functions/validation_formulaire.php';
+// include 'src/functions/ajout_utilisateur.php';
+
+
 
 connexion(); // Fonction qui gère la connexion
-ajout_user(); // Fonction qui gère l'ajout d'utilisateur dans la base de données
+validation_form(); // Fonction qui gère l'ajout d'utilisateur dans la base de données
 ?>
 
 <!DOCTYPE html>
@@ -37,30 +40,36 @@ ajout_user(); // Fonction qui gère l'ajout d'utilisateur dans la base de donné
                         <h5 class="modal-title text-white" id="connexionLabel">Inscription</h5>
                     </div>
                     <div class="modal-body">
-                        <form action="<?php 'src/functions/ajout_utilisateur.php' ?>" method="POST">
+                        <form action="<?php 'src/functions/validation_formulaire.php' ?>" method="POST">
                             <div class="mb-3">
                                 <label for="nom" class="form-label">Nom</label>
                                 <input type="text" class="form-control" name="nom" id="nom" required>
+                                <span class="<?= $class_alert ?>"><?= $Nom_Err?></span>
                             </div>
                             <div class="mb-3">
                                 <label for="prenom" class="form-label">Prenom</label>
                                 <input type="text" class="form-control" name="prenom" id="prenom" required>
+                                <span class="<?= $class_alert ?>"><?= $Prenom_Err ?></span>
                             </div>
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email</label>
                                 <input type="email" class="form-control" name="email" id="email" required>
+                                <span class="<?= $class_alert ?>"><?= $Email_Err ?></span>
                             </div>
                             <div class="mb-3">
                                 <label for="tel" class="form-label">Téléphone</label>
                                 <input type="tel" class="form-control" name="tel" id="tel" required>
+                                <span class="<?= $class_alert ?>"><?= $Telephone_Err ?></span>
                             </div>
                             <div class="mb-3">
                                 <label for="pass" class="form-label">Mot de passe</label>
                                 <input type="password" class="form-control" name="pass" id="pass" required>
+                                <span class="<?= $class_alert ?>"><?= $Password_Err ?></span>
                             </div>
                             <div class="mb-3">
                                 <label for="passConfirmation" class="form-label">Confirmez le mot de passe</label>
                                 <input type="password" class="form-control" name="passConfirmation" id="passConfirmation" required>
+                                <span class="<?= $class_alert ?>"><?= $Confirmation_Pass_Err ?></span>
                             </div>
                             <button type="submit" class="btn btn-primary btn-green-nav" name="inscription">
                                 Inscription<i class="fas fa-user-plus ms-2"></i>
