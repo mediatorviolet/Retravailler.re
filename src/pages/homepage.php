@@ -53,7 +53,7 @@
                         Vous apporter des réponses à la diversité de vos besoins. <br>
                         Construire votre projet avec le conseiller qui vous accompagne tout au long de sa mise en œuvre.
                     </p>
-                    <button type="button" class="btn btn-primary btn-decouvrir">Découvrir</button>
+                    <a href="index.php?page=evolution_professionnelle" class="btn btn-primary btn-decouvrir">Découvrir</a>
                 </div>
             </div>
             <div class="container d-flex mt-5 mb-5 justify-content-center">
@@ -67,7 +67,7 @@
                         <li>à la mise sous tension des démarches favorisée par la dynamique de groupe</li>
                         <li>à un accompagnement et un soutien intensif</li>
                     </ul>
-                    <button type="button" class="btn btn-primary btn-decouvrir">Découvrir</button>
+                    <a href="index.php?page=acceler_emploi" class="btn btn-primary btn-decouvrir">Découvrir</a>
                 </div>
                 <div class="col-3 img-ae ms-5">
                 </div>
@@ -82,7 +82,7 @@
                         Elle s’adresse à tous les actifs, qu’ils soient demandeurs d’emploi inscrits ou non, quel que soit leur niveau
                         d’expression écrite et / ou orale et leur aisance à utiliser les outils numériques.
                     </p>
-                    <button type="button" class="btn btn-primary btn-decouvrir">Découvrir</button>
+                    <a href="index.php?page=atelier_conseil" class="btn btn-primary btn-decouvrir">Découvrir</a>
                 </div>
             </div>
         </div>
