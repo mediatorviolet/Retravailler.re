@@ -66,7 +66,7 @@
 
 .middleSection
 {
-padding-bottom: 140px;
+/* padding-bottom: 140px; */
 }
 
 h4
@@ -83,14 +83,13 @@ p
 }
 
 .imgMain  {
-    margin-top: 4.5rem;
+    margin-top: 4.7rem;
     background-image: linear-gradient(rgba(0, 128, 49, 0.486), rgba(0, 128, 49, 0.486)), url("../ressources/img/conseilEvoProMain.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 500px;
     color: rgb(255, 255, 255);
-    
 }
 
 .textMain

@@ -2,9 +2,11 @@
 <link rel="stylesheet" href="src/style/atc.css">
 
 <div class="container-fluid main-atc">
-    <h2 class="text-white text-uppercase text-center">Atelier conseil</h2>  
+    <h2 class="text-white text-uppercase text-center">Atelier conseil</h2>
     <div class="bg-white w-25 mx-auto mt-4 separator"></div>
-    <div class="pt-4 d-flex justify-content-center"><button class="btn btn-lg btn btn-lg btn-outline-light" type="button">S'inscrire à la prestation</button></div>
+    <div class="pt-4 d-flex justify-content-center">
+        <a class="btn btn-lg btn btn-lg btn-outline-light" href="index.php?page=atelier_conseil_atelier">Découvrir nos ateliers</a>
+    </div>
 </div>
 
 <div class="presentation container-fluid d-flex justify-content-center">

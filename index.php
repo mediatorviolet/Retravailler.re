@@ -28,6 +28,12 @@ if (!isset($_SESSION["admin"])) {
             echo 'Conseil en Evolution Professionnelle';
         } if ($_GET['page'] == 'acceler_emploi') {
             echo 'Accélèr\'Emploi';
+        } if ($_GET['page'] == 'atelier_conseil_atelier') {
+            echo 'Atelier Conseil - Atelier';
+        } if ($_GET['page'] == 'evolution_professionnelle_atelier') {
+            echo 'Evolution Professionnelle - Atelier';
+        } if ($_GET['page'] == 'acceler_emploi_atelier') {
+            echo 'Accélèr\'Emploi - Atelier';
         }
         ?>
     </title>
@@ -51,7 +57,10 @@ if (!isset($_SESSION["admin"])) {
         'espace_perso' => 'espace-perso.php',
         'atelier_conseil' => 'atelier-conseil.php',
         'evolution_professionnelle' => 'evolution-pro.php',
-        'acceler_emploi' => 'acceler-emploi.php'
+        'acceler_emploi' => 'acceler-emploi.php',
+        'evolution_professionnelle_atelier' => 'evolution-pro-atelier.php',
+        'acceler_emploi_atelier' => 'acceler-emploi-atelier.php',
+        'atelier_conseil_atelier' => 'atelier-conseil-atelier.php'
     );
 
     if (isset($_GET["page"]) and isset($page_ok[$_GET['page']])) {
