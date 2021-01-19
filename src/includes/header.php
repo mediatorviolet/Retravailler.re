@@ -11,7 +11,9 @@ ajout_user(); // Fonction qui gère l'ajout d'utilisateur dans la base de donné
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow fixed-top">
     <div class="container-fluid col-md-8 mx-auto">
-        <a class="navbar-brand" href="#"><img class="nav-logo img-fluid" style="width: 7rem;" src="src/ressources/img/logo-RW-reunion.png" alt="logo-RW-reunion"></a>
+        <a class="navbar-brand" href="index.php?page=accueil">
+            <img class="nav-logo img-fluid" style="width: 7rem;" src="src/ressources/img/logo-RW-reunion.png" alt="logo-RW-reunion">
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
