@@ -18,22 +18,22 @@ if (!isset($_SESSION["admin"])) {
     <title>
         Retravailler.re | 
         <?php
-        if ($_GET['page'] == 'accueil') {
+        $title = array( // Array contenant tous les titres des pages
+            'accueil' => 'Accueil',
+            'espace_perso' => 'Espace Personel',
+            'atelier_conseil' => 'Atelier Conseil',
+            'evolution_professionnelle' => 'Conseil en Evolution Professionnelle',
+            'acceler_emploi' => 'Accélèr\'Emploi',
+            'atelier_conseil_atelier' => 'Atelier Conseil - Atelier',
+            'evolution_professionnelle_atelier' => 'Conseil en Evolution Professionnelle - Atelier',
+            'acceler_emploi_atelier' => 'Accélèr\'Emploi - Atelier'
+        );
+        
+        if (isset($_GET['page']) and isset($title[$_GET['page']])) { // Si la page possède un titre dans l'array on echo le titre
+            $page = $_GET['page'];
+            echo $title[$page];
+        } else { // Sinon on echo 'Accueil' (cas de index.php qui renvoie sur la page d'accueil)
             echo 'Accueil';
-        } if ($_GET['page'] == 'espace_perso') {
-            echo 'Espace Personnel';
-        } if ($_GET['page'] == 'atelier_conseil') {
-            echo 'Atelier Conseil';
-        } if ($_GET['page'] == 'evolution_professionnelle') {
-            echo 'Conseil en Evolution Professionnelle';
-        } if ($_GET['page'] == 'acceler_emploi') {
-            echo 'Accélèr\'Emploi';
-        } if ($_GET['page'] == 'atelier_conseil_atelier') {
-            echo 'Atelier Conseil - Atelier';
-        } if ($_GET['page'] == 'evolution_professionnelle_atelier') {
-            echo 'Evolution Professionnelle - Atelier';
-        } if ($_GET['page'] == 'acceler_emploi_atelier') {
-            echo 'Accélèr\'Emploi - Atelier';
         }
         ?>
     </title>
