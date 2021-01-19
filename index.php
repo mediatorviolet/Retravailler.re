@@ -16,7 +16,7 @@ if (!isset($_SESSION["admin"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        Retravailler.re | 
+        Retravailler.re |
         <?php
         $title = array( // Array contenant tous les titres des pages
             'accueil' => 'Accueil',
@@ -28,7 +28,7 @@ if (!isset($_SESSION["admin"])) {
             'evolution_professionnelle_atelier' => 'Conseil en Evolution Professionnelle - Atelier',
             'acceler_emploi_atelier' => 'Accélèr\'Emploi - Atelier'
         );
-        
+
         if (isset($_GET['page']) and isset($title[$_GET['page']])) { // Si la page possède un titre dans l'array on echo le titre
             $page = $_GET['page'];
             echo $title[$page];
