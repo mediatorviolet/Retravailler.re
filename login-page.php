@@ -26,8 +26,6 @@ ajout_user(); // Fonction qui gère l'ajout d'utilisateur dans la base de donné
 </head>
 
 <body>
-    <?php //include 'src/includes/header.php' 
-    ?>
     <div class="container-fluid main-background">
         <a href="index.php?page=accueil" class="text-white position-absolute mt-2">
             <i class="fas fa-angle-left me-2"></i>Retour à l'accueil
@@ -39,6 +37,7 @@ ajout_user(); // Fonction qui gère l'ajout d'utilisateur dans la base de donné
                         <h5 class="modal-title text-white" id="connexionLabel">Connexion</h5>
                     </div>
                     <div class="modal-body">
+                        <span class="alert-danger"><?= $error_login ?></span>
                         <form action="<?= connexion() ?>" method="POST">
                             <div class="mb-3">
                                 <label for="email_connect" class="form-label">Email</label>
@@ -48,7 +47,9 @@ ajout_user(); // Fonction qui gère l'ajout d'utilisateur dans la base de donné
                                 <label for="password_connect" class="form-label">Mot de passe</label>
                                 <input type="password" class="form-control" name="password_connect" id="password_connect" required>
                             </div>
-                            <button type="submit" name="connexion" class="btn btn-primary btn-green-nav">Connexion<i class="fas fa-sign-in-alt ms-2"></i></button>
+                            <button type="submit" name="connexion" class="btn btn-primary btn-green-nav">
+                                Connexion<i class="fas fa-sign-in-alt ms-2"></i>
+                            </button>
                         </form>
                     </div>
                     <div class="modal-footer">
@@ -61,8 +62,6 @@ ajout_user(); // Fonction qui gère l'ajout d'utilisateur dans la base de donné
             </div>
         </div>
     </div>
-    <?php //include 'src/includes/footer.php' 
-    ?>
 </body>
 
 </html>
