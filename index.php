@@ -67,7 +67,7 @@ if (!isset($_SESSION["admin"])) {
         // On inclut la page correspondante
         $page = $_GET['page'];
         include('src/pages/' . $page_ok[$page]);
-    } else {
+    } else { // Sinon on inclut la page d'accueil
         include 'src/pages/homepage.php';
     } ?>
 
