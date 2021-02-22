@@ -1,38 +1,39 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 .main-perso {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../ressources/img/rendezVousWomenBlackWhite.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    padding: 200px 0px 200px 0px;
-    margin-top: 4.7rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../ressources/img/rendezVousWomenBlackWhite.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 200px 0px 200px 0px;
+  margin-top: 4.7rem;
 }
 
 .atelier-perso {
-    padding: 150px 0px 150px 0px;
+  padding: 150px 0px 150px 0px;
 }
 
 .scrollspy-example {
-    height: 15rem;
-    overflow-y: scroll;
+  height: 15rem;
+  overflow-y: scroll;
 }
 
 .accordion-button:focus {
-    border-color: #61CE70;
-    box-shadow: 0 0 0 .25rem rgba(97, 206, 112, .5);
+  border-color: #61ce70;
+  box-shadow: 0 0 0 0.25rem rgba(97, 206, 112, 0.5);
 }
 
 .accordion-button:active {
-    background-color: rgba(97, 206, 112, .5);
+  background-color: rgba(97, 206, 112, 0.5);
 }
 
 .accordion-button:not(.collapsed) {
-    color: #61CE70;
-    background-color: rgba(97, 206, 112, .2);
+  color: #61ce70;
+  background-color: rgba(97, 206, 112, 0.2);
 }
