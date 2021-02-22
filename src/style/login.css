@@ -3,6 +3,7 @@
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
+    min-height: 110vh;
 }
 
 .modal-header {
@@ -16,4 +17,11 @@
 
 .modal-footer a:hover {
     color: #4ea55a;
+}
+
+@media screen and (max-width: 768px) {
+    .modal-dialog {
+        width: 100% !important;
+        margin-top: 5rem;
+    }
 }

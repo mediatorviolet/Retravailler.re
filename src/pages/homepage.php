@@ -13,7 +13,7 @@
 
 <section class="infos">
     <div class="container-fluid d-flex justify-content-center">
-        <div class="col d-flex justify-content-end me-5 d-md-block d-none">
+        <div class="col d-flex justify-content-end me-5 d-md-flex d-none">
             <i class="fas fa-book-open"></i>
         </div>
         <div class="col-md-4 me-5 ms-md-0 ms-5">
