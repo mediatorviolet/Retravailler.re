@@ -10,7 +10,7 @@
 </div>
 
 <div class="presentation container-fluid d-flex justify-content-center">
-    <div class="col-4 me-4">
+    <div class="col-md-4 me-md-4 px-md-0 px-4">
         <p class="text-presentation">
             La prestation « Atelier conseil » s’inscrit dans l’offre de services prestations de Pôle Emploi.
             Elle s’adresse à tous les actifs, qu’ils soient demandeurs d’emploi inscrits (toutes catégories confondues)
@@ -20,11 +20,11 @@
             d’une durée pouvant varier d’une demi-journée (3 heures) à une journée (6 heures) hors temps de restauration.
         </p>
     </div>
-    <div class="img-presentation col-4 ms-4"></div>
+    <div class="img-presentation col-md-4 ms-4 d-md-block d-none"></div>
 </div>
 
-<div class="infos container-fluid d-flex justify-content-center">
-    <div class="infos-box col-4 me-4 shadow">
+<div class="infos container-fluid d-flex justify-content-center flex-wrap">
+    <div class="infos-box col-md-4 me-md-4 mb-md-0 mb-5 shadow">
         <h2 class="text-center text-uppercase mb-4">L'objectif</h2>
         <p>
             Les ateliers permettent aux bénéficiaieres de progresser dans l'acquisition :
@@ -44,7 +44,7 @@
             </li>
         </ul>
     </div>
-    <div class="infos-box col-4 ms-4 shadow">
+    <div class="infos-box col-md-4 ms-md-4 mt-md-0 mt-5 shadow">
         <h2 class="text-center text-uppercase mb-4">Déclenchement de la prestation</h2>
         <p>
             L'inscription sur la prestation peut être mobilisée à tout moment du parcours de retour vers l'emploi du
@@ -64,7 +64,7 @@
 <div class="zoom container-fluid">
     <h2 class="text-center text-uppercase text-white">Zoom sur les 17 ateliers conseil</h2>
     <div class="bg-white w-25 mx-auto mt-4 separator"></div>
-    <div class="d-flex justify-content-center mt-5 bg-white mx-5">
-        <img src="src/ressources/img/schemaAtelierConseil.png" alt="" class="img-fluid col-6">
+    <div class="d-flex justify-content-center mt-5 bg-white mx-md-5 mx-4">
+        <img src="src/ressources/img/schemaAtelierConseil.png" alt="" class="img-fluid col-md-6">
     </div>
 </div>
