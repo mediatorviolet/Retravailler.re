@@ -3,8 +3,8 @@
 
 <section class="main">
     <div class="container-fluid d-flex flex-column align-items-center">
-        <img id="logo-main" src="src/ressources/img/logo-RW-reunion.png" alt="logo-RW-reunion">
-        <h2 class="slogan mt-5">orientation | formation | emploi | conseil</h2>
+        <img id="logo-main" class="img-fluid" src="src/ressources/img/logo-RW-reunion.png" alt="logo-RW-reunion">
+        <h2 class="slogan mt-5 text-center">orientation | formation | emploi | conseil</h2>
         <a href="#title-presta" class="btn-lg btn-primary rounded-pill mt-5 py-3 px-5 btn-green text-decoration-none">
             Nos prestations<i class="fas fa-angle-down ms-2"></i>
         </a>
@@ -13,10 +13,10 @@
 
 <section class="infos">
     <div class="container-fluid d-flex justify-content-center">
-        <div class="col d-flex justify-content-end me-5">
+        <div class="col d-flex justify-content-end me-5 d-md-block d-none">
             <i class="fas fa-book-open"></i>
         </div>
-        <div class="col-4 me-5">
+        <div class="col-md-4 me-5 ms-md-0 ms-5">
             <h2 class="mb-5 infos-title">Qui sommes-nous ?</h2>
             <p class="text-infos">
                 Le Réseau National Retravailler est né en 1974 sur l’impulsion d’Evelyne SULLEROT, sociologue,
@@ -32,7 +32,7 @@
                 hommes, femmes… Son cœur de métiers reste centré sur l’accompagnement et la sécurisation des trajectoires professionnelles.
             </p>
         </div>
-        <div class="col-4 side-infos">
+        <div class="col-md-4 side-infos d-md-block d-none">
         </div>
         <div class="col"></div>
     </div>
@@ -40,17 +40,17 @@
 
 <section class="prestation">
     <div class="container-fluid row">
-        <div class="col-3 mx-auto d-flex flex-row">
-            <i class="fas fa-cannabis me-5"></i>
+        <div class="col-md-3 mx-auto d-flex flex-row">
+            <i class="fas fa-cannabis me-5 d-md-block d-none"></i>
             <h2 id="title-presta" class="title-presta">Nos prestations</h2>
         </div>
-        <div class="col-6">
+        <div class="col-6 d-md-block d-none">
             <!-- <h2>Conseil en évolution professionnelle</h2> -->
         </div>
         <div class="container d-flex mt-5 mb-5 justify-content-center">
-            <div class="col-3 img-cep ms-5">
+            <div class="col-3 img-cep ms-5 d-md-block d-none">
             </div>
-            <div class="col-6 ms-5">
+            <div class="col-md-6 ms-5">
                 <h2>Conseil en évolution professionnelle</h2>
                 <p>
                     Un temps pour vous, pour parler de vos envies et clarifier vos besoins. <br>
@@ -63,7 +63,7 @@
             </div>
         </div>
         <div class="container d-flex mt-5 mb-5 justify-content-center">
-            <div class="col-6 ms-5">
+            <div class="col-md-6 ms-5">
                 <h2>Accélèr'Emploi</h2>
                 <p>
                     La prestation <strong>Accélèr’Emploi</strong> a pour objectif le retour rapide à l’emploi grâce :
@@ -75,13 +75,13 @@
                 </ul>
                 <a href="index.php?page=acceler_emploi" class="btn btn-primary btn-decouvrir">Découvrir</a>
             </div>
-            <div class="col-3 img-ae ms-5">
+            <div class="col-3 img-ae ms-5 d-md-block d-none">
             </div>
         </div>
         <div class="container d-flex mt-5 justify-content-center">
-            <div class="col-3 img-atc ms-5">
+            <div class="col-3 img-atc ms-5 d-md-block d-none">
             </div>
-            <div class="col-6 ms-5">
+            <div class="col-md-6 ms-5">
                 <h2>Atelier conseil</h2>
                 <p>
                     La prestation <strong>Atelier Conseil</strong> s’inscrit dans l’offre de services prestations de Pôle Emploi.
@@ -103,7 +103,7 @@
             </button>
         </div>
         <div class="d-flex justify-content-center mt-5">
-            <iframe class="col-8" src="https://www.google.com/maps/d/embed?mid=1StIVoLvuiMLhf3bpTaFzscL6xdWNtN4a&hl=fr" width="640" height="520"></iframe>
+            <iframe class="col-md-8" src="https://www.google.com/maps/d/embed?mid=1StIVoLvuiMLhf3bpTaFzscL6xdWNtN4a&hl=fr" width="640" height="520"></iframe>
         </div>
     </div>
 </section>

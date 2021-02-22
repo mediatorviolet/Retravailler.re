@@ -1,21 +1,41 @@
 footer {
-    padding: 50px 0px 50px 0px;
-    background: #333334;
-    color: #fff
+  padding: 50px 0px 50px 0px;
+  background: #333334;
+  color: #fff;
 }
 
 .logo-footer {
-    height: 110px;
-    background: #333334;
+  min-height: 110px;
+  background: #333334;
 }
 
 .icon-footer {
-    font-size: 3em;
-    margin-right: 1em;
-    color: #fff
+  font-size: 3em;
+  margin-right: 1em;
+  color: #fff;
 }
 
 .img-footer {
-    height: 110px;
-	margin-right: 2em;
+  height: 110px;
+  margin-right: 2em;
+}
+
+@media screen and (max-width: 768px) {
+  .logo-footer {
+    flex-direction: column;
+    justify-content: space-around !important;
+    align-items: center !important;
+    min-height: 60vh;
+  }
+
+  .img-footer,
+  .icon-footer {
+    margin: 0;
+  }
+
+  .menu-footer {
+    flex-direction: column;
+    justify-content: space-around !important;
+    align-items: center !important;
+  }
 }

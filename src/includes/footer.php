@@ -17,10 +17,10 @@
     </div>
     <hr class="w-75 mx-auto bg-light">
     <div class="menu-footer d-flex w-75 mx-auto">
-        <p class="text-uppercase me-5">
+        <p class="text-uppercase me-md-5">
             <a class="nav-link text-white" href="index.php?page=accueil">acccueil</a>
         </p>
-        <p class="text-uppercase me-5">
+        <p class="text-uppercase me-md-5">
             <a class="nav-link text-white" href="">nos prestations</a>
         </p>
         <p class="text-uppercase">

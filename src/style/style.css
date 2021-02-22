@@ -1,135 +1,146 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 .main > div:nth-child(1) {
-    background-image: linear-gradient( rgba(92, 33, 94, 0.5), rgba(92, 33, 94, 0.5)), url("../ressources/img/accueilSecond.gif");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    padding-top: 200px;
-    padding-bottom: 200px;
+  background-image: linear-gradient(
+      rgba(92, 33, 94, 0.5),
+      rgba(92, 33, 94, 0.5)
+    ),
+    url("../ressources/img/accueilSecond.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 #logo-main {
-    width: 18rem;
+  max-width: 18rem;
 }
 
 .slogan {
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 1.5rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.5rem;
 }
 
-.infos, .prestation, .contact {
-    padding: 150px 0px 150px 0px;
+.infos,
+.prestation,
+.contact {
+  padding: 150px 0px 150px 0px;
 }
 
 .text-infos {
-    text-align: justify;
+  text-align: justify;
 }
 
-.fa-book-open, .fa-cannabis {
-    height: 4rem;
-    padding: 1rem;
-    color: white;
-    font-size: 2rem;
+.fa-book-open,
+.fa-cannabis {
+  height: 4rem;
+  padding: 1rem;
+  color: white;
+  font-size: 2rem;
 }
 
 .fa-book-open {
-    background-color: #61CE70;
+  background-color: #61ce70;
 }
 
 .fa-cannabis {
-    background-color: #5C215E;
+  background-color: #5c215e;
 }
 
 .infos-title {
-    color: #61CE70;
+  color: #61ce70;
 }
 
 .side-infos {
-    background-image: url("../ressources/img/accelereEmploiMain.jpg");
-    background-size: cover;
+  background-image: url("../ressources/img/accelereEmploiMain.jpg");
+  background-size: cover;
 }
 
 .prestation {
-    background-color: #5C215E26;
+  background-color: #5c215e26;
 }
 
 .title-presta {
-    color: #5C215E;
+  color: #5c215e;
 }
 
 .img-cep {
-    height: 200px;
-    background-image: url("../ressources/img/conseilEvoProMain.jpg");
-    background-size: cover;
+  height: 200px;
+  background-image: url("../ressources/img/conseilEvoProMain.jpg");
+  background-size: cover;
 }
 
 .img-ae {
-    height: 200px;
-    background-image: url("../ressources/img/accelereEmploiMain.jpg");
-    background-size: cover;
+  height: 200px;
+  background-image: url("../ressources/img/accelereEmploiMain.jpg");
+  background-size: cover;
 }
 
 .img-atc {
-    height: 200px;
-    background-image: url("../ressources/img/atelierConseilMain.jpg");
-    background-size: cover;
+  height: 200px;
+  background-image: url("../ressources/img/atelierConseilMain.jpg");
+  background-size: cover;
 }
 
 .contact {
-    background-image: linear-gradient(rgba(97, 206, 112, 0.3), rgba(151, 192, 37, 0.3)), url("../ressources/img/reunionVuDeHautWomen.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+  background-image: linear-gradient(
+      rgba(97, 206, 112, 0.3),
+      rgba(151, 192, 37, 0.3)
+    ),
+    url("../ressources/img/reunionVuDeHautWomen.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 .btn-green {
-    background-color: #61CE70;
-    border: .2rem solid #61CE70 !important;
+  background-color: #61ce70;
+  border: 0.2rem solid #61ce70 !important;
 }
 
 .btn-green:hover {
-    background-color: transparent;
-    border-color: #fff !important;
+  background-color: transparent;
+  border-color: #fff !important;
 }
 
 .btn-decouvrir {
-    background-color: #5C215E;
-    border-color: #5C215E;
-    border-width: 2px;
-    padding: .5rem 1.5rem;;
+  background-color: #5c215e;
+  border-color: #5c215e;
+  border-width: 2px;
+  padding: 0.5rem 1.5rem;
 }
 
 .btn-decouvrir:hover {
-    background-color: transparent;
-    border-color: #5C215E;
-    color: #5C215E;
+  background-color: transparent;
+  border-color: #5c215e;
+  color: #5c215e;
 }
 
 footer {
-    padding: 50px 0px 50px 0px;
-    background: #333334;
-    color: #fff
+  padding: 50px 0px 50px 0px;
+  background: #333334;
+  color: #fff;
 }
 
 .logo-footer {
-    height: 110px;
-    background: #333334;
+  height: 110px;
+  background: #333334;
 }
 
 .icon-footer {
-    font-size: 3em;
-    margin-right: 1em;
-    color: #fff
+  font-size: 3em;
+  margin-right: 1em;
+  color: #fff;
 }
 
 .img-footer {
-    height: 110px;
-	margin-right: 2em;
+  height: 110px;
+  margin-right: 2em;
 }
