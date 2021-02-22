@@ -1,2 +1,0 @@
-Monday 22nd of February 2021 03:32:28 PM: Connexion à la base de données réussie
-Monday 22nd of February 2021 03:34:44 PM: Connexion à la base de données impossible
