@@ -11,7 +11,13 @@
         }
 
         $reponse = $bdd->query('SELECT * FROM atelier WHERE id_prestation = 3');
-        while ($donnees = $reponse->fetch()) { ?>
+        $donnees = $reponse->fetch();
+        if (empty($donnees)) {
+            echo "<div class='w-100 my-5 py-5'>";
+            echo "<h5 class='text-center'>Aucun atelier pour le moment</h5>";
+            echo "</div>";
+        }
+        while ($donnees) { ?>
             <div class="col">
                 <div class="card h-100">
                     <div class="card-body">
