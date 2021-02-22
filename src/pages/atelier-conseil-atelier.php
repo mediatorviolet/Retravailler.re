@@ -19,11 +19,15 @@
                         <p class="card-text" style="text-align: justify;">
                             <?= $donnees['description'] ?>
                         </p>
+                        <p></p>
                         <select class="form-select" aria-label="Default select example">
                             <option selected>Choisissez une date</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                            <?php
+                            $response = $bdd->query('SELECT * FROM date_atelier WHERE id_prestation = 3');
+                            while ($donnees = $response->fetch()) {
+                            ?>
+                                <option value="<?= $donnees['date_atelier'] ?>"><?= $donnees['date_atelier'] ?></option>
+                            <?php } ?>
                         </select>
                     </div>
                     <div class="card-footer text-end">
@@ -34,6 +38,6 @@
         <?php }
         $reponse->closeCursor();
         ?>
-        </div>
     </div>
+</div>
 </div>

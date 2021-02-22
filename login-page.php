@@ -31,9 +31,9 @@ ajout_user(); // Fonction qui gère l'ajout d'utilisateur dans la base de donné
             <i class="fas fa-angle-left me-2"></i>Retour à l'accueil
         </a>
         <div class="d-flex vh-100 align-items-center justify-content-center flex-column">
-        <div class="<?= $signup_success_class; ?> text-center col-3" role="alert">
-            <?= $signup_success_msg; ?>
-        </div>
+            <div class="<?= $signup_success_class; ?> text-center col-3" role="alert">
+                <?= $signup_success_msg; ?>
+            </div>
             <div class="modal-dialog w-75">
                 <div class="modal-content shadow border-0">
                     <div class="modal-header">
