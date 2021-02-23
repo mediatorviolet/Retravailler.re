@@ -24,6 +24,7 @@ if (!isset($_SESSION["admin"])) {
             'atelier_conseil' => 'Atelier Conseil',
             'evolution_professionnelle' => 'Conseil en Evolution Professionnelle',
             'acceler_emploi' => 'Accélèr\'Emploi',
+            'contact' => 'contact',
             'atelier_conseil_atelier' => 'Atelier Conseil - Atelier',
             'evolution_professionnelle_atelier' => 'Conseil en Evolution Professionnelle - Atelier',
             'acceler_emploi_atelier' => 'Accélèr\'Emploi - Atelier'
@@ -58,6 +59,7 @@ if (!isset($_SESSION["admin"])) {
         'atelier_conseil' => 'atelier-conseil.php',
         'evolution_professionnelle' => 'evolution-pro.php',
         'acceler_emploi' => 'acceler-emploi.php',
+        'contact' => 'contact.php',
         'evolution_professionnelle_atelier' => 'evolution-pro-atelier.php',
         'acceler_emploi_atelier' => 'acceler-emploi-atelier.php',
         'atelier_conseil_atelier' => 'atelier-conseil-atelier.php'
