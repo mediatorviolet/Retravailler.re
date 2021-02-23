@@ -5,7 +5,7 @@ function ajout_user()
 {
     global $signup_success_msg, $signup_success_class;
     if (isset($_POST['inscription'])) {
-        $serveur = "localhost";
+        $serveur = "127.0.0.1";
         $dbname = "retravailler_final";
         $user = "root";
         $password = "";
