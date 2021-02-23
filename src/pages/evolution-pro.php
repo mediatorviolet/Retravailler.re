@@ -20,7 +20,7 @@
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
         </svg>
-        <p class="text-center">
+        <p class="text-md-center mt-md-0 mt-4">
             Mon conseil en évolution professionnelle a été créé en 2014 et rénové par la loi du 5 septembre 2018 pour
             la « liberté de choisir son avenir professionnel » ; il est organisé et financé par France Compétence
             pour les salariés du secteur privé et travailleurs indépendants.

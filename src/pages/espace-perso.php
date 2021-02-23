@@ -7,7 +7,7 @@
  </div>
 
  <div class="container-fluid atelier-perso">
-     <div class="col-6 px-5 mb-5">
+     <div class="col-md-6 px-5 mb-5">
          <h2>Voici la liste de vos ateliers :</h2>
      </div>
      <div class="accordion accordion-flush px-5" id="accordionFlushExample">

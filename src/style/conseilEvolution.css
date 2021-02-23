@@ -1,67 +1,64 @@
-@media screen and (max-width: 400px)
+@media screen and (max-width: 400px) {
+  .title {
+    font-size: 2.5rem !important;
+    font-style: oblique !important;
+    font-weight: 400 !important;
+    font-family: "roboto" !important;
+    padding-top: 3rem;
+  }
 
-{
-    .title
-{
-    font-size: 50px!important;
-    font-style: oblique!important;
-    font-weight: 200!important;
-    font-family: 'roboto'!important;
-}
+  .slogan {
+    font-size: 1.5rem !important;
+  }
 
-.slogan
-{
-    font-size: 25px!important;
-}
-    .textMain
-    {
-        padding: 35px 0px 35px 0px!important;
-    }
-    .middleSection
-    {
-    padding-bottom: 70px!important;
-    }
+  .pt-4 > a:nth-child(1) {
+    margin-bottom: 3rem;
+  }
 
-    .imgMain
-    {
-        background: center;
-    }
-     .middleSectionTextRight,.middleSectionTextLeft
-    {
-        text-align: center;
-    }
-    h4
-    {
-        padding-bottom: 30px;
-    } 
-    p
-    {
-        letter-spacing: 0.5px;
-        line-height: 15px;
-    }
+  .textMain {
+    padding: 35px 0px 35px 0px !important;
+  }
+
+  .imgMain {
+    background: center;
+  }
+
+  .middleSectionTextRight,
+  .middleSectionTextLeft {
+    text-align: center;
+  }
+
+  h4 {
+    padding-bottom: 30px;
+  }
+
+  p {
+    letter-spacing: 0.5px;
+    line-height: 15px;
+    text-align: start;
+    padding: 0 !important;
+  }
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
-.title
-{
-    font-size: 65px;
-    font-style: oblique;
-    font-weight: 400;
-    font-family: 'roboto';
+.title {
+  font-size: 65px;
+  font-style: oblique;
+  font-weight: 400;
+  font-family: "roboto";
 }
 
-.slogan
-{
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 200;
-    font-family: 'roboto'
+.slogan {
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 200;
+  font-family: "roboto";
 }
 
 /* .middleSection
@@ -69,76 +66,68 @@
     padding-bottom: 140px;
 } */
 
-h4
-{
-    text-align: center;
-    padding: 25px 0 25px 0;
+h4 {
+  text-align: center;
+  padding: 25px 0 25px 0;
 }
 
-p
-{
-    letter-spacing: 1px;
-    line-height: 35px;
-    padding: 0 20px 0 20px;
+p {
+  letter-spacing: 1px;
+  line-height: 35px;
+  padding: 0 20px 0 20px;
 }
 
-.imgMain  {
-    margin-top: 4.7rem;
-    background-image: linear-gradient(rgba(0, 128, 49, 0.486), rgba(0, 128, 49, 0.486)), url("../ressources/img/conseilEvoProMain.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 500px;
-    color: rgb(255, 255, 255);
+.imgMain {
+  margin-top: 4.7rem;
+  background-image: linear-gradient(
+      rgba(0, 128, 49, 0.6),
+      rgba(0, 128, 49, 0.6)
+    ),
+    url("../ressources/img/conseilEvoProMain.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 500px;
+  color: rgb(255, 255, 255);
 }
 
-.textMain
-{   
-    font-style: oblique;
-    font-size: large;
-    padding: 0px 0px 140px 0px;
+.textMain {
+  font-style: oblique;
+  font-size: large;
+  padding: 0px 0px 140px 0px;
 }
 
-#imageMiddle
-{
-    height: 300px;
-    background-size: cover;
-    background-image: url("../ressources/img/reunionVuDeHautWomen.jpg");
+#imageMiddle {
+  height: 300px;
+  background-size: cover;
+  background-image: url("../ressources/img/reunionVuDeHautWomen.jpg");
 }
 
-#imageMiddle2
-{
-    height: 300px;
-    background-size: cover;
-    background-image: url("../ressources/img/rendezVousBlack.jpg");
+#imageMiddle2 {
+  height: 300px;
+  background-size: cover;
+  background-image: url("../ressources/img/rendezVousBlack.jpg");
 }
 
-.middleSection div
-{
-    background-color:#F5F5F5!important;
+.middleSection div {
+  background-color: #f5f5f5 !important;
 }
 
-.imageMiddle
-
-{
-    padding:0px 0px 0px 0px;
-
+.imageMiddle {
+  padding: 0px 0px 0px 0px;
 }
 
-@media screen and ( min-width:401px)
-{.custom-shape-divider-top-1610624090 {
-
+@media screen and (min-width: 401px) {
+  .custom-shape-divider-top-1610624090 {
     width: 100%;
     overflow: hidden;
+  }
 
-}
-
-.custom-shape-divider-top-1610624090 svg {
-
+  .custom-shape-divider-top-1610624090 svg {
     width: calc(122% + 1.3px);
+  }
+
+  .custom-shape-divider-top-1610624090 .shape-fill {
+    fill: #5ae99c;
+  }
 }
-
-.custom-shape-divider-top-1610624090 .shape-fill {
-    fill: #5AE99C;
-}}
-

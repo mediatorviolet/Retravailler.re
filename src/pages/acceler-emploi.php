@@ -10,14 +10,14 @@
 
 <section class="textMain d-flex flex-column align-items-center justify-content-center">
     <div class="col-md-3 col-1"></div>
-    <div class="col-md-6 col-10 px-md-0 px-3 py-md-0 py-5 custom-shape-divider-top-1610706305">
+    <div class="col-md-6 px-md-0 px-3 py-md-0 py-5 custom-shape-divider-top-1610706305">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill d-md-block d-none"></path>
         </svg>
 
         <h2>l'objectif</h2>
         <div class="redBar mx-auto mb-3 mt-4"></div>
-        <p class="text-center">
+        <p class="text-md-center">
             La prestation AccélèR'Emploi a pour objectif le retour rapide à l’emploi grâce :
             au renforcement de la maîtrise des outils et techniques de recherche d’emploi
             à la mise sous tension des démarches favorisée par la dynamique de groupe
@@ -39,11 +39,11 @@
             Ces 2 mois d’accompagnement sont complétés par un suivi post-prestation de 3 mois.
         </p>
     </div>
-    <div class="col-md-6 imageMiddle">
+    <div class="col-md-6 imageMiddle d-md-block d-none">
         <img src="src\ressources\img\computerWorkingPeople.jpg" class="img-fluid" alt="">
     </div>
 
-    <div class="col-md-6 order-2 order-md-1 py-5 py-md-0 px-md-0 px-5  middleSectionTextLeft">
+    <div class="col-md-6 order-2 order-md-1 py-5 py-md-0 px-md-0 px-4  middleSectionTextLeft">
         <h4>Comment s'inscrire ?</h4>
         <p>
             Un temps pour vous, pour parler de vos envies et clarifier vos besoins.
@@ -61,7 +61,7 @@
         <img src="src\ressources\img\rendezVousWomenBlackWhite.jpg" class="img-fluid" alt="">
     </div>
 
-    <div class="col-md-6 py-5 py-md-0 px-md-0 px-5 middleSectionTextRight">
+    <div class="col-md-6 py-5 py-md-0 px-md-0 px-4 middleSectionTextRight">
         <h4>Le premier rendez-vous</h4>
         <p>
             AccélèR’Emploi est une prestation de 2 mois (8 semaines) à temps partiel (0,5 à 1 jour / semaine).
@@ -86,7 +86,7 @@
 
 <section class="row ateliers">
 
-    <div class="col-6 card d-flex">
+    <div class="col-md-6 card d-flex flex-wrap">
         <div class="card-body">
             <h5 class="card-title text-center fs-1">Le suivi individuel</h5>
             <div class="text-center m-3 fs-1"> <i class="fas fa-user"></i></div>
@@ -100,7 +100,7 @@
 
         </div>
     </div>
-    <div class="col-6 card d-flex">
+    <div class="col-md-6 card d-flex">
 
         <div class="card-body">
             <h5 class="card-title text-center fs-1">Les évènements entreprises</h5>
@@ -158,10 +158,10 @@
 
 </section>
 
-<section class="textBottom d-flex flex-column align-items-center justify-content-center">
+<section class="textBottom d-flex flex-column align-items-center justify-content-center py-5">
 
     <div class="m-auto">
-        <p class="text-center m-auto fs-5 lh-lg ">
+        <p class="text-md-center m-auto fs-5 px-5">
             AccélèR’Emploi est une bonne occasion d’accroître son réseau professionnel avec les pairs de sa promotion<br>
             La possibilité d’échanger, à distance, pendant 5 mois via E-proévolution<br>
             Les ateliers et travaux en sous-groupes permettent de créer des affinités et un esprit d’entraide<br>

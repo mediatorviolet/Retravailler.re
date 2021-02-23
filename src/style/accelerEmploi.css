@@ -1,178 +1,161 @@
-@media screen and (max-width: 400px)
+@media screen and (max-width: 400px) {
+  .title {
+    font-size: 2.5rem !important;
+    font-style: oblique !important;
+    font-weight: 400 !important;
+    font-family: "roboto" !important;
+  }
 
-{
-    .title
-{
-    font-size: 50px!important;
-    font-style: oblique!important;
-    font-weight: 200!important;
-    font-family: 'roboto'!important;
-}
+  .slogan {
+    font-size: 25px !important;
+  }
+  .textMain {
+    padding: 35px 0px 35px 0px !important;
+  }
+  .middleSection {
+    padding-bottom: 70px !important;
+  }
 
-.slogan
-{
-    font-size: 25px!important;
-}
-    .textMain
-    {
-        padding: 35px 0px 35px 0px!important;
-    }
-    .middleSection
-    {
-    padding-bottom: 70px!important;
-    }
-
-    .imgMain
-    {
-        background: center;
-    }
-     .middleSectionTextRight,.middleSectionTextLeft
-    {
-        text-align: center;
-    }
-    h4
-    {
-        padding-bottom: 30px;
-    } 
-    p
-    {
-        letter-spacing: 0.5px;
-        line-height: 15px;
-    }
+  .imgMain {
+    background: center;
+  }
+  .middleSectionTextRight,
+  .middleSectionTextLeft {
+    text-align: center;
+  }
+  h4 {
+    padding-bottom: 30px;
+  }
+  p {
+    letter-spacing: 0.5px;
+    line-height: 15px;
+    padding: 20px 0 20px 0 !important;
+  }
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
-.title
-{
-    font-size: 65px;
-    font-style: oblique;
-    font-weight: 400;
-    font-family: 'roboto';
-    text-transform: uppercase;
+body {
+  overflow-x: hidden;
 }
 
-.slogan
-{
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 200;
-    font-family: 'roboto'
+.title {
+  font-size: 65px;
+  font-style: oblique;
+  font-weight: 400;
+  font-family: "roboto";
+  text-transform: uppercase;
 }
 
-h2
-{
-    text-align: center;
-    text-transform: uppercase;
-    font-family: 'Roboto', sans-serif;
+.slogan {
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 200;
+  font-family: "roboto";
 }
 
-.middleSection
-{
-padding-bottom: 140px;
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
 }
 
-h4
-{
-    text-align: center;
-    padding: 25px 0 25px 0;
+.middleSection {
+  padding-bottom: 140px;
 }
 
-p
-{
-    letter-spacing: 1px;
-    line-height: 35px;
-    padding: 0 20px 0 20px;
+h4 {
+  text-align: center;
+  padding: 25px 0 25px 0;
 }
 
-.imgMain  {
-    margin-top: 4.5rem;
-    background-image: linear-gradient(rgba(96, 76, 128, 0.486), rgba(96, 76, 128, 0.486)), url("../ressources/img/accelereEmploiMain.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 500px;
-    color: rgb(255, 255, 255);
+p {
+  letter-spacing: 1px;
+  line-height: 35px;
+  padding: 0 20px 0 20px;
 }
 
-.textMain
-{   
-    font-style: oblique;
-    font-size: large;
-    padding: 0px 0px 140px 0px;
+.imgMain {
+  margin-top: 4.5rem;
+  background-image: linear-gradient(
+      rgba(96, 76, 128, 0.486),
+      rgba(96, 76, 128, 0.486)
+    ),
+    url("../ressources/img/accelereEmploiMain.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 500px;
+  color: rgb(255, 255, 255);
 }
 
-#imageMiddle
-{
-    height: 300px;
-    background-size: cover;
-    background-image: url("../ressources/img/reunionVuDeHautWomen.jpg");
+.textMain {
+  font-style: oblique;
+  font-size: large;
+  padding: 0px 0px 140px 0px;
 }
 
-#imageMiddle2
-{
-    height: 300px;
-    background-size: cover;
-    background-image: url("../ressources/img/rendezVousBlack.jpg");
+#imageMiddle {
+  height: 300px;
+  background-size: cover;
+  background-image: url("../ressources/img/reunionVuDeHautWomen.jpg");
 }
 
-.middleSection div
-{
-    background-color:#F5F5F5!important;
+#imageMiddle2 {
+  height: 300px;
+  background-size: cover;
+  background-image: url("../ressources/img/rendezVousBlack.jpg");
 }
 
-.imageMiddle
-
-{
-    padding:0px 0px 0px 0px;
-
+.middleSection div {
+  background-color: #f5f5f5 !important;
 }
 
-.redBar
-{
-    background-color:rgba(255, 0, 0, 0.63);
-    height: 5px;
-    width: 200px;
-    border-radius: 10px;
+.imageMiddle {
+  padding: 0px 0px 0px 0px;
 }
 
-.ateliers
-{
-    padding-bottom: 140px!important;
-} 
+.redBar {
+  background-color: rgba(255, 0, 0, 0.63);
+  height: 5px;
+  width: 200px;
+  border-radius: 10px;
+}
+
+.ateliers {
+  padding-bottom: 140px !important;
+}
 
 .textBottom {
-    background-image: linear-gradient(rgba(192, 192, 192, 0.486), rgba(192, 192, 192, 0.486)), url("../ressources/img/imageWorkingWomenOffice.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 300px;
-    color: rgb(255, 255, 255);
-    font-family: 'roboto', sans-serif;
-
+  background-image: linear-gradient(
+      rgba(122, 122, 122, 0.6),
+      rgba(122, 122, 122, 0.6)
+    ),
+    url("../ressources/img/imageWorkingWomenOffice.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 300px;
+  color: rgb(255, 255, 255);
+  font-family: "roboto", sans-serif;
 }
 
-@media screen and ( min-width:401px)
-{.custom-shape-divider-top-1610706305 {
-
+@media screen and (min-width: 401px) {
+  .custom-shape-divider-top-1610706305 {
     width: 100%;
     overflow: hidden;
+  }
 
-}
-
-.custom-shape-divider-top-1610706305 svg {
-
+  .custom-shape-divider-top-1610706305 svg {
     width: calc(151% + 1.3px);
+  }
 
+  .custom-shape-divider-top-1610706305 .shape-fill {
+    fill: #604c80cc;
+  }
 }
-
-.custom-shape-divider-top-1610706305 .shape-fill {
-    fill: #604C80CC;
-}
-}
-
