@@ -11,35 +11,31 @@
          <h2>Voici la liste de vos ateliers :</h2>
      </div>
      <div class="accordion accordion-flush px-5" id="accordionFlushExample">
-         <div class="accordion-item">
-             <h2 class="accordion-header" id="flush-headingOne">
-                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                     Accordion Item #1
-                 </button>
-             </h2>
-             <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                 <div class="accordion-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</div>
+         <?php
+            try {
+                $bdd = new PDO('mysql:host=127.0.0.1;dbname=retravailler_final;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+            } catch (Exception $e) {
+                die('Erreur : ' . $e->getMessage());
+            }
+
+            $sql = 'SELECT association_user_date.*, date_atelier.*, atelier.* FROM association_user_date JOIN date_atelier ON association_user_date.id_dateAtelier = date_atelier.id_dateAtelier JOIN atelier ON date_atelier.id_atelier = atelier.id_atelier WHERE association_user_date.id_user = "' . $_SESSION['user']['id_user'] . '"';
+            $req = $bdd->query($sql);
+            $datas = $req->fetchAll();
+            foreach ($datas as $data) {
+            ?>
+             <div class="accordion-item">
+                 <h2 class="accordion-header" id="flush-headingOne">
+                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#id_<?= $data['id_dateAtelier'] ?>" aria-expanded="false" aria-controls="<?= $data['id_dateAtelier'] ?>">
+                         <?= $data['nom'] ?>
+                     </button>
+                 </h2>
+                 <div id="id_<?= $data['id_dateAtelier'] ?>" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                     <div class="accordion-body">
+                         <p><?= $data['description'] ?></p>
+                         <p><b><?= $data['date_atelier'] ?></b></p>
+                     </div>
+                 </div>
              </div>
-         </div>
-         <div class="accordion-item">
-             <h2 class="accordion-header" id="flush-headingTwo">
-                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                     Accordion Item #2
-                 </button>
-             </h2>
-             <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                 <div class="accordion-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</div>
-             </div>
-         </div>
-         <div class="accordion-item">
-             <h2 class="accordion-header" id="flush-headingThree">
-                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                     Accordion Item #3
-                 </button>
-             </h2>
-             <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                 <div class="accordion-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</div>
-             </div>
-         </div>
+         <?php } ?>
      </div>
  </div>
