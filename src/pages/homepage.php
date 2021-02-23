@@ -99,7 +99,7 @@
         <h2 class="text-center text-white">Contactez-nous</h2>
         <div class="d-flex justify-content-center">
             <button type="button" class="btn btn-primary rounded-pill mt-3 py-3 px-5 btn-green">
-                <i class="fas fa-phone-alt me-2"></i>Contact
+                <i class="fas fa-phone-alt"></i>
             </button>
         </div>
         <div class="d-flex justify-content-center mt-5">
