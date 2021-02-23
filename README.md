@@ -83,11 +83,7 @@ Ces champs sont tous obligatoires lors de la création d'un atelier par l'admini
 
 Les couleurs de notre charte graphique sont :
 ![sparkles](src/ressources/couleurs.png)
-**#5c215e**
-![sparkles](src/ressources/couleurs.png)
-**#9cdbc4**
-![sparkles](src/ressources/couleurs.png)
-**#97c025**
+
 
 ### Les polices
 
@@ -109,7 +105,7 @@ L’application doit :
 
 ## Wireframe
 
-![sparkle](https://www.figma.com/file/8RBqhXedE9nQOmToRk6Iau/Retravailler.re?node-id=8%3A0)
+https://www.figma.com/file/8RBqhXedE9nQOmToRk6Iau/Retravailler.re?node-id=8%3A0
 
 
 
