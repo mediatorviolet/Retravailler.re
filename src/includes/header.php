@@ -47,7 +47,7 @@ ajout_user(); // Fonction qui gère l'ajout d'utilisateur dans la base de donné
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contactez-Nous</a>
+                    <a class="nav-link" href="index.php?page=contact">Contactez-Nous</a>
                 </li>
                 <!-- Si aucun utilisateur n'est connecté, on affiche ce qui suit -->
                 <?php if ($_SESSION["user"] == false and $_SESSION["admin"] == false) { ?>

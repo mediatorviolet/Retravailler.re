@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.divider
+{
+    height: 200px;
+}
+
+.separator {
+    height: .5rem;
+}
+
+.main-contact {
+    height: 700px;
+    background-image: linear-gradient(rgba(156, 219, 196, 0.35), rgba(31, 116, 85, 0.35)), url("../ressources/img/workerWomanConseilBlack.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    margin-top: 4.5rem;
+    
+}
+
+
+
+.logo-contact
+{
+    width: 100px;
+    height: 100px;
+    color: rgb(19, 185, 47);
+}
+
+
+.titre-accueil
+{
+    color: rgb(94, 17, 94);
+}
+
+
+@media screen and (max-width:768px)
+{
+    .divider
+    {
+        height: 14rem;
+    }
+}
