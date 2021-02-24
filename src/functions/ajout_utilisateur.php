@@ -5,10 +5,7 @@ function ajout_user()
 {
     global $signup_success_msg, $signup_success_class;
     if (isset($_POST['inscription'])) {
-        $serveur = "127.0.0.1";
-        $dbname = "retravailler_final";
-        $user = "root";
-        $password = "";
+
 
         // $pass = ($_POST['pass']);
         // if (!preg_match("#^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[-+!*$@%_])([-+!*$@%_\w]{8,15})$#", $pass))
@@ -36,13 +33,7 @@ function ajout_user()
             && filter_var($email, FILTER_VALIDATE_EMAIL)
         ) {
 
-            try {
-                //On se connecte à la BDD
-                $bdd = new PDO("mysql:host=$serveur;dbname=$dbname", $user, $password);
-                $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            } catch (PDOException $e) {
-                echo 'Erreur : ' . $e->getMessage();
-            }
+            include 'src/functions/connexion_bdd.php';
 
             //On insère les données reçues
             $insertion = $bdd->prepare("INSERT INTO user (prenom, nom, email, password, telephone, role, etat) VALUES (:prenom, :nom, :email, :password, :telephone, :role, :etat)");

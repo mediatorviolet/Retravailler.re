@@ -3,17 +3,13 @@
 $error_login = '';
 function connexion()
 {
+
+
     global $error_login;
     if ($_SERVER['REQUEST_METHOD'] == 'POST' and isset($_POST['connexion'])) { // On vérifie si le serveur reçoit un POST et si on a cliqué sur le bouton de connexion
-        try { // Connexion à la BDD
-            $bdd = new PDO('mysql:host=127.0.0.1;dbname=retravailler_final;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-            error_log(date('l jS \of F Y h:i:s A') . ": Connexion à la base de données réussie\r\n", 3, 'src/var/log.txt');
-        } catch (Exception $e) { // Si erreur, on renvoi un message d'erreur
-            error_log(date('l jS \of F Y h:i:s A') . ": Connexion à la base de données impossible\r\n", 3, 'src/var/log.txt');
-            header('Location: login-page.php');
-            die('Erreur : ' . $e->getMessage());
-        }
 
+        include 'src/functions/connexion_bdd.php';
+       
         // On selectionne la ligne dans la table 'utilisateur' où l'email correspond à notre $_POST["email_connect"]
         $req = $bdd->prepare('SELECT * FROM user WHERE email = :email');
 
