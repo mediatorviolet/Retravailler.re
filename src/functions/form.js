@@ -1,5 +1,5 @@
 let ajout_date = document.querySelector("#ajout_date");
-let count = 1;
+let count = 0;
 
 function insertAfter(newNode, referenceNode) {
   referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
