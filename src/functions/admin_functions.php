@@ -22,13 +22,22 @@ function creationAtelier()
         $sql_idAtelier = 'SELECT MAX(id_atelier) FROM atelier';
         $req_idAtelier = $bdd->query($sql_idAtelier);
         $data = $req_idAtelier->fetchColumn();
-        for ($i = 0; $i < (count($_POST) - 8); $i++) {
+        if (count($_POST) == 7) {
             $req_date->execute(array(
                 'id_atelier' => $data,
-                'date_atelier' => $_POST['date' . $i] . ' ' . $_POST['heure' . $i],
-                'nb_place' => $_POST['nb_place' . $i],
+                'date_atelier' => $_POST['date0'] . ' ' . $_POST['heure0'],
+                'nb_place' => $_POST['nb_place0'],
                 'id_prestation' => $_POST['prestation']
             ));
+        } else {
+            for ($i = 0; $i < (count($_POST) - 8); $i++) {
+                $req_date->execute(array(
+                    'id_atelier' => $data,
+                    'date_atelier' => $_POST['date' . $i] . ' ' . $_POST['heure' . $i],
+                    'nb_place' => $_POST['nb_place' . $i],
+                    'id_prestation' => $_POST['prestation']
+                ));
+            }
         }
 
         header('Location: index.php?page=admin');
