@@ -3,11 +3,8 @@
 function creationAtelier()
 {
     if (isset($_POST['creer_atelier'])) {
-        try {
-            $bdd = new PDO('mysql:host=127.0.0.1;dbname=retravailler_final;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-        } catch (Exception $e) {
-            die('Erreur : ' . $e->getMessage());
-        }
+
+        include 'src/functions/connexion_bdd.php';
 
         extract($_POST);
         $sql_atelier = 'INSERT INTO atelier (id_prestation, nom, description) VALUES (:id_prestation, :nom, :description)';

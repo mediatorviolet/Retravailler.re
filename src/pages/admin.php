@@ -24,11 +24,8 @@
             </thead>
             <tbody>
                 <?php
-                try {
-                    $bdd = new PDO('mysql:host=127.0.0.1;dbname=retravailler_final;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-                } catch (Exception $e) {
-                    die('Erreur : ' . $e->getMessage());
-                }
+                    
+                    include 'src/functions/connexion_bdd.php';
 
                 $sql = 'SELECT a.id_atelier, a.nom, a.description, d.id_dateAtelier, d.id_atelier, d.date_atelier, d.nb_place, d.id_prestation FROM atelier a RIGHT JOIN date_atelier d ON a.id_atelier = d.id_atelier ORDER BY d.date_atelier';
                 $req = $bdd->query($sql);
