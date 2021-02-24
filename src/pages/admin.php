@@ -2,11 +2,9 @@
     <h2 class="display-4 text-center px-lg-5 py-lg-5 p-md-3 py-3">Administrateur</h2>
 
     <div class="d-flex justify-content-center mb-5">
-        <form action="" method="post">
-            <button type="submit" class="btn btn-primary btn-green-nav" name="creer_atelier">
+            <a href="index.php?page=creation_atelier" class="btn btn-primary btn-green-nav" name="creer_atelier">
                 Créer un atelier
-            </button>
-        </form>
+            </a>
     </div>
     <hr>
     <h3 class="display-5 text-center px-lg-5 p-md-3 py-3">Ateliers crées :</h3>

@@ -28,7 +28,8 @@ if (!isset($_SESSION["admin"])) {
             'atelier_conseil_atelier' => 'Atelier Conseil - Atelier',
             'evolution_professionnelle_atelier' => 'Conseil en Evolution Professionnelle - Atelier',
             'acceler_emploi_atelier' => 'Accélèr\'Emploi - Atelier',
-            'admin' => 'Admin'
+            'admin' => 'Admin',
+            'creation_atelier' => 'Création atelier'
         );
 
         if (isset($_GET['page']) and isset($title[$_GET['page']])) { // Si la page possède un titre dans l'array on echo le titre
@@ -64,7 +65,8 @@ if (!isset($_SESSION["admin"])) {
         'evolution_professionnelle_atelier' => 'evolution-pro-atelier.php',
         'acceler_emploi_atelier' => 'acceler-emploi-atelier.php',
         'atelier_conseil_atelier' => 'atelier-conseil-atelier.php',
-        'admin' => 'admin.php'
+        'admin' => 'admin.php',
+        'creation_atelier' => 'admin_creaAtelier.php'
     );
 
     if (isset($_GET["page"]) and isset($page_ok[$_GET['page']])) {
