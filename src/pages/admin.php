@@ -1,6 +1,7 @@
 <?php
 include 'src/functions/admin_functions.php';
 desactiver();
+modifier();
 ?>
 
 <div class="container-fluid p-lg-5 p-md-3">
@@ -65,7 +66,7 @@ desactiver();
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                            <h5 class="modal-title text-light" id="exampleModalLabel">Liste des inscrits</h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
@@ -77,23 +78,53 @@ desactiver();
                                                 foreach ($results as $result) {
                                                 ?>
                                                     <li><?= $result['prenom'] . ' ' . $result['nom'] ?></li>
-                                                <?php } ?>
+                                                <?php } 
+                                                $req->closeCursor();
+                                                ?>
                                             </ul>
                                         </div>
-                                        <div class="modal-footer">
+                                        <!-- <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>
                         </td>
                         <td>
-                            <form action="" method="post">
-                                <input type="hidden" value="<?= $data['id_dateAtelier'] ?>">
-                                <button type="submit" class="btn btn-primary btn-green-nav" name="modifier">
-                                    Modifier
-                                </button>
-                            </form>
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary btn-green-nav" data-bs-toggle="modal" data-bs-target="#modif<?= $data['id_dateAtelier'] ?>">
+                                Modifier
+                            </button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="modif<?= $data['id_dateAtelier'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title text-light" id="exampleModalLabel">Modification</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
+                                            <div class="modal-body">
+                                                <div id="div0" class="mt-5">
+                                                    <div class="input-group col-md-6">
+                                                        <span class="input-group-text">Date et heure</span>
+                                                        <input type="date" aria-label="First name" class="form-control" name="date" value="<?= substr($data['date_atelier'], 0, 10) ?>">
+                                                        <input type="time" aria-label="Last name" class="form-control" name="heure" value="<?= substr($data['date_atelier'], 11) ?>">
+                                                    </div>
+                                                    <div class="col-md-6 mt-4">
+                                                        <label for="nb_place1" class="form-label">Nombre de places</label>
+                                                        <input type="number" class="form-control" name="nb_place" min="1" value="<?= $data['nb_place'] ?>">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <input type="hidden" name="id_date" value="<?= $data['id_dateAtelier'] ?>">
+                                                <button type="submit" name="modifier" class="btn btn-primary btn-green-nav">Modifier</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
                         </td>
                         <td>
                             <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
@@ -104,7 +135,9 @@ desactiver();
                             </form>
                         </td>
                     </tr>
-                <?php } ?>
+                <?php } 
+                $req->closeCursor();
+                ?>
             </tbody>
         </table>
     </div>

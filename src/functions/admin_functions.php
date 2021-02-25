@@ -52,3 +52,13 @@ function desactiver()
         $bdd->query($sql);        
     }
 }
+
+function modifier() {
+    if (isset($_POST['modifier'])) {
+        extract($_POST);
+        include 'src/functions/connexion_bdd.php';
+        
+        $sql = 'UPDATE date_atelier SET date_atelier = "' . $date . ' ' . $heure . '", nb_place = "' . $nb_place . '" WHERE id_dateAtelier = "' . $id_date . '"';
+        $bdd->query($sql);
+    }
+}
