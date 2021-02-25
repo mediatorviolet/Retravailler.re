@@ -1,3 +1,8 @@
+<?php
+include 'src/functions/admin_functions.php';
+desactiver();
+?>
+
 <div class="container-fluid p-lg-5 p-md-3">
     <h2 class="display-4 text-center px-lg-5 py-lg-5 p-md-3 py-3">Administrateur</h2>
 
@@ -24,10 +29,10 @@
             </thead>
             <tbody>
                 <?php
-                    
-                    include 'src/functions/connexion_bdd.php';
 
-                $sql = 'SELECT a.id_atelier, a.nom, a.description, d.id_dateAtelier, d.id_atelier, d.date_atelier, d.nb_place, d.id_prestation FROM atelier a RIGHT JOIN date_atelier d ON a.id_atelier = d.id_atelier ORDER BY d.date_atelier';
+                include 'src/functions/connexion_bdd.php';
+
+                $sql = 'SELECT a.id_atelier, a.nom, a.description, d.id_dateAtelier, d.id_atelier, d.date_atelier, d.nb_place, d.id_prestation, d.etat FROM atelier a RIGHT JOIN date_atelier d ON a.id_atelier = d.id_atelier ORDER BY d.date_atelier';
                 $req = $bdd->query($sql);
                 $datas = $req->fetchAll();
                 foreach ($datas as $data) {
@@ -77,21 +82,26 @@
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary btn-green-nav">Save changes</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </td>
                         <td>
-                            <button type="submit" class="btn btn-primary btn-green-nav" name="inscription_atelier">
-                                Modifier
-                            </button>
+                            <form action="" method="post">
+                                <input type="hidden" value="<?= $data['id_dateAtelier'] ?>">
+                                <button type="submit" class="btn btn-primary btn-green-nav" name="modifier">
+                                    Modifier
+                                </button>
+                            </form>
                         </td>
                         <td>
-                            <button type="submit" class="btn btn-primary btn-green-nav" name="inscription_atelier">
-                                Désactiver
-                            </button>
+                            <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
+                                <input type="hidden" value="<?= $data['id_dateAtelier'] ?>" name="id_date_desactiver">
+                                <button type="submit" class="btn btn-primary btn-green-nav" name="desactiver">
+                                    <?= $data['etat'] == 1 ? 'Désactiver' : 'Activer' ?>
+                                </button>
+                            </form>
                         </td>
                     </tr>
                 <?php } ?>

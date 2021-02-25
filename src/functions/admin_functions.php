@@ -39,7 +39,16 @@ function creationAtelier()
                 ));
             }
         }
-
         header('Location: index.php?page=admin');
+    }
+}
+
+function desactiver()
+{
+    if (isset($_POST['desactiver'])) {
+        include 'src/functions/connexion_bdd.php';
+
+        $sql = 'UPDATE date_atelier SET etat = CASE WHEN etat = 1 THEN 0 ELSE 1 END WHERE id_dateAtelier = "' . $_POST['id_date_desactiver'] . '"';
+        $bdd->query($sql);        
     }
 }
