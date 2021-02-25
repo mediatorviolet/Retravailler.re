@@ -1,21 +1,21 @@
 <?php
 
 
-// if ($_SERVER["REMOTE_ADDR"]=="127.0.0.1")
-// {
-//     $serveur = "127.0.0.1";
-//     $dbname = "retravailler_final";
-//     $user = "root";
-//     $password = "";
-// }
+if ($_SERVER["REMOTE_ADDR"]=="127.0.0.1")
+{
+    $serveur = "127.0.0.1";
+    $dbname = "retravailler_final";
+    $user = "root";
+    $password = "";
+}
 
-// else
-// {
+else
+{
     $serveur = "us-cdbr-east-03.cleardb.com";
     $dbname = "heroku_7c2ac3a00a455e9";
     $user = "be460bc87bab43";
     $password = "2fe501de";
-// }
+}
 
 try {
     //On se connecte à la BDD
