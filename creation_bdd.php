@@ -28,7 +28,8 @@ CREATE TABLE `date_atelier` (
   `id_atelier` int(11) NOT NULL,
   `date_atelier` datetime NOT NULL,
   `nb_place` int(11) NOT NULL,
-  `id_prestation` int(11) NOT NULL
+  `id_prestation` int(11) NOT NULL,
+  `etat` int(1) DEFAULT 1 NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE `prestation` (
