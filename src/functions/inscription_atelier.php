@@ -17,3 +17,15 @@ function inscriptionAtelier()
         }
     }
 }
+
+function desinscriptionAtelier() {
+    if (isset($_POST['desinscription'])) {
+        include 'src/functions/connexion_bdd.php';
+
+        $sql_desinscription = 'DELETE FROM association_user_date WHERE id_dateAtelier = "' . $_POST['id_date'] . '" AND id_user = "' . $_SESSION['user']['id_user'] . '"';
+        $bdd->query($sql_desinscription);
+
+        $sql_nbplace = 'UPDATE date_atelier SET nb_place = nb_place + 1 WHERE id_dateAtelier = "' . $_POST['id_date'] . '"';
+        $bdd->query($sql_nbplace);
+    }
+}
