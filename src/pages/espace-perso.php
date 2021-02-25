@@ -22,7 +22,20 @@
              <div class="accordion-item">
                  <h2 class="accordion-header" id="flush-headingOne">
                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#id_<?= $data['id_dateAtelier'] ?>" aria-expanded="false" aria-controls="<?= $data['id_dateAtelier'] ?>">
-                         <?= $data['nom'] ?>
+                         <?= $data['nom'] ?> -
+                         <?php
+                            switch ($data['id_prestation']) {
+                                case 1:
+                                    echo 'Conseil en Evolution Professionnelle';
+                                    break;
+                                case 2:
+                                    echo 'Accélèr\'Emploi';
+                                    break;
+                                case 3:
+                                    echo 'Atelier Conseil';
+                                    break;
+                            }
+                            ?>
                      </button>
                  </h2>
                  <div id="id_<?= $data['id_dateAtelier'] ?>" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">

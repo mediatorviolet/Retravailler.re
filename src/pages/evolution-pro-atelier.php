@@ -30,13 +30,23 @@ inscriptionAtelier();
                             <select name="date" class="form-select" aria-label="Default select example">
                                 <option selected>Choisissez une date</option>
                                 <?php
-                                $request = $bdd->query('SELECT id_user FROM association_user_date WHERE id_user = "' . $_SESSION['user']['id_user'] . '" AND id_dateAtelier = "' . $_POST['date'] . '"');
-
                                 $response = $bdd->query('SELECT * FROM date_atelier WHERE id_prestation = 1 AND id_atelier = "' . $donnee['id_atelier'] . '" AND etat = 1');
                                 $data = $response->fetchAll();
+
+                                $request = $bdd->query('SELECT id_dateAtelier FROM association_user_date WHERE id_user = "' . $_SESSION['user']['id_user'] . '"');
+                                $r = $request->fetchAll();
+
                                 for ($i = 0; $i < count($data); $i++) {
                                 ?>
-                                    <option value="<?= $data[$i]['id_dateAtelier'] ?>" <?= !empty($request) ? 'disabled' : '' ?>>
+                                    <option value="<?= $data[$i]['id_dateAtelier'] ?>" <?php
+                                                                                        foreach ($r as $s) {
+                                                                                            if ($s['id_dateAtelier']  == $data[$i]['id_dateAtelier']) {
+                                                                                                echo 'disabled';
+                                                                                            } else {
+                                                                                                echo '';
+                                                                                            }
+                                                                                        }
+                                                                                        ?>>
                                         <?= $data[$i]['date_atelier'] . ' - ' . $data[$i]['nb_place'] . ' places restantes' ?>
                                     </option>
                                 <?php } ?>
