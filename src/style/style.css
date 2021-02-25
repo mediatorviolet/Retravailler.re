@@ -144,10 +144,3 @@ footer {
   height: 110px;
   margin-right: 2em;
 }
-
-#ajout_date {
-  text-decoration: underline;
-  cursor: pointer;
-  color: #61ce70;
-  font-weight: 400;
-}
