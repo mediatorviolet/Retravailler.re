@@ -1,4 +1,9 @@
 <?php
+require 'src/functions/auth.php';
+if (!Auth::isLogged() && $_SESSION['user']['role'] != 1) {
+    header('Location: login-page.php');
+}
+
 include 'src/functions/inscription_atelier.php';
 desinscriptionAtelier();
 ?>

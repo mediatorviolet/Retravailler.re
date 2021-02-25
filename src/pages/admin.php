@@ -1,4 +1,9 @@
 <?php
+require 'src/functions/auth.php';
+if (!Auth::isLogged() && $_SESSION['user']['role'] != 2) {
+    header('Location: login-page.php');
+}
+
 include 'src/functions/admin_functions.php';
 desactiver();
 modifier();
@@ -128,7 +133,7 @@ modifier();
                                                     </div>
                                                     <div class="col-md-6 mt-4">
                                                         <label for="nb_place1" class="form-label">Nombre de places</label>
-                                                        <input type="number" class="form-control" name="nb_place" min="1" value="<?= $data['nb_place'] ?>" required>
+                                                        <input type="number" class="form-control" name="nb_place" min="<?= count($results) ?>" value="<?= $data['nb_place'] ?>" required>
                                                     </div>
                                                 </div>
                                             </div>

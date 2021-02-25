@@ -1,4 +1,9 @@
 <?php
+require 'src/functions/auth.php';
+if (!Auth::isLogged() && $_SESSION['user']['role'] != 2) {
+    header('Location: login-page.php');
+}
+
 include 'src/functions/admin_functions.php';
 creationAtelier()
 ?>
@@ -34,7 +39,7 @@ creationAtelier()
         <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST" class="row g-3 col-md-10 mx-auto">
             <div class="col-12">
                 <label for="prestation" class="form-label">Prestation</label>
-                <select name="prestation" id="" class="form-select" required autofocus>
+                <select name="prestation" id="" class="form-select" required>
                     <option value="" selected>Choisir une prestation</option>
                     <option value="1">Conseil en Evolution Professionnelle</option>
                     <option value="2">Accélèr'Emploi</option>

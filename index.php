@@ -4,9 +4,6 @@ session_start(); // Initialisation de la session
 if (!isset($_SESSION["user"])) {
     $_SESSION["user"] = false;
 }
-if (!isset($_SESSION["admin"])) {
-    $_SESSION["admin"] = false;
-}
 ?>
 
 <!DOCTYPE html>
