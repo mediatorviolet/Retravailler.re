@@ -50,91 +50,27 @@ ajout_user(); // Fonction qui gère l'ajout d'utilisateur dans la base de donné
                     <a class="nav-link" href="index.php?page=contact">Contactez-Nous</a>
                 </li>
                 <!-- Si aucun utilisateur n'est connecté, on affiche ce qui suit -->
-                <?php if ($_SESSION["user"] == false and $_SESSION["admin"] == false) { ?>
+                <?php if ($_SESSION["user"] == false) { ?>
             </ul>
 
             <a class="btn btn-primary btn-green-nav" href="login-page.php">
                 Connexion<i class="fas fa-sign-in-alt ms-2"></i>
             </a>
-            <!-- Button trigger modal -->
-            <!-- <button type="button" class="btn btn-primary btn-green-nav" data-bs-toggle="modal" data-bs-target="#connexion" data-bs-backdrop="false">
-                Connexion<i class="fas fa-sign-in-alt ms-2"></i>
-            </button> -->
-
-            <!-- Modal connexion -->
-            <!-- <div class="modal fade" id="connexion" tabindex="-1" aria-labelledby="connexionLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title text-white" id="connexionLabel">Connexion</h5>
-                            <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form action="" method="POST">
-                                <div class="mb-3">
-                                    <label for="email_connect" class="form-label">Email</label>
-                                    <input type="email" class="form-control" name="email_connect" id="email_connect" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="password_connect" class="form-label">Mot de passe</label>
-                                    <input type="password" class="form-control" name="password_connect" id="password_connect" required>
-                                </div>
-                                <button type="submit" name="connexion" class="btn btn-primary btn-green-nav">Connexion</button>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <a class="text-muted text-decoration-none" href="#" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#inscription" data-bs-backdrop="false">
-                                Pas encore de compte ? Inscrivez-vous <i class="fas fa-user-plus"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-
-            <!-- Modal inscription -->
-            <!-- <div class="modal fade" id="inscription" tabindex="-1" aria-labelledby="inscriptionLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title text-white" id="inscriptionLabel">Inscription</h5>
-                            <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form action="" method="POST">
-                                <div class="mb-3">
-                                    <label for="nom" class="form-label">Nom</label>
-                                    <input type="text" class="form-control" name="nom" id="nom" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="prenom" class="form-label">Prenom</label>
-                                    <input type="text" class="form-control" name="prenom" id="prenom" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="email" class="form-label">Email</label>
-                                    <input type="email" class="form-control" name="email" id="email" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="tel" class="form-label">Téléphone</label>
-                                    <input type="tel" class="form-control" name="tel" id="tel" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="pass" class="form-label">Mot de passe</label>
-                                    <input type="password" class="form-control" name="pass" id="pass" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="passConfirmation" class="form-label">Confirmez le mot de passe</label>
-                                    <input type="password" class="form-control" name="passConfirmation" id="passConfirmation" required>
-                                </div>
-                                <button type="submit" class="btn btn-primary btn-green-nav" name="inscription">Inscription</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
             <!-- Si 'user' est connecté, on affiche ce qui suit -->
-        <?php } else if ($_SESSION["user"] == true) { ?>
+        <?php } else if ($_SESSION["user"]['role'] == 1) { ?>
             <li class="nav-item">
                 <a class="nav-link <?= $_GET['page'] == 'espace_perso' ? 'active' : '' ?>" href="index.php?page=espace_perso">Espace personnel</a>
+            </li>
+            </ul>
+            <form action="<?= connexion() ?>" method="POST">
+                <button class="btn btn-primary btn-green-nav" type="submit" name="deconnexion">Déconnexion</button>
+            </form>
+            <!-- Si admin est connecté, on affiche ce qui suit -->
+        <?php } else if ($_SESSION['user']['role'] == 2) { ?>
+            <li class="nav-item">
+                <a class="nav-link <?= $_GET['page'] == 'admin' ? 'active' : '' ?>" href="index.php?page=admin">
+                    Espace administrateur
+                </a>
             </li>
             </ul>
             <form action="<?= connexion() ?>" method="POST">
