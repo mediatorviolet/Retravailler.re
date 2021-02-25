@@ -34,7 +34,7 @@ include 'src/functions/connexion_bdd.php';
                                 <?php
                                 $request = $bdd->query('SELECT id_user FROM association_user_date WHERE id_user = "' . $_SESSION['user']['id_user'] . '" AND id_dateAtelier = "' . $_POST['date'] . '"');
 
-                                $response = $bdd->query('SELECT * FROM date_atelier WHERE id_prestation = 3 AND id_atelier = "' . $donnee['id_atelier'] . '"');
+                                $response = $bdd->query('SELECT * FROM date_atelier WHERE id_prestation = 3 AND id_atelier = "' . $donnee['id_atelier'] . '" AND etat = 1');
                                 $data = $response->fetchAll();
                                 for ($i = 0; $i < count($data); $i++) {
                                 ?>
