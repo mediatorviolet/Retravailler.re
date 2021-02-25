@@ -2,11 +2,7 @@
 function inscriptionAtelier()
 {
     if (isset($_POST['inscription_atelier'])) {
-        try {
-            $bdd = new PDO('mysql:host=127.0.0.1;dbname=retravailler_final;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-        } catch (Exception $e) {
-            die('Erreur : ' . $e->getMessage());
-        }
+        include 'src/functions/connexion_bdd.php';
 
         $request = $bdd->query('SELECT id_user FROM association_user_date WHERE id_user = "' . $_SESSION['user']['id_user'] . '" AND id_dateAtelier = "' . $_POST['date'] . '"');
         if (empty($request)) {

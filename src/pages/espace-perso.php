@@ -12,11 +12,7 @@
      </div>
      <div class="accordion accordion-flush px-5" id="accordionFlushExample">
          <?php
-            try {
-                $bdd = new PDO('mysql:host=127.0.0.1;dbname=retravailler_final;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-            } catch (Exception $e) {
-                die('Erreur : ' . $e->getMessage());
-            }
+            include 'src/functions/connexion_bdd.php';
 
             $sql = 'SELECT association_user_date.*, date_atelier.*, atelier.* FROM association_user_date JOIN date_atelier ON association_user_date.id_dateAtelier = date_atelier.id_dateAtelier JOIN atelier ON date_atelier.id_atelier = atelier.id_atelier WHERE association_user_date.id_user = "' . $_SESSION['user']['id_user'] . '"';
             $req = $bdd->query($sql);

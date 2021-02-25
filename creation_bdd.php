@@ -42,6 +42,7 @@ CREATE TABLE `user` (
   `prenom` varchar(255) NOT NULL,
   `nom` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
+  
   `password` varchar(255) NOT NULL,
   `telephone` int(11) NOT NULL,
   `role` int(2) NOT NULL,
