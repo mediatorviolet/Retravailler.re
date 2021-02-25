@@ -40,7 +40,7 @@
         </p>
     </div>
     <div class="col-md-6 imageMiddle d-md-block d-none">
-        <img src="src\ressources\img\computerWorkingPeople.jpg" class="img-fluid" alt="">
+        <img src="src/ressources/img/computerWorkingPeople.jpg" class="img-fluid" alt="">
     </div>
 
     <div class="col-md-6 order-2 order-md-1 py-5 py-md-0 px-md-0 px-4  middleSectionTextLeft">
@@ -54,11 +54,11 @@
         </p>
     </div>
     <div class="col-md-6 order-1 order-md-2 imageMiddle">
-        <img src="src\ressources\img\imageAtelierHappy.jpg" class="img-fluid" alt="">
+        <img src="src/ressources/img/imageAtelierHappy.jpg" class="img-fluid" alt="">
     </div>
 
     <div class="col-md-6 imageMiddle">
-        <img src="src\ressources\img\rendezVousWomenBlackWhite.jpg" class="img-fluid" alt="">
+        <img src="src/ressources/img/rendezVousWomenBlackWhite.jpg" class="img-fluid" alt="">
     </div>
 
     <div class="col-md-6 py-5 py-md-0 px-md-0 px-4 middleSectionTextRight">
@@ -127,7 +127,7 @@
 <section class="row d-flex justify-content-center middleSection mx-md-5 mx-0">
 
     <div class="col-md-6 imageMiddle">
-        <img src="src\ressources\img\reunionWorkingPeopleBlanc.jpg" class="img-fluid" alt="">
+        <img src="src/ressources/img/reunionWorkingPeopleBlanc.jpg" class="img-fluid" alt="">
     </div>
 
     <div class="col-md-6 py-5 py-md-0 px-md-0 px-5 middleSectionTextRight">
@@ -153,7 +153,7 @@
         </p>
     </div>
     <div class="col-md-6 order-1 order-md-2 imageMiddle">
-        <img src="src\ressources\img\rendezVousBlack.jpg" class="img-fluid" alt="">
+        <img src="src/ressources/img/rendezVousBlack.jpg" class="img-fluid" alt="">
     </div>
 
 </section>
