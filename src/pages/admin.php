@@ -13,6 +13,21 @@ modifier();
         </a>
     </div>
     <hr>
+    <?php
+    if (isset($_POST['modifier'])) {
+        if ($count_modif > 0) {
+            echo '<div class="alert alert-danger alert-dismissible fade show col-6 mx-auto mb-5 text-center fw-bold shadow" role="alert">';
+            echo '<span>Une erreur est survenue</span>';
+            echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
+            echo '</div>';
+        } else {
+            echo '<div class="alert alert-success alert-dismissible fade show col-6 mx-auto mb-5 text-center fw-bold shadow" role="alert">';
+            echo '<span>La date a bien été modifiée</span>';
+            echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
+            echo '</div>';
+        }
+    }
+    ?>
     <h3 class="display-5 text-center px-lg-5 p-md-3 py-3">Ateliers crées :</h3>
     <div class="row row-cols-1 row-cols-md-2 g-4">
         <table class="table table-hover">
@@ -78,7 +93,7 @@ modifier();
                                                 foreach ($results as $result) {
                                                 ?>
                                                     <li><?= $result['prenom'] . ' ' . $result['nom'] ?></li>
-                                                <?php } 
+                                                <?php }
                                                 $req->closeCursor();
                                                 ?>
                                             </ul>
@@ -108,12 +123,12 @@ modifier();
                                                 <div id="div0" class="mt-5">
                                                     <div class="input-group col-md-6">
                                                         <span class="input-group-text">Date et heure</span>
-                                                        <input type="date" aria-label="First name" class="form-control" name="date" value="<?= substr($data['date_atelier'], 0, 10) ?>">
-                                                        <input type="time" aria-label="Last name" class="form-control" name="heure" value="<?= substr($data['date_atelier'], 11) ?>">
+                                                        <input type="date" aria-label="First name" class="form-control" name="date" value="<?= substr($data['date_atelier'], 0, 10) ?>" required autofocus>
+                                                        <input type="time" aria-label="Last name" class="form-control" name="heure" value="<?= substr($data['date_atelier'], 11) ?>" required>
                                                     </div>
                                                     <div class="col-md-6 mt-4">
                                                         <label for="nb_place1" class="form-label">Nombre de places</label>
-                                                        <input type="number" class="form-control" name="nb_place" min="1" value="<?= $data['nb_place'] ?>">
+                                                        <input type="number" class="form-control" name="nb_place" min="1" value="<?= $data['nb_place'] ?>" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -135,7 +150,7 @@ modifier();
                             </form>
                         </td>
                     </tr>
-                <?php } 
+                <?php }
                 $req->closeCursor();
                 ?>
             </tbody>
