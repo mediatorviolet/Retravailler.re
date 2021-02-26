@@ -40,14 +40,17 @@ function ajout_user()
                 'etat' => $etat
             ));
 
+
             //On renvoie l'utilisateur vers la page de login
             header('Location: login-page.php');
 
-            // Voir pourquoi ça ne fonctionne pas
-            $signup_success_msg = 'Votre compte a bien été créé';
-            $signup_success_class = 'alert alert-success';
+            
+            error_log(date('l jS \of F Y h:i:s A') . ": compte créé avec succès\r\n", 3, 'src/var/logSuccess.txt');
+            
         } else {
-            echo 'error wutwut';
+            error_log(date('l jS \of F Y h:i:s A') . ": échec de la création du compte\r\n", 3, 'src/var/logError.txt');
+            
+
         }
     }
 }

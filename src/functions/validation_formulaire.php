@@ -56,11 +56,11 @@ function validation_form()
         }
         if ($count > 0) {
             $class_alert = "alert-danger";
-            echo "CANETTE";
+            error_log(date('l jS \of F Y h:i:s A') . ": échec de la validation du formulaire\r\n", 3, 'src/var/logError.txt');
             // chaque erreur incrémente le compteur, si le compteur n'est pas à 0, le formulaire n'est pas envoyé et un message d'erreur apparait
         } else {
-            echo 'niceulu';
             ajout_user();
+            error_log(date('l jS \of F Y h:i:s A') . ": validation du formulaire OK\r\n", 3, 'src/var/logSuccess.txt');
         }
     }
 }

@@ -27,16 +27,18 @@ modifier();
     <?php
     // Affiche un message d'alerte en fonction de la valeur de $count_crea (défini dans la fonction creationAtelier())
     if (isset($_POST['modifier'])) {
-        if ($count_modif > 0) {
-            echo '<div class="alert alert-danger alert-dismissible fade show col-6 mx-auto mb-5 text-center fw-bold shadow" role="alert">';
-            echo '<span>Une erreur est survenue</span>';
-            echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
-            echo '</div>';
-        } else {
-            echo '<div class="alert alert-success alert-dismissible fade show col-6 mx-auto mb-5 text-center fw-bold shadow" role="alert">';
-            echo '<span>La date a bien été modifiée</span>';
-            echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
-            echo '</div>';
+        if ($count_modif > 0) { ?>
+            <div class="alert alert-danger alert-dismissible fade show col-6 mx-auto mb-5 text-center fw-bold shadow" role="alert">
+                <span>Une erreur est survenue</span>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        <?php
+        } else { ?>
+            <div class="alert alert-success alert-dismissible fade show col-6 mx-auto mb-5 text-center fw-bold shadow" role="alert">
+                <span>La date a bien été modifiée</span>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+    <?php
         }
     }
     ?>
