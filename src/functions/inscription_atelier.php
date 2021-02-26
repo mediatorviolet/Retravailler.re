@@ -10,11 +10,14 @@ function inscriptionAtelier()
 {
     if (isset($_POST['inscription_atelier'])) { // On vérifie que l'utilisateur à cliqué sur le bouton 'inscription_atelier'
         global $count_err;
+
+        // On vérifie que le $_POST['date'] n'est pas vide et qu'il n'est pas égal à 'false'
         if (!empty($_POST['date']) && $_POST['date'] != 'false') {
             include 'src/functions/connexion_bdd.php'; // Connexion à la BDD
 
+            // Inutile
+            // $bdd->query('SELECT id_user FROM association_user_date WHERE id_user = "' . $_SESSION['user']['id_user'] . '" AND id_dateAtelier = "' . $_POST['date'] . '"');
 
-            $request = $bdd->query('SELECT id_user FROM association_user_date WHERE id_user = "' . $_SESSION['user']['id_user'] . '" AND id_dateAtelier = "' . $_POST['date'] . '"');
             $req = $bdd->prepare("INSERT INTO association_user_date (id_user, id_dateAtelier) VALUES (:id_user, :id_dateAtelier)");
 
             $req->execute(array(
@@ -22,6 +25,7 @@ function inscriptionAtelier()
                 'id_dateAtelier' => $_POST['date']
             ));
 
+            // Quand un utilisateur s'inscrit, le nombre de place diminue
             $bdd->query('UPDATE date_atelier SET nb_place = nb_place - 1 WHERE id_dateAtelier = "' . $_POST['date'] . '"');
         } else {
             $count_err++;
@@ -29,6 +33,11 @@ function inscriptionAtelier()
     }
 }
 
+/**
+ * 
+ * Fonction qui gère la 
+ * 
+ */
 function desinscriptionAtelier()
 {
     if (isset($_POST['desinscription'])) {

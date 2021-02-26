@@ -1,6 +1,6 @@
 <?php
 include 'src/functions/inscription_atelier.php';
-// inscriptionAtelier();
+inscriptionAtelier();
 ?>
 
 <link rel="stylesheet" href="src/style/atelier.css">
