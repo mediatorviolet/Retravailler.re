@@ -1,9 +1,10 @@
 <?php
 
-$signup_success_msg = $signup_success_class = '';
+
 function ajout_user()
 {
-    global $signup_success_msg, $signup_success_class;
+    $msg_login = "d-none";
+    $_SESSION['message'] = $msg_login;
     if (isset($_POST['inscription'])) {
         $role1 = 1;
         $pass = password_hash($_POST["pass"], PASSWORD_DEFAULT);
@@ -44,11 +45,20 @@ function ajout_user()
             //On renvoie l'utilisateur vers la page de login
             header('Location: login-page.php');
 
+           
+           
+
+            
+
+          $msg_login = "alert-success";
+         
             
             error_log(date('l jS \of F Y h:i:s A') . ": compte créé avec succès\r\n", 3, 'src/var/logSuccess.txt');
             
         } else {
             error_log(date('l jS \of F Y h:i:s A') . ": échec de la création du compte\r\n", 3, 'src/var/logError.txt');
+           $msg_login = "alert-danger";
+            
             
 
         }

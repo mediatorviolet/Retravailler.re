@@ -28,11 +28,11 @@ function connexion()
         $isPasswordCorrect = password_verify($_POST["password_connect"], $resultat["password"]);
         if (!$resultat or !$isPasswordCorrect) { // Si un des deux input ne correspond pas, on renvoi un message d'erreur
             $error_login = 'Mauvais identifiant ou mot de passe';
-            error_log(date('l jS \of F Y h:i:s A') . ": Mot de passe ou identifiant incorrect, échec de la connexion\r\n", 3, 'src/var/log.txt');
+            error_log(date('l jS \of F Y h:i:s A') . ": Mot de passe ou identifiant incorrect, échec de la connexion\r\n", 3, 'src/var/logError.txt');
         } else {
             if ($isPasswordCorrect) { // Si le password correspond on lance la session user
                 $_SESSION['user'] = $resultat;
-                error_log(date('l jS \of F Y h:i:s A') . ": Identifiants corrects, connexion réussie\r\n", 3, 'src/var/log.txt');
+                error_log(date('l jS \of F Y h:i:s A') . ": Identifiants corrects, connexion réussie\r\n", 3, 'src/var/logSuccess.txt');
                 header('Location: index.php?page=accueil'); // Redirection vers la page d'accueil
                 die;
             }
@@ -43,10 +43,10 @@ function connexion()
     if ($_SERVER['REQUEST_METHOD'] == 'POST' and isset($_POST['deconnexion'])) {
         $_SESSION['user'] = false;
         session_destroy();
-        error_log(date('l jS \of F Y h:i:s A') . ": Déconnexion réussie\r\n", 3, 'src/var/log.txt');
+        error_log(date('l jS \of F Y h:i:s A') . ": Déconnexion réussie\r\n", 3, 'src/var/logSuccess.txt');
         header('Location: index.php?page=accueil');
         die;
     } else {
-        error_log(date('l jS \of F Y h:i:s A') . ": Echec de la déconnexion\r\n", 3, 'src/var/log.txt');
+        error_log(date('l jS \of F Y h:i:s A') . ": Echec de la déconnexion\r\n", 3, 'src/var/logError.txt');
     }
 }
