@@ -1,10 +1,27 @@
+/**
+ * 
+ * Script JS pour générer plusieurs champs (date, heure et nombre de places) lors de la création d'un atelier
+ * 
+ */
+
 let ajout_date = document.querySelector("#ajout_date");
 let count = 0;
 
+/**
+ * 
+ * Fonction pour insérer un élément DOM après un élément spécifique
+ * 
+ */
 function insertAfter(newNode, referenceNode) {
   referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
 }
 
+
+/**
+ * 
+ * Fonction qui crée les champs pour la date (date et heure)
+ * 
+ */
 function createDateInput() {
   let dateDiv = document.createElement("div");
   let span = document.createElement("span");
@@ -32,6 +49,11 @@ function createDateInput() {
   return dateDiv;
 }
 
+/**
+ * 
+ * Fonction qui crée un champ pour le nombre de place
+ * 
+ */
 function createPlaceInput() {
   let placeDiv = document.createElement("div");
   let placeLabel = document.createElement("label");
@@ -55,6 +77,11 @@ function createPlaceInput() {
   return placeDiv;
 }
 
+/**
+ * 
+ * Fonction qui met les deux champs créés précédemment dans une div et les ajoute à la fin du formulaire
+ * 
+ */
 function ajouterDate() {
   let parentDiv = document.createElement("div");
 
@@ -70,4 +97,5 @@ function ajouterDate() {
   count++;
 }
 
+// Event Listener, lance la fonction ajouterDate() à chaque fois que l'administrateur clique sur le lien 'ajouter une date'
 ajout_date.addEventListener("click", ajouterDate);
