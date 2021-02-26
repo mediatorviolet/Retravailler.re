@@ -5,13 +5,6 @@ function ajout_user()
 {
     global $signup_success_msg, $signup_success_class;
     if (isset($_POST['inscription'])) {
-
-
-        // $pass = ($_POST['pass']);
-        // if (!preg_match("#^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[-+!*$@%_])([-+!*$@%_\w]{8,15})$#", $pass))
-        // {
-        //     echo 'erreur mot de passe';
-        // }
         $role1 = 1;
         $pass = password_hash($_POST["pass"], PASSWORD_DEFAULT);
         $etat = 1;
@@ -21,8 +14,7 @@ function ajout_user()
         $telephone = htmlentities(trim($_POST['tel']));
         $email = htmlentities(trim($_POST['email']));
 
-        /*Si les champs requis ne sont pas vides et si les donnees ont
-            bien la forme attendue*/
+        //Si les champs requis ne sont pas vides et si les donnees ont bien la forme attendue
         if (
             !empty($nom) && !empty($prenom) && !empty($telephone) && !empty($email) && !empty($pass)
             && strlen($nom) <= 30
@@ -33,7 +25,7 @@ function ajout_user()
             && filter_var($email, FILTER_VALIDATE_EMAIL)
         ) {
 
-            include 'src/functions/connexion_bdd.php';
+            include 'src/functions/connexion_bdd.php'; // Connexion à la BDD
 
             //On insère les données reçues
             $insertion = $bdd->prepare("INSERT INTO user (prenom, nom, email, password, telephone, role, etat) VALUES (:prenom, :nom, :email, :password, :telephone, :role, :etat)");
