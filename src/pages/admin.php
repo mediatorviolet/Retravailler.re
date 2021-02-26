@@ -1,9 +1,15 @@
 <?php
+
+/**
+ * Vérifie que l'utilisateur est bien connecté et qu'il est autorisé à visiter la page (role)
+ * Sinon il est redirigé vers la page de connexion
+ */
 require 'src/functions/auth.php';
 if (!Auth::isLogged() && $_SESSION['user']['role'] != 2) {
     header('Location: login-page.php');
 }
 
+// Fonctions qui gèrent la desactivation et la modification des ateliers
 include 'src/functions/admin_functions.php';
 desactiver();
 modifier();
@@ -19,6 +25,7 @@ modifier();
     </div>
     <hr>
     <?php
+    // Affiche un message d'alerte en fonction de la valeur de $count_crea (défini dans la fonction creationAtelier())
     if (isset($_POST['modifier'])) {
         if ($count_modif > 0) {
             echo '<div class="alert alert-danger alert-dismissible fade show col-6 mx-auto mb-5 text-center fw-bold shadow" role="alert">';
@@ -51,16 +58,22 @@ modifier();
             <tbody>
                 <?php
 
-                include 'src/functions/connexion_bdd.php';
+                include 'src/functions/connexion_bdd.php'; // Connexion à la BDD
 
+                /**
+                 * Jointure des tables `atelier` et `date_atelier` où correspond la valeur de `id_atelier`
+                 * Le but est d'afficher chaque date
+                 * Les dates sont classées par ordre croissant
+                 */
                 $sql = 'SELECT a.id_atelier, a.nom, a.description, d.id_dateAtelier, d.id_atelier, d.date_atelier, d.nb_place, d.id_prestation, d.etat FROM atelier a RIGHT JOIN date_atelier d ON a.id_atelier = d.id_atelier ORDER BY d.date_atelier';
                 $req = $bdd->query($sql);
-                $datas = $req->fetchAll();
-                foreach ($datas as $data) {
+                $datas = $req->fetchAll(); // fetchAll() renvoi un tableau avec toutes les correspondances
+                foreach ($datas as $data) { // On parcours le tableau pour afficher les informations
                 ?>
                     <tr>
                         <td>
                             <?php
+                            // On change l'affichage en fonction de la valeur de `id_prestation`
                             switch ($data['id_prestation']) {
                                 case 1:
                                     echo 'Conseil en Evolution Professionnelle';
@@ -74,10 +87,20 @@ modifier();
                             }
                             ?>
                         </td>
-                        <td><?= substr($data['date_atelier'], 0, 16) ?></td>
-                        <td><?= $data['nom'] ?></td>
-                        <td><?= substr($data['description'], 0, 20) ?>...</td>
-                        <td><?= $data['nb_place'] ?></td>
+                        <td>
+                            <!-- On affiche que les 16 premiers caractères pour ne pas afficher les secondes -->
+                            <?= substr($data['date_atelier'], 0, 16) ?>
+                        </td>
+                        <td>
+                            <?= $data['nom'] ?>
+                        </td>
+                        <td>
+                            <!-- On affiche que les 20 premiers caractères de la description -->
+                            <?= substr($data['description'], 0, 20) ?>...
+                        </td>
+                        <td>
+                            <?= $data['nb_place'] ?>
+                        </td>
                         <td>
                             <!-- Button trigger modal -->
                             <a href="#" data-bs-toggle="modal" data-bs-target="#modal<?= $data['id_dateAtelier'] ?>">Voir</a>
@@ -90,22 +113,28 @@ modifier();
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
-                                            <ul>
+                                            <ul class="list-group">
                                                 <?php
+                                                /**
+                                                 * Jointure de la table `association_user_date` et `user` afin d'afficher
+                                                 * la liste des utilisateurs inscrit à une date spécifique
+                                                 */
                                                 $sql = 'SELECT * FROM association_user_date a JOIN user u ON a.id_user = u.id_user WHERE id_dateAtelier = "' . $data['id_dateAtelier'] . '"';
                                                 $req = $bdd->query($sql);
                                                 $results = $req->fetchAll();
+
+                                                // On parcours le tableau obtenu
                                                 foreach ($results as $result) {
                                                 ?>
-                                                    <li><?= $result['prenom'] . ' ' . $result['nom'] ?></li>
+                                                    <li class="list-group-item">
+                                                        <?= $result['prenom'] . ' ' . $result['nom'] ?>
+                                                    </li>
                                                 <?php }
+                                                // Fermeture de la requête en cours
                                                 $req->closeCursor();
                                                 ?>
                                             </ul>
                                         </div>
-                                        <!-- <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                        </div> -->
                                     </div>
                                 </div>
                             </div>
@@ -128,11 +157,14 @@ modifier();
                                                 <div id="div0" class="mt-5">
                                                     <div class="input-group col-md-6">
                                                         <span class="input-group-text">Date et heure</span>
+                                                        <!-- On prend les 10 premiers caractères pour avoir uniquement la date -->
                                                         <input type="date" aria-label="First name" class="form-control" name="date" value="<?= substr($data['date_atelier'], 0, 10) ?>" required autofocus>
+                                                        <!-- On affiche à partir du 11e caractère afin d'avoir uniquement l'heure -->
                                                         <input type="time" aria-label="Last name" class="form-control" name="heure" value="<?= substr($data['date_atelier'], 11) ?>" required>
                                                     </div>
                                                     <div class="col-md-6 mt-4">
                                                         <label for="nb_place1" class="form-label">Nombre de places</label>
+                                                        <!-- On ne peut pas mettre un nombre de places inférieur au nombre d'utilisateurs déjà inscrit -->
                                                         <input type="number" class="form-control" name="nb_place" min="<?= count($results) ?>" value="<?= $data['nb_place'] ?>" required>
                                                     </div>
                                                 </div>
@@ -149,6 +181,7 @@ modifier();
                         <td>
                             <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
                                 <input type="hidden" value="<?= $data['id_dateAtelier'] ?>" name="id_date_desactiver">
+                                <!-- On change le texte du bouton en fonction de l'état de la date (active ou inactive) -->
                                 <button type="submit" class="btn btn-primary btn-green-nav" name="desactiver">
                                     <?= $data['etat'] == 1 ? 'Désactiver' : 'Activer' ?>
                                 </button>

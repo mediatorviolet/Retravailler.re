@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Vérifie que l'utilisateur est bien connecté et qu'il est autorisé à visiter la page (role)
  * Sinon il est redirigé vers la page de connexion

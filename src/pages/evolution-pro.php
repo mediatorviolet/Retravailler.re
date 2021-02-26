@@ -4,15 +4,12 @@
 <section class="imgMain d-flex flex-column align-items-center justify-content-center">
     <h1 class="title text-center pb-5">Le conseil en evolution<br> professionnelle</h1>
     <h3 class="slogan mt-5 text-center">Salariés et indépendants, votre avenir professionnel se construit avec vous</h3>
-
     <div class="pt-4">
-        <a class="btn btn-lg btn-primary btn-green-nav" href="index.php?page=evolution_professionnelle_atelier">Découvrir nos ateliers</a>
+        <a class="btn btn-lg btn-primary btn-green-nav" href="index.php?page=evolution_professionnelle_atelier">
+            Découvrir nos ateliers
+        </a>
     </div>
-
-
-
 </section>
-
 
 <section class="textMain d-flex flex-column align-items-center justify-content-center">
     <div class="col-md-3 col-1"></div>
@@ -29,13 +26,10 @@
     <div class="col-md-3 col-1"></div>
 </section>
 
-
 <section class="row d-flex justify-content-center middleSection mx-md-5 mx-0">
-
     <div class="col-md-6 imageMiddle">
         <img src="src/ressources/img/reunionWorkingPeopleBlanc.jpg" class="img-fluid" alt="">
     </div>
-
     <div class="col-md-6 py-5 py-md-0 px-md-0 px-5 middleSectionTextRight">
         <h4>Que faisons-nous ?</h4>
         <p>
@@ -45,9 +39,6 @@
             Des conseillers à proximité pour vous aider !
         </p>
     </div>
-
-
-
     <div class="col-md-6 order-2 order-md-1 py-5 py-md-0 px-md-0 px-5  middleSectionTextLeft">
         <h4>Qu'est-ce que le cep ?</h4>
         <p>
@@ -61,8 +52,9 @@
     <div class="col-md-6 order-1 order-md-2 imageMiddle">
         <img src="src/ressources/img/rendezVousBlack.jpg" class="img-fluid" alt="">
     </div>
-
 </section>
-    <div class="d-flex justify-content-center py-5">
-        <a class="btn btn-lg btn-primary btn-green-nav" href="index.php?page=evolution_professionnelle_atelier">Voir nos ateliers</a>
-    </div>
+<div class="d-flex justify-content-center py-5">
+    <a class="btn btn-lg btn-primary btn-green-nav" href="index.php?page=evolution_professionnelle_atelier">
+        Voir nos ateliers
+    </a>
+</div>

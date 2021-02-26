@@ -41,7 +41,7 @@
 <section class="prestation">
     <div class="container-fluid row">
         <div class="col-md-3 mx-auto d-flex flex-row">
-            <i class="fas fa-cannabis me-5 d-md-block d-none"></i>
+            <i class="fas fa-bookmark me-5 d-md-block d-none"></i>
             <h2 id="title-presta" class="title-presta">Nos prestations</h2>
         </div>
         <div class="col-6 d-md-block d-none">
@@ -66,7 +66,7 @@
             <div class="col-md-6 ms-5">
                 <h2>Accélèr'Emploi</h2>
                 <p>
-                    La prestation <strong>Accélèr’Emploi</strong> a pour objectif le retour rapide à l’emploi grâce :
+                    La prestation <b>Accélèr’Emploi</b> a pour objectif le retour rapide à l’emploi grâce :
                 </p>
                 <ul>
                     <li>au renforcement de la maîtrise des outils et techniques de recherche d’emploi</li>
@@ -84,7 +84,7 @@
             <div class="col-md-6 ms-5">
                 <h2>Atelier conseil</h2>
                 <p>
-                    La prestation <strong>Atelier Conseil</strong> s’inscrit dans l’offre de services prestations de Pôle Emploi.
+                    La prestation <b>Atelier Conseil</b> s’inscrit dans l’offre de services prestations de Pôle Emploi.
                     Elle s’adresse à tous les actifs, qu’ils soient demandeurs d’emploi inscrits ou non, quel que soit leur niveau
                     d’expression écrite et / ou orale et leur aisance à utiliser les outils numériques.
                 </p>

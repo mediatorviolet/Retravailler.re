@@ -1,11 +1,16 @@
 <?php
+
+/**
+ * Vérifie que l'utilisateur est bien connecté et qu'il est autorisé à visiter la page (role)
+ * Sinon il est redirigé vers la page de connexion
+ */
 require 'src/functions/auth.php';
 if (!Auth::isLogged() && $_SESSION['user']['role'] != 1) {
     header('Location: login-page.php');
 }
 
 include 'src/functions/inscription_atelier.php';
-desinscriptionAtelier();
+desinscriptionAtelier(); // Fonction qui gère la désinscription d'un utilisateur à un atelier
 ?>
 
 <!-- Main CSS -->
@@ -22,11 +27,17 @@ desinscriptionAtelier();
     </div>
     <div class="accordion accordion-flush px-5" id="accordionFlushExample">
         <?php
-        include 'src/functions/connexion_bdd.php';
+        include 'src/functions/connexion_bdd.php'; // Connexion à la BDD
 
+        /**
+         * Jointure des tables `association_user_date` et `date_atelier` où correspond la valeur de `id_atelier`
+         * Le but est d'afficher la liste des dates auxquelles l'utilisateur est inscrit
+         */
         $sql = 'SELECT association_user_date.*, date_atelier.*, atelier.* FROM association_user_date JOIN date_atelier ON association_user_date.id_dateAtelier = date_atelier.id_dateAtelier JOIN atelier ON date_atelier.id_atelier = atelier.id_atelier WHERE association_user_date.id_user = "' . $_SESSION['user']['id_user'] . '"';
         $req = $bdd->query($sql);
         $datas = $req->fetchAll();
+
+        // On parcours le tableau renvoyé par la requête pour afficher les informations
         foreach ($datas as $data) {
         ?>
             <div class="accordion-item">
@@ -34,6 +45,7 @@ desinscriptionAtelier();
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#id_<?= $data['id_dateAtelier'] ?>" aria-expanded="false" aria-controls="<?= $data['id_dateAtelier'] ?>">
                         <?= $data['nom'] ?> -
                         <?php
+                        // On change l'affichage en fonction de la valeur de `id_prestation`
                         switch ($data['id_prestation']) {
                             case 1:
                                 echo 'Conseil en Evolution Professionnelle';
@@ -63,6 +75,9 @@ desinscriptionAtelier();
                     </div>
                 </div>
             </div>
-        <?php } ?>
+        <?php }
+        // Fermeture de la requête en cours
+        $req->closeCursor();
+        ?>
     </div>
 </div>
