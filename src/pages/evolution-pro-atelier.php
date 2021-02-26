@@ -1,11 +1,19 @@
 <?php
 include 'src/functions/inscription_atelier.php';
-inscriptionAtelier();
+// inscriptionAtelier();
 ?>
 
 <link rel="stylesheet" href="src/style/atelier.css">
 
 <div class="container-fluid p-lg-5 p-md-3 main">
+    <?php
+    if (isset($_POST['inscription_atelier']) && inscriptionAtelier() == true) {
+        echo '<div class="alert alert-success alert-dismissible fade show col-6 mx-auto mb-5 text-center fw-bold shadow" role="alert">';
+        echo '<span>Inscription réussie</span>';
+        echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
+        echo '</div>';
+    }
+    ?>
     <h2 class="display-4 text-center px-lg-5 py-lg-4 p-md-3 py-3">NOS ATELIERS</h2>
     <div class="row row-cols-1 row-cols-md-2 g-4">
         <?php
