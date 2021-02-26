@@ -1,12 +1,17 @@
 <?php
+/**
+ * 
+ * Connexion à la BDD
+ * Cette page est appelée à chque fois qu'on à besoin de se connecter à la BDD
+ * 
+ */
 
-
-if ($_SERVER["REMOTE_ADDR"] == "127.0.0.1") {
+if ($_SERVER["REMOTE_ADDR"] == "127.0.0.1") { // Si on est en local on utilise ces identifiants
     $serveur = "127.0.0.1";
     $dbname = "retravailler_final";
     $user = "root";
     $password = "";
-} else {
+} else { // Sinon on utilise les identifiants de la BDD Heroku
     $serveur = "us-cdbr-east-03.cleardb.com";
     $dbname = "heroku_7c2ac3a00a455e9";
     $user = "be460bc87bab43";
