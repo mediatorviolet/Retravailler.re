@@ -1,50 +1,57 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 .main-atc {
-    background-image: linear-gradient(rgba(156, 219, 196, 0.35), rgba(156, 219, 196, 0.35)), url("../ressources/img/imageAtelierConseil.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    padding-top: 200px;
-    padding-bottom: 200px;
-    margin-top: 4.5rem;
+  background-image: linear-gradient(
+      rgba(156, 219, 196, 0.35),
+      rgba(156, 219, 196, 0.35)
+    ),
+    url("../ressources/img/imageAtelierConseil.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  margin-top: 4.5rem;
 }
 
-.presentation, .infos, .zoom {
-    padding: 150px 0px 150px 0px;
+.presentation,
+.infos,
+.zoom {
+  padding: 150px 0px 150px 0px;
 }
 
 .text-presentation {
-    text-align: justify;
-    font-size: 1.2rem;
+  text-align: justify;
+  font-size: 1.2rem;
 }
 
 .img-presentation {
-    background-image: url("../ressources/img/imageAtelierHappy.jpg");
-    background-size: cover;
+  background-image: url("../ressources/img/imageAtelierHappy.jpg");
+  background-size: cover;
 }
 
 .infos {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../ressources/img/imageWorkingWomenOffice.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../ressources/img/imageWorkingWomenOffice.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .infos-box {
-    background-color: #fff;
-    padding: 3rem;
+  background-color: #fff;
+  padding: 3rem;
 }
 
 .zoom {
-    background-color: #61CE70;
+  background-color: #61ce70;
 }
 
 .separator {
-    height: .5rem;
+  height: 0.5rem;
 }

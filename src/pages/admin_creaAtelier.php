@@ -1,11 +1,16 @@
 <?php
+
+/**
+ * Vérifie que l'utilisateur est bien connecté et qu'il est autorisé à visiter la page (role)
+ * Sinon il est redirigé vers la page de connexion
+ */
 require 'src/functions/auth.php';
 if (!Auth::isLogged() && $_SESSION['user']['role'] != 2) {
     header('Location: login-page.php');
 }
 
 include 'src/functions/admin_functions.php';
-creationAtelier()
+creationAtelier() // Fonction qui gère la création des ateliers
 ?>
 
 <div class="container-fluid p-lg-5 p-md-3">
@@ -22,6 +27,7 @@ creationAtelier()
     </div>
     <div>
         <?php
+        // Affiche un message d'alerte en fonction de la valeur de $count_crea (défini dans la fonction creationAtelier())
         if (isset($_POST['creer_atelier'])) {
             if ($count_crea > 0) {
                 echo '<div class="alert alert-danger alert-dismissible fade show col-6 mx-auto mb-5 text-center fw-bold shadow" role="alert">';
@@ -75,4 +81,5 @@ creationAtelier()
     </div>
 </div>
 
+<!-- Script JS qui gère l'ajout de date pour un atelier -->
 <script src="src/functions/form.js"></script>
