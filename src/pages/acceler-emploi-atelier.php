@@ -1,4 +1,5 @@
 <?php
+include 'src/functions/auth.php';
 include 'src/functions/inscription_atelier.php';
 inscriptionAtelier();
 ?>
@@ -53,7 +54,7 @@ inscriptionAtelier();
                             </select>
                         </div>
                         <div class="card-footer text-end">
-                            <button type="submit" class="btn btn-primary btn-green-nav" name="inscription_atelier">
+                            <button type="submit" class="btn btn-primary btn-green-nav" name="inscription_atelier" <?= !Auth::isLogged() ? 'disabled' : '' ?>>
                                 S'inscrire
                             </button>
                         </div>
