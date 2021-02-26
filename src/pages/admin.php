@@ -74,7 +74,7 @@ modifier();
                             }
                             ?>
                         </td>
-                        <td><?= $data['date_atelier'] ?></td>
+                        <td><?= substr($data['date_atelier'], 0, 16) ?></td>
                         <td><?= $data['nom'] ?></td>
                         <td><?= substr($data['description'], 0, 20) ?>...</td>
                         <td><?= $data['nb_place'] ?></td>
