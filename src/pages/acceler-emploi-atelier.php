@@ -1,13 +1,16 @@
 <?php
 include 'src/functions/inscription_atelier.php';
-inscriptionAtelier();
+inscriptionAtelier(); //Fonction qui gère l'inscription des utilisateurs à un atelier
 ?>
 
 <link rel="stylesheet" href="src/style/atelier.css">
 
 <div class="container-fluid p-lg-5 p-md-3 main">
     <?php
-    // Affiche un message de réussite ou  d'échec en fonction de la valeur de $count_err (défini dans la fonction inscriptionAtelier())
+    /**
+     * Affiche un message de réussite ou  d'échec en fonction de la valeur de $count_err (défini dans la fonction
+     * inscriptionAtelier())
+     */
     if (isset($_POST['inscription_atelier']) && $count_err == 0) {
         echo '<div class="alert alert-success alert-dismissible fade show col-6 mx-auto mb-5 text-center fw-bold shadow" role="alert">';
         echo '<span>Inscription réussie</span>';
@@ -33,6 +36,7 @@ inscriptionAtelier();
             echo "<h5 class='text-center'>Aucun atelier pour le moment</h5>";
             echo "</div>";
         }
+        
         // On parcours le tableau retourné par la fonction fetchAll() pour afficher les données dans la page
         foreach ($donnees as $donnee) { ?>
             <div class="col">
