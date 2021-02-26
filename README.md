@@ -67,7 +67,7 @@ Ces champs sont tous obligatoires lors de la création d'un atelier par l'admini
 |  ADMINISTRATEUR   | désactiver/activer           | Rendre visible ou invisible pour les particuliers |- Désactiver l'atelier ne rend plus visible sur la liste des ateliers  - Activer l’atelier le rend visible sur la liste des ateliers |
 |   ADMINISTRATEUR    |modifier un atelier           |changer les informations rentrées précédemment     |Les modifications apparaissent dans la liste des ateliers      |
 |   ADMINISTRATEUR    | créer un atelier             |proposer à des particuliers                        |L’atelier nouvellement créé apparaît dans la liste des ateliers|
-|   ADMINISTRATEUR   |avoir une interface d’administration sécurisé|être le seul à pouvoir modifier mes ateliers|Le cuisinier accède aux pages sécurisées grâce à un login et mot de passe.|
+|   ADMINISTRATEUR   |avoir une interface d’administration sécurisé|être le seul à pouvoir modifier mes ateliers|L'utilisateur accède aux pages sécurisées grâce à un login et mot de passe.|
 |  PARTICULIER   |voir la liste des ateliers    |s’inscrire à un atelier                            |une page qui affiche la liste des ateliers disponibles         |
 |  PARTICULIER   |m’inscrire à un atelier       |de réserver ma place     |quand un particulier s’inscrit à l’atelier le nombre de places disponibles diminue|
 
