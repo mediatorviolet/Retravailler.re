@@ -35,17 +35,19 @@ function inscriptionAtelier()
 
 /**
  * 
- * Fonction qui gère la 
+ * Fonction qui gère la désinscription à un atelier
  * 
  */
 function desinscriptionAtelier()
 {
-    if (isset($_POST['desinscription'])) {
-        include 'src/functions/connexion_bdd.php';
+    if (isset($_POST['desinscription'])) { // On vérifie que l'utilisateur clique sur le btn 'desinscription'
+        include 'src/functions/connexion_bdd.php'; // Connexion à la BDD
 
+        // Suppression de la ligne correspondante dans la table `association_user_date`
         $sql_desinscription = 'DELETE FROM association_user_date WHERE id_dateAtelier = "' . $_POST['id_date'] . '" AND id_user = "' . $_SESSION['user']['id_user'] . '"';
         $bdd->query($sql_desinscription);
 
+        // Mise à jour du nombre de places disponibles
         $sql_nbplace = 'UPDATE date_atelier SET nb_place = nb_place + 1 WHERE id_dateAtelier = "' . $_POST['id_date'] . '"';
         $bdd->query($sql_nbplace);
     }
