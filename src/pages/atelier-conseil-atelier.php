@@ -7,9 +7,14 @@ include 'src/functions/inscription_atelier.php';
 
 <div class="container-fluid p-lg-5 p-md-3 main">
     <?php
-    if (isset($_POST['inscription_atelier']) && inscriptionAtelier() == true) {
+    if (isset($_POST['inscription_atelier']) && $count_err == 0) {
         echo '<div class="alert alert-success alert-dismissible fade show col-6 mx-auto mb-5 text-center fw-bold shadow" role="alert">';
         echo '<span>Inscription réussie</span>';
+        echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
+        echo '</div>';
+    } else if ($count_err > 0) {
+        echo '<div class="alert alert-danger alert-dismissible fade show col-6 mx-auto mb-5 text-center fw-bold shadow" role="alert">';
+        echo '<span>Veuillez choisir une date</span>';
         echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
         echo '</div>';
     }
@@ -36,7 +41,7 @@ include 'src/functions/inscription_atelier.php';
                                 <?= $donnee['description'] ?>
                             </p>
                             <select name="date" class="form-select" aria-label="Default select example">
-                                <option selected>Choisissez une date</option>
+                                <option value="false" selected>Choisissez une date</option>
                                 <?php
                                 $response = $bdd->query('SELECT * FROM date_atelier WHERE id_prestation = 3 AND id_atelier = "' . $donnee['id_atelier'] . '" AND etat = 1');
                                 $data = $response->fetchAll();
