@@ -49,7 +49,7 @@ validation_form(); // Fonction qui gère l'ajout d'utilisateur dans la base de d
                             <div class="mb-3">
                                 <label for="nom" class="form-label">Nom</label>
                                 <input type="text" class="form-control" name="nom" id="nom" required>
-                                <span class="<?= $class_alert ?>"><?= $Nom_Err?></span>
+                                <span class="<?= $class_alert ?>"><?= $Nom_Err ?></span>
                             </div>
                             <div class="mb-3">
                                 <label for="prenom" class="form-label">Prenom</label>

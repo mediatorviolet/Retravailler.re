@@ -60,8 +60,7 @@ function ajout_user()
             
         } else {
             error_log(date('l jS \of F Y h:i:s A') . ": échec de la création du compte\r\n", 3, 'src/var/logError.txt');
-            $_SESSION['class'] = "alert-danger";
-            $_SESSION['message'] = "Un problème est survenu lors de la création du compte";
+
             
             
 

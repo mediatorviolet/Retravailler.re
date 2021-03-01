@@ -24,6 +24,7 @@ Friday 26th of February 2021 12:45:28 PM: Echec de la déconnexion
 Friday 26th of February 2021 12:45:45 PM: Echec de la déconnexion
 Friday 26th of February 2021 12:45:45 PM: Echec de la déconnexion
 Friday 26th of February 2021 12:45:45 PM: Echec de la déconnexion
+<<<<<<< HEAD
 Saturday 27th of February 2021 08:33:34 AM: Echec de la déconnexion
 Saturday 27th of February 2021 08:33:43 AM: Echec de la déconnexion
 Saturday 27th of February 2021 08:33:43 AM: Echec de la déconnexion
@@ -94,3 +95,15 @@ Monday 1st of March 2021 10:37:40 AM: Echec de la déconnexion
 Monday 1st of March 2021 10:37:40 AM: échec de la validation du formulaire
 Monday 1st of March 2021 11:00:50 AM: Echec de la déconnexion
 Monday 1st of March 2021 11:00:54 AM: Echec de la déconnexion
+=======
+Monday 1st of March 2021 10:51:04 AM: Echec de la déconnexion
+Monday 1st of March 2021 10:51:08 AM: Echec de la déconnexion
+Monday 1st of March 2021 10:51:08 AM: Echec de la déconnexion
+Monday 1st of March 2021 10:51:13 AM: Echec de la déconnexion
+Monday 1st of March 2021 10:51:13 AM: Echec de la déconnexion
+Monday 1st of March 2021 10:51:15 AM: Echec de la déconnexion
+Monday 1st of March 2021 10:51:15 AM: Echec de la déconnexion
+Monday 1st of March 2021 10:51:19 AM: Echec de la déconnexion
+Monday 1st of March 2021 10:51:19 AM: Echec de la déconnexion
+Monday 1st of March 2021 12:48:08 PM: Echec de la déconnexion
+>>>>>>> d928f93b64ae2e153f07965b20a368002e20451c
