@@ -30,10 +30,10 @@ validation_form(); // Fonction qui gère l'ajout d'utilisateur dans la base de d
 
 <body>
     <div class="container-fluid main-background">
-        <a href="index.php?page=accueil" class="text-white position-absolute mt-2">
+        <a href="index.php?page=accueil" class="text-white position-relative mt-2">
             <i class="fas fa-angle-left me-2"></i>Retour à l'accueil
         </a>
-        <div class="d-flex vh-100 align-items-center justify-content-center">
+        <div class="d-flex align-items-center justify-content-center">
             <div class="modal-dialog w-75">
                 <div class="modal-content shadow border-0">
                     <div class="modal-header">
@@ -44,7 +44,7 @@ validation_form(); // Fonction qui gère l'ajout d'utilisateur dans la base de d
                             <div class="mb-3">
                                 <label for="nom" class="form-label">Nom</label>
                                 <input type="text" class="form-control" name="nom" id="nom" required>
-                                <span class="<?= $class_alert ?>"><?= $Nom_Err?></span>
+                                <span class="<?= $class_alert ?>"><?= $Nom_Err ?></span>
                             </div>
                             <div class="mb-3">
                                 <label for="prenom" class="form-label">Prenom</label>
