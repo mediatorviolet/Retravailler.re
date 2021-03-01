@@ -20,8 +20,11 @@ function creationAtelier()
             $date0,
             $heure0,
             $nb_place0
+
+            
         );
 
+        
         // Pour chaque éléments dans le tableau $requiredInput, on passe les fonctions htmlentities() et trim()
         foreach ($requiredInput as $input) {
             htmlentities(trim($input));
@@ -66,7 +69,9 @@ function creationAtelier()
                 }
             }
         }
+        error_log(date('l jS \of F Y h:i:s A') . ": l'atelier a été créé avec succès\r\n", 3, 'src/var/logSuccess.txt');
     }
+    
 }
 
 /**
@@ -82,6 +87,7 @@ function desactiver()
         // Màj dans la table `date_atelier`, si `etat` = 1 alors il sera égal à 1, sinon 0
         $sql = 'UPDATE date_atelier SET etat = CASE WHEN etat = 1 THEN 0 ELSE 1 END WHERE id_dateAtelier = "' . $_POST['id_date_desactiver'] . '"';
         $bdd->query($sql);
+        error_log(date('l jS \of F Y h:i:s A') . ": date desactivée avec succès\r\n", 3, 'src/var/logSuccess.txt');
     }
 }
 
@@ -106,8 +112,10 @@ function modifier()
             // Mise à jour de la date, l'heure et le nombre de places
             $sql = 'UPDATE date_atelier SET date_atelier = "' . $date . ' ' . $heure . '", nb_place = "' . $nb_place . '" WHERE id_dateAtelier = "' . $id_date . '"';
             $bdd->query($sql);
+            error_log(date('l jS \of F Y h:i:s A') . ": date modifiée avec succès\r\n", 3, 'src/var/logSuccess.txt');
         } else { // Si des champs sont vides, le compteur d'erreurs s'incrémente
             $count_modif++;
+            error_log(date('l jS \of F Y h:i:s A') . ": erreur lors de la modification de la date\r\n", 3, 'src/var/logError.txt');
         }
     }
 }

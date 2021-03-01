@@ -1,4 +1,5 @@
 <?php
+
 include 'src/functions/ajout_utilisateur.php';
 // function doublonEmail()
 // {
@@ -57,6 +58,8 @@ function validation_form()
         if ($count > 0) {
             $class_alert = "alert-danger";
             error_log(date('l jS \of F Y h:i:s A') . ": échec de la validation du formulaire\r\n", 3, 'src/var/logError.txt');
+            $_SESSION['class'] = "alert-danger";
+            $_SESSION['message'] = "Un problème est survenu lors de la création du compte";
             // chaque erreur incrémente le compteur, si le compteur n'est pas à 0, le formulaire n'est pas envoyé et un message d'erreur apparait
         } else {
             ajout_user();

@@ -30,10 +30,15 @@ validation_form(); // Fonction qui gère l'ajout d'utilisateur dans la base de d
 
 <body>
     <div class="container-fluid main-background">
-        <a href="index.php?page=accueil" class="text-white position-absolute mt-2">
+        <a href="index.php?page=accueil" class="text-white position-relative mt-2">
             <i class="fas fa-angle-left me-2"></i>Retour à l'accueil
         </a>
-        <div class="d-flex vh-100 align-items-center justify-content-center">
+        <div class="<?=  $_SESSION['class'] ?> alert  alert-dismissible fade show col-6 mx-auto mb-5 text-center fw-bold shadow" role="alert">
+            <span><?=  $_SESSION['message'] ?></span>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+
+        <div class="d-flex align-items-center justify-content-center">
             <div class="modal-dialog w-75">
                 <div class="modal-content shadow border-0">
                     <div class="modal-header">

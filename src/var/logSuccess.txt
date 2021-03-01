@@ -33,3 +33,6 @@ Monday 1st of March 2021 05:36:55 AM: Connexion à la base de données réussie
 Monday 1st of March 2021 05:36:56 AM: test
 Monday 1st of March 2021 05:36:56 AM: compte créé avec succès
 Monday 1st of March 2021 05:36:56 AM: validation du formulaire OK
+Monday 1st of March 2021 10:28:32 AM: Connexion à la base de données réussie
+Monday 1st of March 2021 10:28:32 AM: compte créé avec succès
+Monday 1st of March 2021 10:28:32 AM: validation du formulaire OK

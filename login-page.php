@@ -32,8 +32,8 @@ connexion(); // Fonction qui gère la connexion
         </a>
         <div class="d-flex vh-100 align-items-center justify-content-center flex-column">
 
-        <div class="<?=  $_SESSION['message'] ?> alert  alert-dismissible fade show col-6 mx-auto mb-5 text-center fw-bold shadow" role="alert">
-            <span>Le compte à bien été créé</span>
+        <div class="<?=  $_SESSION['class'] ?> alert  alert-dismissible fade show col-6 mx-auto mb-5 text-center fw-bold shadow" role="alert">
+            <span><?=  $_SESSION['message'] ?></span>
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
 
