@@ -46,7 +46,5 @@ function connexion()
         error_log(date('l jS \of F Y h:i:s A') . ": Déconnexion réussie\r\n", 3, 'src/var/logSuccess.txt');
         header('Location: index.php?page=accueil');
         die;
-    } else {
-        error_log(date('l jS \of F Y h:i:s A') . ": Echec de la déconnexion\r\n", 3, 'src/var/logError.txt');
     }
 }
