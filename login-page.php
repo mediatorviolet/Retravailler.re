@@ -4,7 +4,7 @@ include 'src/functions/connexion.php';
 include 'src/functions/ajout_utilisateur.php';
 
 connexion(); // Fonction qui gère la connexion
-ajout_user(); 
+// ajout_user();
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +32,7 @@ ajout_user();
         </a>
         <div class="d-flex vh-100 align-items-center justify-content-center flex-column">
 
-        <div class="<?=  $_SESSION['message'][$msg_login] ?> alert  alert-dismissible fade show col-6 mx-auto mb-5 text-center fw-bold shadow" role="alert">
+        <div class="<?=  $_SESSION['message'] ?> alert  alert-dismissible fade show col-6 mx-auto mb-5 text-center fw-bold shadow" role="alert">
             <span>Le compte à bien été créé</span>
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
@@ -44,7 +44,7 @@ ajout_user();
                     <div class="modal-header">
                         <h5 class="modal-title text-white" id="connexionLabel">Connexion</h5>
                     </div>
-                    <?php print_r ($_SESSION) ?>
+                   
                     <div class="modal-body">
                         <span class="alert-danger"><?= $error_login ?></span>
                         <form action="<?= connexion() ?>" method="POST">
