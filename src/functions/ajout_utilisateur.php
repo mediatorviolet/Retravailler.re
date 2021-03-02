@@ -5,7 +5,7 @@ function ajout_user()
 {
     
     $_SESSION['class'] = "d-none";
-    $_SESSION['message'] = "d-none";
+    $_SESSION['message'] = "";
     if (isset($_POST['inscription'])) {
         $role1 = 1;
         $pass = password_hash($_POST["pass"], PASSWORD_DEFAULT);

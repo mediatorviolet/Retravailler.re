@@ -17,7 +17,6 @@ Friday 26th of February 2021 12:44:39 PM: validation du formulaire OK
 Friday 26th of February 2021 12:45:45 PM: Connexion à la base de données réussie
 Friday 26th of February 2021 12:45:45 PM: compte créé avec succès
 Friday 26th of February 2021 12:45:45 PM: validation du formulaire OK
-<<<<<<< HEAD
 Saturday 27th of February 2021 08:35:05 AM: Connexion à la base de données réussie
 Saturday 27th of February 2021 08:35:05 AM: compte créé avec succès
 Saturday 27th of February 2021 08:35:05 AM: validation du formulaire OK
@@ -37,11 +36,3 @@ Monday 1st of March 2021 05:36:56 AM: validation du formulaire OK
 Monday 1st of March 2021 10:28:32 AM: Connexion à la base de données réussie
 Monday 1st of March 2021 10:28:32 AM: compte créé avec succès
 Monday 1st of March 2021 10:28:32 AM: validation du formulaire OK
-=======
-Monday 1st of March 2021 10:51:13 AM: Connexion à la base de données réussie
-Monday 1st of March 2021 10:51:13 AM: Identifiants corrects, connexion réussie
-Monday 1st of March 2021 10:51:15 AM: Connexion à la base de données réussie
-Monday 1st of March 2021 10:51:15 AM: Connexion à la base de données réussie
-Monday 1st of March 2021 10:51:19 AM: Connexion à la base de données réussie
-Monday 1st of March 2021 12:48:08 PM: Déconnexion réussie
->>>>>>> d928f93b64ae2e153f07965b20a368002e20451c
