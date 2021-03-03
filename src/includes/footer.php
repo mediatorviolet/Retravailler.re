@@ -9,10 +9,10 @@
             <i class="fab fa-linkedin icon-footer"></i>
         </a>
         <a href="">
-            <img class="img-footer" src="src/ressources/img/franceCompetences.png" alt="france_competence_logo">
+            <i class="fab fa-instagram icon-footer"></i>
         </a>
         <a href="">
-            <img class="img-footer" src="src/ressources/img/poleEmploi.jpg" alt="pole_emploi_logo">
+            <i class="fab fa-twitter icon-footer"></i>        
         </a>
     </div>
     <hr class="w-75 mx-auto bg-light">

@@ -5,7 +5,7 @@ function ajout_user()
 {
 
     $_SESSION['class'] = "d-none";
-    $_SESSION['message'] = "d-none";
+    $_SESSION['message'] = "";
     if (isset($_POST['inscription'])) {
         $role1 = 1;
         $pass = password_hash($_POST["pass"], PASSWORD_DEFAULT);
@@ -47,10 +47,16 @@ function ajout_user()
 
             $_SESSION['class'] = "alert-success";
             $_SESSION['message'] = "Le compte a bien été créé";
-
-            error_log(date('l jS \of F Y h:i:s A') . ": compte créé avec succès\r\n", 3, 'src/var/logSuccess.txt');
+         
+            
+            error_log(date('l jS \of F Y h:i:s A') . ": compte créé avec succès\r\n", 3, 'src/var/log.txt');
+            
         } else {
-            error_log(date('l jS \of F Y h:i:s A') . ": échec de la création du compte\r\n", 3, 'src/var/logError.txt');
+            error_log(date('l jS \of F Y h:i:s A') . ": échec de la création du compte\r\n", 3, 'src/var/log.txt');
+
+            
+            
+
         }
     }
 }
