@@ -132,7 +132,7 @@ modifier();
                                                         <?= $result['prenom'] . ' ' . $result['nom'] ?>
                                                     </li>
                                                 <?php }
-                                                // Fermeture de la requête en cours
+                                                // Fermeture de la requête en cours ( non nécessaire mais utile si changement de SGBD )
                                                 $req->closeCursor();
                                                 ?>
                                             </ul>
