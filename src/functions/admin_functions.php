@@ -20,11 +20,9 @@ function creationAtelier()
             $date0,
             $heure0,
             $nb_place0
-
-            
         );
 
-        
+
         // Pour chaque éléments dans le tableau $requiredInput, on passe les fonctions htmlentities() et trim()
         foreach ($requiredInput as $input) {
             htmlentities(trim($input));
@@ -71,7 +69,6 @@ function creationAtelier()
         }
         error_log(date('l jS \of F Y h:i:s A') . ": l'atelier a été créé avec succès\r\n", 3, 'src/var/logSuccess.txt');
     }
-    
 }
 
 /**

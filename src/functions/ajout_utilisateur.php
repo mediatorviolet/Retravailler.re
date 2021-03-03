@@ -3,7 +3,7 @@
 
 function ajout_user()
 {
-    
+
     $_SESSION['class'] = "d-none";
     $_SESSION['message'] = "d-none";
     if (isset($_POST['inscription'])) {
@@ -42,28 +42,15 @@ function ajout_user()
                 'etat' => $etat
             ));
 
-
             //On renvoie l'utilisateur vers la page de login
             header('Location: login-page.php');
 
-
-           
-           
-           
-            
-
             $_SESSION['class'] = "alert-success";
             $_SESSION['message'] = "Le compte a bien été créé";
-         
-            
+
             error_log(date('l jS \of F Y h:i:s A') . ": compte créé avec succès\r\n", 3, 'src/var/logSuccess.txt');
-            
         } else {
             error_log(date('l jS \of F Y h:i:s A') . ": échec de la création du compte\r\n", 3, 'src/var/logError.txt');
-
-            
-            
-
         }
     }
 }

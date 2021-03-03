@@ -30,13 +30,13 @@ inscriptionAtelier(); //Fonction qui gère l'inscription des utilisateurs à un 
 
         // On sélectionne tous les ateliers liés à la prestation 2 (Accélèr'Emploi)
         $req = $bdd->query('SELECT * FROM atelier WHERE id_prestation = 2');
-        $donnees = $req->fetchAll(); // fectAll() renvoie un tableau
+        $donnees = $req->fetchAll(); // fecthAll() renvoie un tableau
         if (empty($donnees)) { // Si le tableau est vide (il n'y a pas d'ateliers), on affiche le message qui suit
             echo "<div class='w-100 my-5 py-5'>";
             echo "<h5 class='text-center'>Aucun atelier pour le moment</h5>";
             echo "</div>";
         }
-        
+
         // On parcours le tableau retourné par la fonction fetchAll() pour afficher les données dans la page
         foreach ($donnees as $donnee) { ?>
             <div class="col">
