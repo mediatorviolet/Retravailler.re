@@ -28,10 +28,10 @@ function inscriptionAtelier()
 
             // Quand un utilisateur s'inscrit, le nombre de place diminue
             $bdd->query('UPDATE date_atelier SET nb_place = nb_place - 1 WHERE id_dateAtelier = "' . $_POST['date'] . '"');
-            error_log(date('l jS \of F Y h:i:s A') . ": inscription atelier réussie\r\n", 3, 'src/var/logSuccess.txt');
+            error_log(date('l jS \of F Y h:i:s A') . ": inscription atelier réussie\r\n", 3, 'src/var/log.txt');
         } else {
             $count_err++;
-            error_log(date('l jS \of F Y h:i:s A') . ": échec de l'inscription à l'atelier\r\n", 3, 'src/var/logError.txt');
+            error_log(date('l jS \of F Y h:i:s A') . ": échec de l'inscription à l'atelier\r\n", 3, 'src/var/log.txt');
         }
     }
 }
@@ -53,6 +53,6 @@ function desinscriptionAtelier()
         // Mise à jour du nombre de places disponibles
         $sql_nbplace = 'UPDATE date_atelier SET nb_place = nb_place + 1 WHERE id_dateAtelier = "' . $_POST['id_date'] . '"';
         $bdd->query($sql_nbplace);
-        error_log(date('l jS \of F Y h:i:s A') . ": Désincription réussie\r\n", 3, 'src/var/logSuccess.txt');
+        error_log(date('l jS \of F Y h:i:s A') . ": Désincription réussie\r\n", 3, 'src/var/log.txt');
     }
 }

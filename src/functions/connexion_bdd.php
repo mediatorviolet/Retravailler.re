@@ -22,8 +22,8 @@ try {
     //On se connecte à la BDD
     $bdd = new PDO("mysql:host=$serveur;dbname=$dbname", $user, $password);
     $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    error_log(date('l jS \of F Y h:i:s A') . ": Connexion à la base de données réussie\r\n", 3, 'src/var/logSuccess.txt');
+    error_log(date('l jS \of F Y h:i:s A') . ": Connexion à la base de données réussie\r\n", 3, 'src/var/log.txt');
 } catch (PDOException $e) { // Si erreur, on renvoi un message d'erreur
-    error_log(date('l jS \of F Y h:i:s A') . ": Connexion à la base de données impossible\r\n", 3, 'src/var/logError.txt');
+    error_log(date('l jS \of F Y h:i:s A') . ": Connexion à la base de données impossible\r\n", 3, 'src/var/log.txt');
     echo 'Erreur : ' . $e->getMessage();
 }
