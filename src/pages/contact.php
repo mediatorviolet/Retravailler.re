@@ -7,7 +7,8 @@
 </section>
 
 <section>
-  <h2 class="fs-2 fw-bold text-center pt-5 mt-5">
+<div class="divider"></div>
+  <h2 class="fs-2 fw-bold text-center">
     Mon Conseil en Evolution Professionnelle​
   </h2>
 
@@ -50,26 +51,27 @@
 </section>
 
 <section>
-  <h2 class="py-5 text-center">Nos lieux d'accueil</h2>
+<div class="divider"></div>
+  <h2 class="pb-5 text-center">Nos lieux d'accueil</h2>
   <div class="row row-md-cols-1 d-flex container-fluid justify-content-center">
-    <div class="col px-5 d-flex flex-column">
+    <div class="col px-5 d-flex flex-column pb-md-0 pb-5">
       <p class="titre-accueil fw-bold">CEP, ACCELER'EMPLOI et ATC</p>
       <p class="fw-bold">Saint-Denis</p>
       <p>121 Boulevard Jean Jaurès Immeuble Doret 97400 Saint-Denis</p>
     </div>
 
-    <div class="col px-5 d-flex flex-column">
+    <div class="col px-5 d-flex flex-column pb-md-0 pb-5">
       <p class="titre-accueil fw-bold">CEP, ACCELER'EMPLOI et ATC</p>
       <p class="fw-bold">Le Port</p>
       <p>16 Rue Claude Chappe ZAE 2000 97420 Le Port</p>
     </div>
 
-    <div class="col px-5 d-flex flex-column">
+    <div class="col px-5 d-flex flex-column pb-md-0 pb-5">
       <p class="titre-accueil fw-bold">CEP, ACCELER'EMPLOI et ATC</p>
       <p class="fw-bold">Saint-Paul</p>
       <p>121 Route de l'Eperon Immeuble ZE Bureau 97435 Saint-Paul</p>
     </div>
-    <div class="col px-5 d-flex flex-column">
+    <div class="col px-5 d-flex flex-column pb-md-0 pb-5">
       <p class="titre-accueil fw-bold">CEP, ACCELER'EMPLOI et ATC</p>
       <p class="fw-bold">Le Tampon</p>
       <p>26 Rue Paul Herman 97418 Le Tampon</p>
@@ -80,4 +82,5 @@
       <p>328 Rue Raphaël Babet 97480 Saint-Joseph</p>
     </div>
   </div>
+  <div class="divider"></div>
 </section>
