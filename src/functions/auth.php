@@ -15,7 +15,7 @@ class Auth
             extract($_SESSION['user']);
             include 'src/functions/connexion_bdd.php'; // Connexion à la BDD
 
-            // On vérifie que l'email et le password présent dans la variable $_SESSION correpsondent à ceux dans la BDD
+            // On vérifie que l'email et le password présent dans la variable $_SESSION correspondent à ceux dans la BDD
             $req = $bdd->query("SELECT id_user FROM user WHERE email = '$email' AND password = '$password'");
             $res = $req->fetch();
 
