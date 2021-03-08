@@ -57,7 +57,7 @@ function creationAtelier()
                     'id_prestation' => $prestation
                 ));
             } else { // Sinon, on a ajouté des champs supplémentaires
-                for ($i = 0; $i < (count($_POST) - 8); $i++) { // (count($_POST) - 8) permet d'obtenir le nombre de champs supplémentaires
+                for ($i = 0; $i < ((count($_POST) - 6) / 3); $i++) { // (count($_POST) - 6) / 3 permet d'obtenir le nombre de champs supplémentaires
                     $req_date->execute(array(
                         'id_atelier' => $data,
                         'date_atelier' => $_POST['date' . $i] . ' ' . $_POST['heure' . $i],
